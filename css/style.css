@@ -470,7 +470,10 @@ button:focus,
     }
 
 .team .thumbnail img {
-    width : 100%;
+    object-fit: cover;
+    height: 250px;
+    width : 250px;
+    border-radius:50%;
     }
 
 .team .thumbnail .caption {
@@ -753,3 +756,4 @@ button:focus,
     text-align : center;
     top        : 65%;
     }
+
