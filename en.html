@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,182 +27,296 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body id="page-top" data-spy="scroll" data-target=".navbar">
-<div id="main-wrapper">
-    <!-- Page Preloader -->
-    <div id="preloader">
-        <div id="status">
-            <div class="status-mes"></div>
-        </div>
-    </div>
+    <video autoplay muted id="background">
+        <source src="https://s3.amazonaws.com/ptyglass/video-1513665396.mp4" type="video/mp4">
+    </video>
 
-    <header class="header">
-        <!-- Navigation -->
-        <nav class="navbar main-menu" role="navigation">
+    <div id="main-wrapper">
+        <!-- Page Preloader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="status-mes"></div>
+            </div>
+        </div>
+
+        <header class="header">
+            <!-- Navigation -->
+            <nav class="navbar main-menu" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 id="logo">
+                            <a class="navbar-brand page-scroll" href="#page-top">PANAMA</a>
+                        </h1>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden">
+                                <a href="#page-top"></a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#section-intro">About</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#section-speaker">Speakers</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#section-ajenda">Agenda</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#section-pricing">Infographic</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#section-partner">Partners</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#section-venue">Venue</a>
+                            </li>
+                            <li>
+                                <a href="es.html">ES</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+
+            <!-- .nav -->
+
+            <div id="welcome">
+                <div class="event-date">Feb. 22-26 2018, Panama City</div>
+                <div id="text"></div>
+                <div class="lead">Un discurso público sobre la modernización y la transparencia del sistema financiero de Panamá.</div>
+                <button type="button" class="btn btn-default btn-lg">MAS INFO</button>
+            </div>
+
+        </header>
+
+        <div class="jumbotron text-center">
+            <div class="content">
+                <div class="event-date">. 22-26 2018, Panamá City</div>
+                <h1>Panamá Glass</h1>
+                <p class="lead">A public discourse on the modernization and transparency of the Panamá financial system.</p>
+                <button type="button" class="btn btn-default btn-lg">STAY IN THE LOOP</button>
+            </div>
+        </div>
+        <!-- .Jumbotron-->
+
+
+        <section id="section-intro" class="section-wrapper about-event">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="img/panama-glass.png" alt="Panamá Glass" style="max-width: 350px"></a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                    <ul class="nav navbar-nav">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden"><a href="#page-top"></a></li>
-                        <li><a class="page-scroll" href="#section-intro">About</a></li>
-                        <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
-                        <li><a class="page-scroll" href="#section-ajenda">Agenda</a></li>
-                        <li><a class="page-scroll" href="#section-pricing">Infographic</a></li>
-                        <li><a class="page-scroll" href="#section-partner">Partners</a></li>
-                        <li><a class="page-scroll" href="#section-venue">Venue</a></li>
-                        <li><a href="/es.html">ES</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-
-        <!-- .nav -->
-
-    </header>
-
-    <div class="jumbotron text-center">
-        <div class="content">
-            <div class="event-date">. 22-26 2018, Panamá City</div>
-            <h1>Panamá Glass</h1>
-            <p class="lead">A public discourse on the modernization and transparency of the Panamá financial system.</p>
-            <button type="button" class="btn btn-default btn-lg">STAY IN THE LOOP</button>
-        </div>
-    </div>
-    <!-- .Jumbotron-->
-
-
-    <section id="section-intro" class="section-wrapper about-event">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="lead">
-                        Panamá Glass is an open discourse on "modernization and transparency of Panamá's financial system."
-
-                        The summit will bring together international experts with local stakeholders and a lucky group of students. The goal of this group is to produce a visionary plan. Topics to include:
-                        <ul>
-                            <li>Transparency and Accountability</li>
-                            <li>Smart Contracts</li>
-                            <li>Digital Dollar Standard</li>
-                            <li>Modern International Settlement Channels</li>
-                            <li>Digital Identity</li>
-                            <li>Land and Ship Titles</li>
-                            <li>Social Services (welfare, education)</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p class="lead">
-			<h5>In 2017 Panamá was hit many times</h5>
-                        <ul>
-                          <li>Included in the <a target="_blank" href="https://www.centralamericadata.com/en/article/home/Panama_on_the_Black_List_of_the_European_Union">EU black list</a>.</li>
-                          <li>Received $250 million loan from CAF for <a target="_blank" href="http://www.panamatoday.com/economy/caf-will-grant-panama-250-million-loan-improve-financial-management-5716">"modernize and improve transparency of the country's financial system"</a></li>
-                          <li>Found out many government officials received millions in bribes from Odebrecht and others.</li>
-                          <li>Is being pressured to overhaul or eliminate the special economic zones.</li>
-                          <li>Is being pressured to strictly regulate financial technology.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- .about-event -->
-
-    <section id="section-speaker" class="section-wrapper team gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>SPEAKERS</h1>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="lead">
+                            Panamá Glass is an open discourse on "modernization and transparency of Panamá's financial system." The summit will bring
+                            together international experts with local stakeholders and a lucky group of students. The goal
+                            of this group is to produce a visionary plan. Topics to include:
+                            <ul>
+                                <li>Transparency and Accountability</li>
+                                <li>Smart Contracts</li>
+                                <li>Digital Dollar Standard</li>
+                                <li>Modern International Settlement Channels</li>
+                                <li>Digital Identity</li>
+                                <li>Land and Ship Titles</li>
+                                <li>Social Services (welfare, education)</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="lead">
+                            <h5>In 2017 Panamá was hit many times</h5>
+                            <ul>
+                                <li>Included in the
+                                    <a target="_blank" href="https://www.centralamericadata.com/en/article/home/Panama_on_the_Black_List_of_the_European_Union">EU black list</a>.</li>
+                                <li>Received $250 million loan from CAF for
+                                    <a target="_blank" href="http://www.panamatoday.com/economy/caf-will-grant-panama-250-million-loan-improve-financial-management-5716">"modernize and improve transparency of the country's financial system"</a>
+                                </li>
+                                <li>Found out many government officials received millions in bribes from Odebrecht and others.</li>
+                                <li>Is being pressured to overhaul or eliminate the special economic zones.</li>
+                                <li>Is being pressured to strictly regulate financial technology.</li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/jason-king.png" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Jason King
-                                <small>Founder <a target="_blank" href="http://www.unsung.org/">Unsung</a> & <a target="_blank" href="https://www.academytoken.com/">Academy</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
+        </section>
+        <!-- .about-event -->
 
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/Gabriel_Abed.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Gabriel Abed
-                                <small>Co-founder <a target="_blank" href="https://bitt.com">bitt</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
+        <section id="section-speaker" class="section-wrapper team gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>SPEAKERS</h1>
+                        </div>
+                    </div>
                 </div>
-                <!-- /.col-sm-6 -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/jason-king.png" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Jason King
+                                    <small>Founder
+                                        <a target="_blank" href="http://www.unsung.org/">Unsung</a> &
+                                        <a target="_blank" href="https://www.academytoken.com/">Academy</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
 
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/fechandi.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Felipe Echandi
-                                <small>Founder <a target="_blank" href="https://panafintech.com">PanaFintech</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/Gabriel_Abed.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Gabriel Abed
+                                    <small>Co-founder
+                                        <a target="_blank" href="https://bitt.com">bitt</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
 
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/ira-miller.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Ira Miller
-                                <small>Founder <a target="_blank" href="https://guld.io">guld</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/fechandi.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Felipe Echandi
+                                    <small>Founder
+                                        <a target="_blank" href="https://panafintech.com">PanaFintech</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/ira-miller.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Ira Miller
+                                    <small>Founder
+                                        <a target="_blank" href="https://guld.io">guld</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -218,69 +333,138 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-            </div>
-            <!-- .row -->
-            <div class="row">
-
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/jorge-farias2.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Jorge Farias
-                                <small>Founder <a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a> & <a target="_blank" href="https://cryptobuyer.io">Cryptobuyer</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
                 </div>
-                <!-- /.col-sm-6 -->
+                <!-- .row -->
+                <div class="row">
 
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/ana-hilarski.png" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Anabell Hilarski
-                                <small>Co-Founder <a target="_blank" href="https://200social.com">200 Social</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/jorge-farias2.jpg" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Jorge Farias
+                                    <small>Founder
+                                        <a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a> &
+                                        <a target="_blank" href="https://cryptobuyer.io">Cryptobuyer</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
 
-		<div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="img/alejandro-palomar.png" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>Alejandro Palomar
-                                <small>Co-Founder <a target="_blank" href="http://www.blockchain360solutions.com">Blockchain 360 solutions</a></small>
-                            </h3>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                            </ul>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/ana-hilarski.png" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Anabell Hilarski
+                                    <small>Co-Founder
+                                        <a target="_blank" href="https://200social.com">200 Social</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#">
+                                <img src="img/alejandro-palomar.png" class="img-responsive" alt="Image">
+                            </a>
+                            <figcaption class="caption text-center">
+                                <h3>Alejandro Palomar
+                                    <small>Co-Founder
+                                        <a target="_blank" href="http://www.blockchain360solutions.com">Blockchain 360 solutions</a>
+                                    </small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -296,9 +480,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -314,9 +498,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -333,9 +517,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -352,9 +536,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -371,9 +555,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -390,9 +574,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -409,9 +593,9 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
-                <!--<div class="col-sm-6 col-md-3">
+                    <!--<div class="col-sm-6 col-md-3">
                     <figure class="thumbnail">
                         <a href="#"><img src="img/person.gif" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
@@ -428,184 +612,191 @@
                         </figcaption>
                     </figure>
                 </div>-->
-                <!-- /.col-sm-6 -->
+                    <!-- /.col-sm-6 -->
 
+                </div>
+                <!-- .row -->
             </div>
-            <!-- .row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- .team -->
+            <!-- /.container -->
+        </section>
+        <!-- .team -->
 
-    <section id="section-ajenda" class="section-wrapper section-ajenda">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>AGENDA</h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="session">
-                        <time>Day 1</time>
-                        <h2>Team Intro</h2>
-                        <h3>Private</h3>
-                    </div>
-                    <!-- .session -->
-
-                    <div class="session">
-                        <time>Day 2</time>
-                        <h2>Work Groups</h2>
-                        <h3>Private</h3>
-                    </div>
-                    <!-- .session -->
-
-                </div>
-                <div class="col-md-4">
-                    <div class="session">
-                        <time>Days 3 & 4</time>
-                        <h2>Speeches and Panels</h2>
-                        <h3>Open to the Public</h3>
-                    </div>
-                    <!-- .session -->
-                </div>
-                <div class="col-md-4">
-                    <div class="session">
-                        <time>Post-Summit Editing</time>
-                        <h2>Students combine and edit</h2>
-                        <h3>Using drafts and notes from teams, work groups, speeches and panels.</h3>
-                    </div>
-                    <!-- .session -->
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section id="section-pricing" class="section-wrapper pricing-section gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>INFOGRAPHIC</h1>
-                        <p>How will Panamá Glass be organized?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col" style="text-align: center;">
-                   <img src="img/PanamaVidrio.jpg" ></img>
-                </div>
-                <!-- .col-sm-4 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- .pricing-section -->
-
-
-    <section id="section-partner" class="section-wrapper client-logo">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>PARTNERS</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                    <a href="#"><img src="img/logo-panafintech-contained.png" alt="Image"></a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                    <a href="#"><img src="img/6_guld_ gold_logo.png" alt="Image"></a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                    <a href="#"><img src="img/tigo-logo.png" alt="Image"></a>
-                </div>
-            </div>
-        </div>
-        <!--end of .container -->
-    </section>
-    <!-- .client-logo -->
-
-
-    <section id="section-venue" class="section-wrapper  gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>THE VENUE</h1>
-
-                        <p>To Be Determined.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row-->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <!--<div id="googleMap"></div>-->
-                </div>
-            </div>
-            <!-- .row-->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h2>STAY INFORMED</h2>
-                        <p>Don't miss the event!</p>
-                    </div>
-                    <form id="contactForm" class="subscribe-form form-inline" action="sendemail.php" method="POST">
-                        <div class="form-group">
-                            <label for="emailTwo" class="sr-only">Email</label>
-                            <input type="email" class="form-control input-lg" required="" id="emailTwo" name="email" placeholder="Enter your email address">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg">SUBSCRIBE</button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- contact-section -->
-
-
-    <footer class="footer">
-        <div class="copyright-section">
+        <section id="section-ajenda" class="section-wrapper section-ajenda">
             <div class="container">
-                <div class="col-md-12">
-                    <div class="copytext text-center">&copy; Panamá Glass. All rights reserved | Design By: <a href="https://uicookies.com">uiCookies</a></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>AGENDA</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="session">
+                            <time>Day 1</time>
+                            <h2>Team Intro</h2>
+                            <h3>Private</h3>
+                        </div>
+                        <!-- .session -->
+
+                        <div class="session">
+                            <time>Day 2</time>
+                            <h2>Work Groups</h2>
+                            <h3>Private</h3>
+                        </div>
+                        <!-- .session -->
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="session">
+                            <time>Days 3 & 4</time>
+                            <h2>Speeches and Panels</h2>
+                            <h3>Open to the Public</h3>
+                        </div>
+                        <!-- .session -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="session">
+                            <time>Post-Summit Editing</time>
+                            <h2>Students combine and edit</h2>
+                            <h3>Using drafts and notes from teams, work groups, speeches and panels.</h3>
+                        </div>
+                        <!-- .session -->
+                    </div>
                 </div>
             </div>
-            <!-- .container -->
-        </div>
-        <!-- .copyright-section -->
-    </footer>
-    <!-- .footer -->
 
-</div>
-<!-- #main-wrapper -->
+        </section>
 
 
-<!-- jquery -->
-<script src="js/jquery-2.1.4.min.js"></script>
+        <section id="section-pricing" class="section-wrapper pricing-section gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>INFOGRAPHIC</h1>
+                            <p>How will Panamá Glass be organized?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: center;">
+                        <img src="img/PanamaVidrio.jpg"></img>
+                    </div>
+                    <!-- .col-sm-4 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- .pricing-section -->
 
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
+        <section id="section-partner" class="section-wrapper client-logo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>PARTNERS</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                        <a href="#">
+                            <img src="img/logo-panafintech-contained.png" alt="Image">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                        <a href="#">
+                            <img src="img/6_guld_ gold_logo.png" alt="Image">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
+                        <a href="#">
+                            <img src="img/tigo-logo.png" alt="Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--end of .container -->
+        </section>
+        <!-- .client-logo -->
 
-<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
 
-<!--<script src="js/one-page-nav.js"></script>-->
-<script src="js/scripts.js"></script>
+        <section id="section-venue" class="section-wrapper  gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>THE VENUE</h1>
+
+                            <p>To Be Determined.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--<div id="googleMap"></div>-->
+                    </div>
+                </div>
+                <!-- .row-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h2>STAY INFORMED</h2>
+                            <p>Don't miss the event!</p>
+                        </div>
+                        <form id="contactForm" class="subscribe-form form-inline" action="sendemail.php" method="POST">
+                            <div class="form-group">
+                                <label for="emailTwo" class="sr-only">Email</label>
+                                <input type="email" class="form-control input-lg" required="" id="emailTwo" name="email" placeholder="Enter your email address">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- contact-section -->
+
+
+        <footer class="footer">
+            <div class="copyright-section">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="copytext text-center">&copy; Panamá Glass. All rights reserved</div>
+                    </div>
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .copyright-section -->
+        </footer>
+        <!-- .footer -->
+
+    </div>
+    <!-- #main-wrapper -->
+
+
+    <!-- jquery -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!--<script src="js/one-page-nav.js"></script>-->
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>
