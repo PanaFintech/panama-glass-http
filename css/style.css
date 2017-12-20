@@ -270,6 +270,13 @@ button:focus,
     background: #fff;
     }
 
+.internal-nav {
+    display: inline-block;
+    float: none;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
 /*Navigation Style*/
 
 .main-menu .navbar-right {
@@ -616,7 +623,7 @@ button:focus,
     }
 
 /* --------------------------
- * Client Logo 
+ * Client Logo
  *---------------------------*/
 
 .client-logo a img {
