@@ -41,7 +41,7 @@ body {
     font-size   : 17px;
     line-height : 1.7em;
     color       : #353e55;
-    font-weight : 100;
+    font-weight : 200;
     background  : #ffffff;
     margin: 0;
     padding: 0;
@@ -53,23 +53,23 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin : 0 0 15px;
-    color  : #0e1555;
+    color  : #264175;
     }
 
 h1 {
-    font-size   : 36px;
+    font-size   : 4rem;
     line-height : 1.2em;
-    font-weight : 700;
+    font-weight : 400;
     }
 
 h2 {
-    font-size   : 30px;
+    font-size   : 2.4rem;
     line-height : 1.5em;
     font-weight : 400;
     }
 
 h3 {
-    font-size   : 24px;
+    font-size   : 1.8rem;
     line-height : 1.5em;
     font-weight : 300;
     }
@@ -167,6 +167,10 @@ ul {
     color            : #ffffff;
     background-color : transparent;
     border-color     : #ffffff;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     }
 
 .btn-default:hover,
@@ -211,9 +215,8 @@ button:focus,
 
 .header {
     position : absolute;
-    left     : 15px;
-    right    : 15px;
-    top      : 40px;
+    top      : 0;
+    width: 100%;
     z-index  : 9;
     }
 
@@ -239,7 +242,7 @@ button:focus,
 
 .navbar {
     border-radius  : 0;
-    padding        : 30px 0;
+    padding-top : 3rem;
     background     : transparent;
     margin         : 0;
     font-size      : 15px;
@@ -328,7 +331,7 @@ button:focus,
     }
 
 .sticky-nav .nav li a {
-    color : #0e1555;
+    color : #689cce;
     }
 
 .sticky-nav .navbar-toggle .icon-bar{
@@ -462,8 +465,8 @@ button:focus,
 
 .team .thumbnail img {
     object-fit: cover;
-    height: 250px;
-    width : 250px;
+    height: 15rem;
+    width: 15rem;
     border-radius:50%;
     }
 
@@ -531,7 +534,6 @@ button:focus,
 
 .section-ajenda .session h3 {
     margin         : 20px 0 20px 20px;
-    font-size      : 20px;
     text-transform : uppercase;
     }
 
@@ -758,11 +760,9 @@ button:focus,
 }
 
 #welcome {
-    top: 11rem;
     position: relative;
     text-align: center;
     overflow: hidden;
-    padding: 2rem 0;
 }
 
 #welcome div {
@@ -783,7 +783,7 @@ button:focus,
     font-weight: 500;
     display: inline-block;
     opacity: 1;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 #welcome #backgroundGlass {
@@ -833,7 +833,7 @@ button:focus,
 
 .sticky-nav #logo a {
     color: #5799d6;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(3, 169, 232)), color-stop(50%, rgba(0, 0, 0, 0.3)), to(rgb(152, 168, 185)));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(3, 169, 232)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgb(152, 168, 185)));
 }
 
 #section-partner .section-margin {
@@ -856,5 +856,26 @@ span.typed-cursor {
 @-webkit-keyframes blink-animation {
     to {
         visibility: hidden;
+    }
+}
+
+.infoimg img {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%;
+    }
+
+    section {
+        padding: 40px 0 !important;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .lead {
+        display: none;
     }
 }
