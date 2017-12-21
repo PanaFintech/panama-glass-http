@@ -32,7 +32,7 @@ the event Panama Glass Summit 2018.
     the same essay in both English and Spanish, with the same sets
     of ideas.
 
-7.  The paper can either be send in plain text or [markdown](http://daringfireball.net/projects/markdown/syntax#html) format.
+7.  The paper can either be sent in plain text or [markdown](http://daringfireball.net/projects/markdown/syntax#html) format.
 
 8.  Your name, id number (cédula) and e-mail must be in the top of
     the paper. A profile photo may optionally be included separately.
