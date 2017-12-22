@@ -131,6 +131,7 @@ $( document ).ready(function() {
 
         $('#welcome').css("padding-top", off_top + "px");
         
+        $(".header").height($("#background").height());
     });
     $(window).resize();
 });
