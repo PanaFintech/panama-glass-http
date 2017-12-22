@@ -313,7 +313,6 @@ button:focus, .btn:focus, .btn:active:focus {
         margin-top: 10px;
         background: #fff;
     }
-
     .navbar-nav {
         margin: 0.1rem 0 0 0.4rem;
     }
@@ -764,6 +763,11 @@ button:focus, .btn:focus, .btn:active:focus {
     overflow: hidden;
 }
 
+#welcome a {
+    color: #fff;
+    opacity: 1;
+}
+
 #welcome div {
     position: relative;
     color: #fff;
@@ -783,6 +787,7 @@ button:focus, .btn:focus, .btn:active:focus {
     display: inline-block;
     opacity: 1;
     margin: 2rem 0;
+    height: 3rem;
 }
 
 #welcome #backgroundGlass {
@@ -793,6 +798,62 @@ button:focus, .btn:focus, .btn:active:focus {
     width: 100%;
 }
 
+#social {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#social a {
+    font-size: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    margin: 1rem;
+    padding: 0.6rem;
+    color: #fff;
+    top: 0;
+    position: relative;
+    animation: social-show 1s;
+    -webkit-animation: social-show 1s;
+}
+
+#social a:hover, #social a:active{
+    color: #fd367e;
+    border: 2px #fd367e solid;
+}
+
+@keyframes social-show {
+    from {
+        top: 8rem;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+#social a#gitter {
+    padding: 0.7rem 0.9rem;
+    animation: social-show 0.4s;
+    -webkit-animation: social-show 0.4s;
+}
+
+#social a#facebook {
+    padding: 0.6rem 1.1rem;
+    animation: social-show 0.8s;
+    -webkit-animation: social-show 0.8s;
+}
+
+.sticky-nav #logo a {
+    color: #5799d6;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(3, 169, 232)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgb(152, 168, 185)));
+}
+
 #logo {
     position: relative;
     margin-top: 0;
@@ -800,10 +861,6 @@ button:focus, .btn:focus, .btn:active:focus {
     text-shadow: 2px 3px 3px #1b5fbb;
     -webkit-text-stroke: 1px #307fb5;
     padding: 1rem 2rem;
-}
-
-#logo:hover {
-    text-shadow: 2px 3px 3px #292929;
 }
 
 #logo a {
@@ -824,15 +881,8 @@ button:focus, .btn:focus, .btn:active:focus {
     font-weight: 500;
 }
 
-#logo a:hover {
-    opacity: 1;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.sticky-nav #logo a {
-    color: #5799d6;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(3, 169, 232)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgb(152, 168, 185)));
+.sticky-nav #logo a:hover {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(230, 52, 224)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgb(175, 152, 185)));
 }
 
 #section-partner .section-margin {
@@ -859,6 +909,23 @@ span.typed-cursor {
     }
 }
 
+.nav-pills>li>a, .nav-pills>li>a:focus, .nav-pills>li>a:hover {
+    color: #fff;
+    background-color: #dee4ef;
+    color: #274175;
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    margin: 2rem 1rem -4rem 1rem;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    font-weight: 300;
+    background: #ffe7f0;
+    color: #eb6497;
+}
+
 .infoimg img {
     width: 100%;
 }
@@ -878,19 +945,25 @@ span.typed-cursor {
     }
 }
 
-.nav-pills>li>a, .nav-pills>li>a:focus, .nav-pills>li>a:hover {
-    color: #fff;
-    background-color: #dee4ef;
-    color: #274175;
-    font-size: 1.8rem;
-    font-weight: 300;
-    padding: 1rem 2rem;
-    margin: 2rem 1rem -4rem 1rem;
+@media (max-width: 500px) {
+    .nav-pills>li>a, .nav-pills>li>a:focus, .nav-pills>li>a:hover {
+        margin: 0 0 -4rem 0;
+    }
+    #welcome {
+        padding-top: 0.6rem !important;
+    }
+    #welcome .event-date {
+        font-size: 2rem;
+    }
+    #welcome #text {
+        font-size: 3.4rem;
+        margin: 0.6rem 0 1rem 0;
+    }
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    color: #fff;
-    font-weight: 300;
-    background: #ffe7f0;
-    color: #eb6497;
+@media (max-width: 400px) {
+    .nav-pills>li {
+        width: 100%;
+        height: 5.4rem;
+    }
 }
