@@ -798,6 +798,38 @@ button:focus, .btn:focus, .btn:active:focus {
     width: 100%;
 }
 
+#welcome #buy a {
+    display: inline-block;
+}
+
+#welcome #buy a div {
+    display: none;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-top: 0.1px #e8a2b9 solid;
+    padding-top: 0.4rem;
+}
+
+#welcome #buy a:hover div {
+    display: block;
+}
+
+#welcome .btn-primary {
+    background: rgb(95, 169, 191);
+    color: #ffffff;
+    border-color: #559cb5;
+    border-radius: 0.6rem;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+}
+
+#welcome .btn-primary:hover, #welcome .btn-primary:focus, #welcome .btn-primary:active:focus {
+    background-color: #fd367e;
+    border-color: #fd367e;
+    color: #fff;
+}
+
 #social {
     position: absolute;
     bottom: 0;
@@ -821,7 +853,7 @@ button:focus, .btn:focus, .btn:active:focus {
     -webkit-animation: social-show 1s;
 }
 
-#social a:hover, #social a:active{
+#social a:hover, #social a:active {
     color: #fd367e;
     border: 2px #fd367e solid;
 }
