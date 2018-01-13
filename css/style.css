@@ -977,7 +977,7 @@ span.typed-cursor {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .nav-pills>li>a, .nav-pills>li>a:focus, .nav-pills>li>a:hover {
         margin: 0 0 -4rem 0;
     }
@@ -990,6 +990,12 @@ span.typed-cursor {
     #welcome #text {
         font-size: 3.4rem;
         margin: 0.6rem 0 1rem 0;
+    }
+}
+
+@media (max-width: 450px) {
+    #social {
+        display: none;
     }
 }
 
