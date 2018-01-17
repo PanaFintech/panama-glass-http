@@ -30,6 +30,110 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
+
+    <div id="pay_fiat" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_fiat_label" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pay_fiat_label">Pay with fiat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <ul id="paymentstab" class="nav nav-pills internal-nav">
+                    <li class="active">
+                        <a data-toggle="pill" href="#localpayments">Panama</a>
+                    </li>
+                    <li>
+                        <a data-toggle="pill" href="#internationalpayments">International</a>
+                    </li>
+                </ul>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="tab-content">
+                                    <div id="localpayments" class="tab-pane fade in active">
+                                        <ul class="text-left">
+                                            <li>
+                                                <b>Bank:</b> Credicorp Bank</li>
+                                            <li>
+                                                <b>Name:</b> Fundacion PanaFintech</li>
+                                            <li>
+                                                <b>Account Type:</b> Savings/Ahorro</li>
+                                            <li>
+                                                <b>Account Number:</b> 4021555102</li>
+                                        </ul>
+                                    </div>
+                                    <div id="internationalpayments" class="tab-pane fade">
+                                        <ul class="text-left">
+                                            <li>
+                                                <b>SWIFT CODE/BIC:</b> CRLDPAPA</li>
+                                            <li>
+                                                <b>Bank/Intitution:</b> Credicorp Bank S.A.</li>
+                                            <li>
+                                                <b>Address:</b> EDIF PLAZA CREDICORP, CALLE 50 Y OBARRIO</li>
+                                            <li>
+                                                <b>City:</b> PANAMA</li>
+                                            <li>
+                                                <b>Postcode:</b> 833-0125</li>
+                                            <li>
+                                                <b>Country:</b> PANAMA</li>
+                                            <li>
+                                                <b>Beneficiary:</b> Fundacion PanaFintech</li>
+                                            <li>
+                                                <b>Beneficiary’s account:</b> 4021555102</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row text-justify">
+                            <div class="col-sm-6">
+                                Once payment has been made, please contact ptyglass@gmail.com with a screenshot or picture of the payment receipt, along
+                                with the following details:
+                            </div>
+
+                            <div class="col-sm-6">
+                                <ul class="text-left">
+                                    <li>
+                                        Your Name/s:
+                                    </li>
+                                    <li>
+                                        Contact email/s:
+                                    </li>
+                                    <li>
+                                        Contact Phone number/s:
+                                    </li>
+                                    <li>
+                                        Ticket Package/s:
+                                    </li>
+                                    <li>
+                                        Number of tickets purchased:
+                                    </li>
+                                    <li>
+                                        Payment Method:
+                                    </li>
+                                    <li>
+                                        Date of Payment:
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <video autoplay muted id="background" poster="img/back.jpg">
         <source src="https://s3.amazonaws.com/ptyglass/video-1513665396.mp4" type="video/mp4">
     </video>
@@ -100,10 +204,16 @@
                 <div id="text"></div>
                 <div class="lead">A public discourse on the modernization and transparency of the Panamá financial system.</div>
                 <div id="buy">
-                        <a class="btn btn-primary btn-lg" href="mailto:ptyglass@gmail.com?subject=Buy tickets">
-                            BUY TICKETS
-                            <div>Open email client</div>
-                        </a>
+                    <!--
+                    <a class="btn btn-primary btn-lg" href="mailto:ptyglass@gmail.com?subject=Buy tickets" data-toggle="modal" data-target="#pay_fiat">
+                        BUY TICKETS
+                        <div>with crypto</div>
+                    </a>
+                -->
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_fiat">
+                        BUY TICKETS
+                        <div>with USD</div>
+                    </a>
                 </div>
             </div>
             <div id="social">
@@ -419,14 +529,16 @@
                             </p>
                             <h5 id="objective">Objective</h5>
                             <p>To choose the best students to assist top world class Though Leaders in making the white papers
-                                on their dissertations and thoughts developed in the event Panama Glass Summit 2018.</p>
+                                on their dissertations and thoughts developed in the event Panama Glass Summit 2018.
+                            </p>
                             <h5 id="contest-rules">Contest Rules:</h5>
                             <ol style="list-style-type: decimal">
                                 <li>
                                     <p>The contest opens on December 21th, 2017 and close on January 21th, 2018.</p>
                                 </li>
                                 <li>
-                                    <p>The contest is open to students from all the Panamanian universities, public and privates.</p>
+                                    <p>The contest is open to students from all the Panamanian universities, public and privates.
+                                    </p>
                                 </li>
                                 <li>
                                     <p>The contest is open to all the careers.</p>

@@ -30,6 +30,108 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
+        <div id="pay_fiat" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_fiat_label" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pay_fiat_label">Paga con dólares</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <ul id="paymentstab" class="nav nav-pills internal-nav">
+                    <li class="active">
+                        <a data-toggle="pill" href="#localpayments">Panamá</a>
+                    </li>
+                    <li>
+                        <a data-toggle="pill" href="#internationalpayments">Internacional</a>
+                    </li>
+                </ul>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="tab-content">
+                                    <div id="localpayments" class="tab-pane fade in active">
+                                        <ul class="text-left">
+                                            <li>
+                                                <b>Banco:</b> Credicorp Bank</li>
+                                            <li>
+                                                <b>A nombre:</b> Fundacion PanaFintech</li>
+                                            <li>
+                                                <b>Tipo de cuenta:</b> Savings/Ahorro</li>
+                                            <li>
+                                                <b>Número de cuenta:</b> 4021555102</li>
+                                        </ul>
+                                    </div>
+                                    <div id="internationalpayments" class="tab-pane fade">
+                                        <ul class="text-left">
+                                            <li>
+                                                <b>SWIFT CODE/BIC:</b> CRLDPAPA</li>
+                                            <li>
+                                                <b>Banco/Institución:</b> Credicorp Bank S.A.</li>
+                                            <li>
+                                                <b>Dirección:</b> EDIF PLAZA CREDICORP, CALLE 50 Y OBARRIO</li>
+                                            <li>
+                                                <b>Ciudad:</b> PANAMA</li>
+                                            <li>
+                                                <b>Código postal:</b> 833-0125</li>
+                                            <li>
+                                                <b>País:</b> PANAMA</li>
+                                            <li>
+                                                <b>Beneficiario:</b> Fundacion PanaFintech</li>
+                                            <li>
+                                                <b>Cuenta beneficiaria:</b> 4021555102</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row text-justify">
+                            <div class="col-sm-6">
+                                Una vez realizado el pago, por favor contacte ptyglass@gmail.com con una captura de pantalla or foto de el recibo de pago, junto con los siguientes detalles:
+                            </div>
+
+                            <div class="col-sm-6">
+                                <ul class="text-left">
+                                    <li>
+                                        Nombre/s:
+                                    </li>
+                                    <li>
+                                        Correo/s:
+                                    </li>
+                                    <li>
+                                        Número/s de contacto:
+                                    </li>
+                                    <li>
+                                        Paquete/s de boletos:
+                                    </li>
+                                    <li>
+                                        Número de boletos comprados:
+                                    </li>
+                                    <li>
+                                        Método de pago:
+                                    </li>
+                                    <li>
+                                        Fecha de pago:
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Listo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <video autoplay muted id="background" poster="img/back.jpg">
         <source src="https://s3.amazonaws.com/ptyglass/video-1513665396.mp4" type="video/mp4">
     </video>
@@ -100,10 +202,10 @@
                 <div id="text"></div>
                 <div class="lead">Un discurso público sobre la modernización y la transparencia del sistema financiero de Panamá.</div>
                 <div id="buy">
-                        <a class="btn btn-primary btn-lg" href="mailto:ptyglass@gmail.com?subject=Compra Boletos">
-                            Compra boletos
-                            <div>Abre cliente de correo</div>
-                        </a>
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_fiat">
+                        COMPRA BOLETOS
+                        <div>en USD</div>
+                    </a>
                 </div>
             </div>
             <div id="social">
