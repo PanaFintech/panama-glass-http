@@ -978,7 +978,7 @@ span.typed-cursor {
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
     font-weight: 300;
-    background: #ffe7f0;
+    background: #fff;
     color: #eb6497;
 }
 
