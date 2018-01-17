@@ -44,7 +44,7 @@ body {
     font-weight: 200;
     background: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
 }
 
 /* --------------------------------------
@@ -753,6 +753,14 @@ button:focus, .btn:focus, .btn:active:focus {
  * Custom code
 /* ---------------------------------------------- */
 
+.modal-header .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5.4rem;
+    height: 5.4rem;
+}
+
 #background {
     width: 100%;
 }
@@ -771,7 +779,7 @@ button:focus, .btn:focus, .btn:active:focus {
 #welcome div {
     position: relative;
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #welcome .event-date {
@@ -800,19 +808,14 @@ button:focus, .btn:focus, .btn:active:focus {
 
 #welcome #buy a {
     display: inline-block;
+    margin: 0 0.4rem;
 }
 
-#welcome #buy a div {
-    display: none;
+#welcome #buy .btn div {
     opacity: 1;
     font-weight: bold;
     font-size: 0.9rem;
-    border-top: 0.1px #e8a2b9 solid;
     padding-top: 0.4rem;
-}
-
-#welcome #buy a:hover div {
-    display: block;
 }
 
 #welcome .btn-primary {
@@ -820,11 +823,32 @@ button:focus, .btn:focus, .btn:active:focus {
     color: #ffffff;
     border-color: #559cb5;
     border-radius: 0.6rem;
-    padding: 1rem 2rem;
+    padding: 0.6rem 2rem;
     font-size: 1.4rem;
 }
 
-#welcome .btn-primary:hover, #welcome .btn-primary:focus, #welcome .btn-primary:active:focus {
+#welcome #buy .btn-primary div {
+    border-top: 0.1px #7bbdcc solid;
+}
+
+#welcome .btn-secondary {
+    background: rgb(132, 133, 134);
+    color: #ffffff;
+    border-color: #a09e9e;
+    border-radius: 0.6rem;
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+}
+
+#welcome #buy .btn-secondary div {
+    border-top: 0.1px #a2a2a2 solid;
+}
+
+#welcome #buy a:hover div {
+    border-top: 0.1px #e8a2b9 solid;
+}
+
+#welcome .btn:hover, #welcome .btn:focus, #welcome .btn:active:focus {
     background-color: #fd367e;
     border-color: #fd367e;
     color: #fff;
@@ -960,6 +984,21 @@ span.typed-cursor {
 
 .infoimg img {
     width: 100%;
+}
+
+#paymentstab {
+    margin: 0;
+    width: 100%;
+}
+
+#paymentstab li {
+    width: 50%;
+    margin: 0;
+}
+
+#paymentstab li a {
+    margin: 0;
+    border-radius: 0;
 }
 
 @media (max-width: 1000px) {
