@@ -220,7 +220,7 @@ button:focus, .btn:focus, .btn:active:focus {
 .navbar-brand {
     padding: 0;
     height: auto;
-    margin: 5px 0 !important;
+    padding: 1rem 1rem 0.9rem 1rem;
 }
 
 @media (max-width: 768px) {
@@ -236,13 +236,11 @@ button:focus, .btn:focus, .btn:active:focus {
 /*navbar*/
 
 .navbar {
-    border-radius: 0;
-    padding-top: 3rem;
-    background: transparent;
-    margin: 0;
+    background: #ffffff;
     font-size: 15px;
     text-transform: uppercase;
 }
+
 
 @media (max-width: 768px) {
     .navbar {
@@ -280,7 +278,7 @@ button:focus, .btn:focus, .btn:active:focus {
 }
 
 .main-menu .nav li a {
-    color: #ffffff;
+    color: #137bc3;
     font-weight: 500;
     padding: 15px 0 15px 30px;
 }
@@ -905,41 +903,6 @@ button:focus, .btn:focus, .btn:active:focus {
     -webkit-animation: social-show 0.8s;
 }
 
-.sticky-nav #logo a {
-    color: #5799d6;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(3, 169, 232)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgb(152, 168, 185)));
-}
-
-#logo {
-    position: relative;
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 3px 3px #1b5fbb;
-    -webkit-text-stroke: 1px #307fb5;
-    padding: 1rem 2rem;
-}
-
-#logo a {
-    font-size: 5rem;
-    text-decoration: none;
-    color: #fff;
-    position: absolute;
-    opacity: 1;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(3, 169, 232)), color-stop(50%, rgba(0, 0, 0, 0.15)), to(rgb(152, 168, 185)));
-    text-shadow: 0 2px 0 #4d7ea5;
-    font-weight: bolder;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
-    line-height: initial;
-    margin-top: -1.4rem !important;
-    min-width: 21.4rem;
-    font-weight: 500;
-}
-
-.sticky-nav #logo a:hover {
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(230, 52, 224)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgb(175, 152, 185)));
-}
 
 #section-partner .section-margin {
     text-align: center;

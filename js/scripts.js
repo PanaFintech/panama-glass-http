@@ -122,8 +122,8 @@ $( document ).ready(function() {
         var video = $('#background').height();
         var welcome = $('#welcome').height();
 
-        var free_space = video - (welcome + 82);  
-        free_space = free_space - (free_space * 0.2) // 0.1 of adjust to top
+        var free_space = video - (welcome + 62);  
+        free_space = free_space - (free_space * 0.1) // 0.1 of adjust to top
         var off_top = (free_space / 2);
         if (off_top < 1) {
             off_top = 3;
