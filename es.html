@@ -110,7 +110,7 @@
                         </div>
                         <div class="row text-justify">
                             <div class="col-sm-6">
-                                Una vez realizado el pago, por favor contacte ptyglass@gmail.com con una captura de pantalla or foto de el recibo de pago,
+                                Una vez realizado el pago, por favor contacte ptyglass@gmail.com con una captura de pantalla or foto del recibo de pago,
                                 junto con los siguientes detalles:
                             </div>
 
@@ -148,6 +148,71 @@
             </div>
         </div>
     </div>
+
+    <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pay_card_label">Pago con Tarjeta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group row">
+                                    <label for="ticketNumber" class="col-2 col-form-label">Número</label>
+                                    <div class="col-10">
+                                        <select id="ticketNumber" class="form-control form-control-lg">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group row">
+                                    <label for="ticketTier" class="col-2 col-form-label">Tipo</label>
+                                    <div class="col-10">
+                                        <select id="ticketTier" class="form-control form-control-lg">
+                                            <option value="1" selected>Regular - 2 días ($300)</option>
+                                            <option value="2">VIP - 4 días ($1500)</option>
+                                            <option value="3">Patrocinador Bronce ($2500)</option>
+                                            <option value="3">Patrocinador Plata ($5000)</option>
+                                            <option value="3">Patrocinador Oro ($10000)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="paybutton" class="row">
+                            <div class="col-sm-8">
+                                Una vez realizado el pago, por favor contacte ptyglass@gmail.com con una captura de pantalla del recibo de pago.
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <a target="_blank" href="https://dev.paguelofacil.com/LinkDeamon.cfm?CCLW=162E2ADFB272EBA51406E660339F14A45218153B4197EAAE9682425D860CB1D2&CMTN=1&CDSC=Ejemplo+de+Boton">
+                                    <img src="http://pfserver.net/img/pay_esBT.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div id="terms" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="terms_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -348,6 +413,10 @@
                 <div id="text"></div>
                 <div class="lead">Un discurso público sobre la modernización y la transparencia del sistema financiero de Panamá.</div>
                 <div id="buy">
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
+                        COMPRA BOLETOS
+                        <div>con Tarjeta</div>
+                    </a>
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_fiat">
                         COMPRA BOLETOS
                         <div>en USD</div>
