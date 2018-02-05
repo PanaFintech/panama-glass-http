@@ -18,8 +18,7 @@ jQuery(function ($) {
         $(window).scroll(function () {
             if ($(this).scrollTop() >= 50) {
                 $('nav.navbar').addClass('sticky-nav');
-            }
-            else {
+            } else {
                 $('nav.navbar').removeClass('sticky-nav');
             }
         });
@@ -49,6 +48,38 @@ jQuery(function ($) {
                 $('.navbar-toggle:visible').trigger('click');
             }
         });
+    }());
+
+    // --------------------------------------------------------------------
+    // Tickets calculator
+    // --------------------------------------------------------------------
+    (function () {
+        function generate() {
+            var number = $('#ticketNumber').val();
+            var tier = $('#ticketTier').val();
+            var tierCost = 300;
+            if (tier == 2) {
+                tierCost = 1500;
+            } else if (tier == 3) {
+                tierCost = 2500;
+            } else if (tier == 4) {
+                tierCost = 5000;
+            } else if (tier == 5) {
+                tierCost = 10000;
+            }
+            $('#paybutton a').attr("href", "https://secure.paguelofacil.com/LinkDeamon.cfm?CCLW=162E2ADFB272EBA51406E660339F14A45218153B4197EAAE9682425D860CB1D2&CMTN="+
+            number * tierCost + "&CDSC=Number-" + number + "_Tier-" + tier);
+        }
+        generate();
+
+        $('#ticketNumber').on('change', function () {
+            generate();
+        });
+
+        $('#ticketTier').on('change', function () {
+            generate();
+        });
+        
     }());
 
     // --------------------------------------------------------------------
@@ -117,12 +148,12 @@ var typed3 = new Typed('#text', {
     loop: false
 });
 
-$( document ).ready(function() {
-    $(window).resize(function() {
+$(document).ready(function () {
+    $(window).resize(function () {
         var video = $('#background').height();
         var welcome = $('#welcome').height();
 
-        var free_space = video - (welcome + 62);  
+        var free_space = video - (welcome + 62);
         free_space = free_space - (free_space * 0.1) // 0.1 of adjust to top
         var off_top = (free_space / 2);
         if (off_top < 1) {
@@ -130,7 +161,7 @@ $( document ).ready(function() {
         }
 
         $('#welcome').css("padding-top", off_top + "px");
-        
+
         $(".header").height($("#background").height());
     });
     $(window).resize();
