@@ -5,6 +5,7 @@ Version: 1.0
 Author: uiCookies.com
 */
 
+
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -41,17 +42,23 @@ body {
     font-size: 17px;
     line-height: 1.7em;
     color: #353e55;
-    font-weight: 200;
+    font-weight: 300;
     background: #ffffff;
     margin: 0;
     padding: 0 !important;
 }
 
+
 /* --------------------------------------
  * Global Typography
  *------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0 0 15px;
     color: #264175;
 }
@@ -91,6 +98,7 @@ h6 {
     line-height: 24px;
 }
 
+
 /* --------------------------------------
  * LINK STYLE
  *------------------------------------------*/
@@ -104,12 +112,16 @@ a {
     transition: all 0.3s ease 0s;
 }
 
-a, a:active, a:focus, a:active {
+a,
+a:active,
+a:focus,
+a:active {
     text-decoration: none;
     outline: none
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none;
     color: #999999;
 }
@@ -129,6 +141,7 @@ ul {
     list-style: none;
 }
 
+
 /*Button Style*/
 
 .btn {
@@ -146,6 +159,7 @@ ul {
     padding: 15px 30px
 }
 
+
 /*btn-primary*/
 
 .btn-primary {
@@ -153,11 +167,14 @@ ul {
     border-color: #fd367e;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active:focus {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:focus {
     background: transparent;
     color: #fd367e;
     border-color: #fd367e;
 }
+
 
 /*btn-default*/
 
@@ -171,15 +188,20 @@ ul {
     transition: all 0.3s ease 0s;
 }
 
-.btn-default:hover, .btn-default:focus, .btn-default:active:focus {
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active:focus {
     background-color: transparent;
     color: #fd367e;
     border-color: #fd367e;
 }
 
-button:focus, .btn:focus, .btn:active:focus {
+button:focus,
+.btn:focus,
+.btn:active:focus {
     outline: none;
 }
+
 
 /* --------------------
  * Section Background
@@ -195,6 +217,7 @@ button:focus, .btn:focus, .btn:active:focus {
     background-color: #ffffff;
 }
 
+
 /* --------------------
  *  main Wrapper
  * -------------------*/
@@ -203,6 +226,7 @@ button:focus, .btn:focus, .btn:active:focus {
     background: #ffffff;
     overflow: hidden;
 }
+
 
 /*-----------------------------
  * NAVIGATION & HEADER STYLE
@@ -214,6 +238,7 @@ button:focus, .btn:focus, .btn:active:focus {
     width: 100%;
     z-index: 9;
 }
+
 
 /*Logo*/
 
@@ -233,6 +258,7 @@ button:focus, .btn:focus, .btn:active:focus {
     }
 }
 
+
 /*navbar*/
 
 .navbar {
@@ -241,12 +267,12 @@ button:focus, .btn:focus, .btn:active:focus {
     text-transform: uppercase;
 }
 
-
 @media (max-width: 768px) {
     .navbar {
         padding: 10px;
     }
 }
+
 
 /*navbar toggle*/
 
@@ -271,6 +297,7 @@ button:focus, .btn:focus, .btn:active:focus {
     margin-bottom: 2em;
 }
 
+
 /*Navigation Style*/
 
 .main-menu .navbar-right {
@@ -283,7 +310,8 @@ button:focus, .btn:focus, .btn:active:focus {
     padding: 15px 0 15px 30px;
 }
 
-.main-menu .nav li a:hover, .main-menu .nav li.active a {
+.main-menu .nav li a:hover,
+.main-menu .nav li.active a {
     color: #fd367e;
     background: transparent;
 }
@@ -316,6 +344,7 @@ button:focus, .btn:focus, .btn:active:focus {
     }
 }
 
+
 /* Sticky Menu */
 
 .sticky-nav {
@@ -346,6 +375,7 @@ button:focus, .btn:focus, .btn:active:focus {
         padding-right: 10px;
     }
 }
+
 
 /*-------------------
  * Jumbotron
@@ -403,6 +433,7 @@ button:focus, .btn:focus, .btn:active:focus {
     }
 }
 
+
 /*---------------------------
  * Section Wrapper
  *---------------------------*/
@@ -410,6 +441,7 @@ button:focus, .btn:focus, .btn:active:focus {
 .section-wrapper {
     padding: 100px 0;
 }
+
 
 /*---------------------------
  * Section Title
@@ -429,6 +461,7 @@ button:focus, .btn:focus, .btn:active:focus {
     color: #888888;
 }
 
+
 /* ----------------------------------------------
  * About Event
  *-----------------------------------------------*/
@@ -447,6 +480,7 @@ button:focus, .btn:focus, .btn:active:focus {
 .about-event address strong {
     color: #353e55;
 }
+
 
 /* ----------------------------------------------
  * Team Section
@@ -512,6 +546,7 @@ button:focus, .btn:focus, .btn:active:focus {
     color: #333;
 }
 
+
 /* --------------------------
  * Agenda
  *---------------------------*/
@@ -542,6 +577,7 @@ button:focus, .btn:focus, .btn:active:focus {
     display: block;
     line-height: 1;
 }
+
 
 /* --------------------------
  * Pricing Table
@@ -592,6 +628,7 @@ button:focus, .btn:focus, .btn:active:focus {
     margin: 0;
 }
 
+
 /*pricing list*/
 
 .pricing-section .pricing-list li {
@@ -614,6 +651,7 @@ button:focus, .btn:focus, .btn:active:focus {
 .pricing-section .pricing-detail .pink-i li {
     position: relative;
 }
+
 
 /* --------------------------
  * Client Logo
@@ -639,6 +677,7 @@ button:focus, .btn:focus, .btn:active:focus {
     }
 }
 
+
 /* ------------------
  * Google Map
  * ------------------*/
@@ -649,6 +688,7 @@ button:focus, .btn:focus, .btn:active:focus {
     margin-bottom: 100px;
 }
 
+
 /* ---------------------------
  * Subscribe Form
  * --------------------------- */
@@ -656,6 +696,7 @@ button:focus, .btn:focus, .btn:active:focus {
 .subscribe-form {
     text-align: center;
 }
+
 
 /*-------------------
  * Form Style
@@ -685,7 +726,8 @@ button:focus, .btn:focus, .btn:active:focus {
     min-width: 400px;
 }
 
-.form-control:focus, .form-control:active {
+.form-control:focus,
+.form-control:active {
     box-shadow: none;
     border-color: #fd367e;
 }
@@ -697,9 +739,11 @@ button:focus, .btn:focus, .btn:active:focus {
     }
 }
 
+
 /* --------------------------------------------
  *   Footer
  *---------------------------------------------- */
+
 
 /* Copyright */
 
@@ -713,6 +757,7 @@ button:focus, .btn:focus, .btn:active:focus {
     font-weight: 400;
     display: block;
 }
+
 
 /* ---------------------------------------------- /*
  * Preloader
@@ -728,7 +773,8 @@ button:focus, .btn:focus, .btn:active:focus {
     z-index: 9999;
 }
 
-#status, .status-mes {
+#status,
+.status-mes {
     background-image: url(../img/preloader.gif);
     background-position: center;
     background-repeat: no-repeat;
@@ -747,6 +793,7 @@ button:focus, .btn:focus, .btn:active:focus {
     text-align: center;
     top: 65%;
 }
+
 
 /* ---------------------------------------------- /*
  * Custom code
@@ -847,7 +894,9 @@ button:focus, .btn:focus, .btn:active:focus {
     border-top: 0.1px #e8a2b9 solid;
 }
 
-#welcome .btn:hover, #welcome .btn:focus, #welcome .btn:active:focus {
+#welcome .btn:hover,
+#welcome .btn:focus,
+#welcome .btn:active:focus {
     background-color: #fd367e;
     border-color: #fd367e;
     color: #fff;
@@ -876,7 +925,8 @@ button:focus, .btn:focus, .btn:active:focus {
     -webkit-animation: social-show 1s;
 }
 
-#social a:hover, #social a:active {
+#social a:hover,
+#social a:active {
     color: #fd367e;
     border: 2px #fd367e solid;
 }
@@ -904,7 +954,6 @@ button:focus, .btn:focus, .btn:active:focus {
     -webkit-animation: social-show 0.8s;
 }
 
-
 #section-partner .section-margin {
     text-align: center;
     height: 20rem;
@@ -929,7 +978,9 @@ span.typed-cursor {
     }
 }
 
-.nav-pills>li>a, .nav-pills>li>a:focus, .nav-pills>li>a:hover {
+.nav-pills>li>a,
+.nav-pills>li>a:focus,
+.nav-pills>li>a:hover {
     color: #fff;
     background-color: #dee4ef;
     color: #274175;
@@ -939,7 +990,9 @@ span.typed-cursor {
     margin: 2rem 1rem -4rem 1rem;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
     color: #fff;
     font-weight: 300;
     background: #fff;
@@ -986,7 +1039,9 @@ span.typed-cursor {
 }
 
 @media (max-width: 550px) {
-    .nav-pills>li>a, .nav-pills>li>a:focus, .nav-pills>li>a:hover {
+    .nav-pills>li>a,
+    .nav-pills>li>a:focus,
+    .nav-pills>li>a:hover {
         margin: 0 0 -4rem 0;
     }
     #welcome {
@@ -1012,4 +1067,8 @@ span.typed-cursor {
         width: 100%;
         height: 5.4rem;
     }
+}
+
+.asterisk {
+    font-size: 13px;
 }
