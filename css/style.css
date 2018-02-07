@@ -448,7 +448,7 @@ button:focus,
  *---------------------------*/
 
 .section-title {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -646,6 +646,10 @@ button:focus,
 
 .pricing-section .pricing-detail .pink-i li {
     position: relative;
+}
+
+.list-group-item {
+    background-color: #f9f9f9e6;
 }
 
 
@@ -1066,6 +1070,10 @@ span.typed-cursor {
 
 .asterisk {
     font-size: 13px;
+}
+
+.list-group {
+    margin-bottom: 0%;
 }
 
 .gold {
