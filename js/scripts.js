@@ -67,8 +67,8 @@ jQuery(function ($) {
             } else if (tier == 5) {
                 tierCost = 10000;
             }
-            $('#paybutton a').attr("href", "https://secure.paguelofacil.com/LinkDeamon.cfm?CCLW=162E2ADFB272EBA51406E660339F14A45218153B4197EAAE9682425D860CB1D2&CMTN="+
-            number * tierCost + "&CDSC=Number-" + number + "_Tier-" + tier);
+            $('#paybutton a').attr("href", "https://secure.paguelofacil.com/LinkDeamon.cfm?CCLW=162E2ADFB272EBA51406E660339F14A45218153B4197EAAE9682425D860CB1D2&CMTN=" +
+                number * tierCost + "&CDSC=Number-" + number + "_Tier-" + tier);
         }
         generate();
 
@@ -79,7 +79,7 @@ jQuery(function ($) {
         $('#ticketTier').on('change', function () {
             generate();
         });
-        
+
     }());
 
     // --------------------------------------------------------------------
@@ -87,29 +87,29 @@ jQuery(function ($) {
     // --------------------------------------------------------------------
 
     (function () {
+        //google map custom marker icon
+        var $marker_url = 'img/google-map-marker.png';
+
+        //we define here the style of the map
+        var style = [{
+            "stylers": [{
+                "hue": "#000"
+            }, {
+                "saturation": 100
+            }, {
+                "gamma": 1.15
+            }, {
+                "lightness": 5
+            }]
+        }];
+
         if ($('#googleMap').length > 0) {
 
             //set your google maps parameters
-            var $latitude = 9.002099, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
-                $longitude = -79.582579,
+            var $latitude = 8.9936856, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
+                $longitude = -79.5830599,
                 $map_zoom = 14;
             /* ZOOM SETTING */
-
-            //google map custom marker icon
-            var $marker_url = 'img/google-map-marker.png';
-
-            //we define here the style of the map
-            var style = [{
-                "stylers": [{
-                    "hue": "#000"
-                }, {
-                    "saturation": 100
-                }, {
-                    "gamma": 1.15
-                }, {
-                    "lightness": 5
-                }]
-            }];
 
             //set google map options
             var map_options = {
@@ -133,6 +133,39 @@ jQuery(function ($) {
                 icon: $marker_url
             });
         }
+
+
+        if ($('#googleMap2').length > 0) {
+
+            //set your google maps parameters
+            var $latitude2 = 9.002099, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
+                $longitude2 = -79.582579,
+                $map_zoom2 = 14;
+            /* ZOOM SETTING */
+
+            //set google map options
+            var map_options2 = {
+                center: new google.maps.LatLng($latitude2, $longitude2),
+                zoom: $map_zoom2,
+                panControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                streetViewControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                styles: style,
+            }
+            //initialize the map
+            var map2 = new google.maps.Map(document.getElementById('googleMap2'), map_options2);
+            //add a custom marker to the map
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng($latitude2, $longitude2),
+                map: map2,
+                visible: true,
+                icon: $marker_url
+            });
+        }
+
     }());
 }); // JQuery end
 

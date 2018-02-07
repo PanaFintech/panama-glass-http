@@ -701,10 +701,10 @@ button:focus,
  * Google Map
  * ------------------*/
 
-#googleMap {
+#googleMap, #googleMap2 {
     height: 320px;
     border: 5px solid #ffffff;
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
 }
 
 
@@ -714,6 +714,7 @@ button:focus,
 
 .subscribe-form {
     text-align: center;
+    margin-top: 7rem;
 }
 
 
