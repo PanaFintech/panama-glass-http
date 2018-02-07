@@ -452,10 +452,6 @@ button:focus,
     text-align: center;
 }
 
-.section-title h1 {
-    margin-bottom: 5px;
-}
-
 .section-title p {
     font-size: 18px;
     color: #888888;
@@ -551,28 +547,28 @@ button:focus,
  * Agenda
  *---------------------------*/
 
-.section-ajenda .session {
+.section-agenda .session {
     padding: 15px 0;
     border-left: 1px solid #eeeeee;
     margin-bottom: 40px;
 }
 
-.section-ajenda .session time {
+.section-agenda .session time {
     padding: 5px 25px 15px;
     border-bottom: 1px solid #eeeeee;
     display: inline-block;
 }
 
-.section-ajenda .session h2 {
+.section-agenda .session h2 {
     margin: 20px 0 0 20px;
 }
 
-.section-ajenda .session h3 {
+.section-agenda .session h3 {
     margin: 20px 0 20px 20px;
     text-transform: uppercase;
 }
 
-.section-ajenda .session h3 span {
+.section-agenda .session h3 span {
     font-size: 14px;
     display: block;
     line-height: 1;
@@ -658,13 +654,12 @@ button:focus,
  *---------------------------*/
 
 .client-logo a img {
-    width: 100%;
     opacity: 1;
     -webkit-transition: all 0.8s ease 0s;
     -moz-transition: all 0.8s ease 0s;
     -o-transition: all 0.8s ease 0s;
     transition: all 0.8s ease 0s;
-    max-width: 15rem;
+    width: 100%;
 }
 
 .client-logo a:hover img {
@@ -1071,4 +1066,54 @@ span.typed-cursor {
 
 .asterisk {
     font-size: 13px;
+}
+
+.gold {
+    width: 100%;
+    display: inline-block;
+}
+
+.golditem {
+    text-align: center;
+    width: 20%;
+    margin: 0% 5% 4% 9%;
+    display: inline-block;
+}
+
+.guld {
+    width: 19.5%;
+}
+
+.silver {
+    width: 100%;
+    display: inline-block;
+}
+
+.silveritem {
+    text-align: center;
+    width: 10.5%;
+    margin: 1% 4%;
+    display: inline-block;
+}
+
+.social200logo {
+    width: 7%;
+}
+
+.blockchain {
+    widows: 13.5%;
+}
+
+.bronze {
+    width: 100%;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 0%;
+}
+
+.bronzeitem {
+    text-align: center;
+    width: 10%;
+    margin: 2% 10% 0% 10%;
+    display: inline-block;
 }
