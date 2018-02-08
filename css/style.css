@@ -225,7 +225,6 @@ button:focus,
 #main-wrapper {
     background: #ffffff;
     overflow: hidden;
-    margin-top: -1rem;
 }
 
 
@@ -234,10 +233,11 @@ button:focus,
  *-------------------------------*/
 
 .header {
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 9;
+    overflow: hidden;
 }
 
 
@@ -461,8 +461,6 @@ button:focus,
 .btnGlass {
     background-color: #68abbe;
     padding: 1% 0%;
-    margin-top: -2.8rem;
-    margin-bottom: -2.8rem;
 }
 
 #section-intro svg {
@@ -481,6 +479,9 @@ button:focus,
 
 .letterbtn {
     color: #fff;
+    position: absolute;
+    width: 100%;
+    padding: 0;
 }
 
 
@@ -837,6 +838,8 @@ button:focus,
 #background {
     width: 100%;
     object-fit: cover;
+    display: block;
+    position: absolute;
 }
 
 #welcome {

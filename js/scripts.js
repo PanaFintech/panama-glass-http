@@ -184,11 +184,16 @@ var typed3 = new Typed('#text', {
 $(document).ready(function () {
     $(window).resize(function () {
         var height = $(window).height();
-        var video = $('#background').height();
-        var welcome = $('#welcome').height();
+        var video = $('#background').outerHeight();
+        var welcome = $('#welcome').outerHeight();
+        var heightWOButton = height - $('#btnpresentation section').outerHeight();
 
-        if (video >= (height + $('#btnpresentation').height())) {
-            video = height - $('#btnpresentation').height() - 44;
+        console.log(height);
+        console.log(video);
+        console.log(heightWOButton);
+
+        if (video >= (height - heightWOButton)) {
+            video = heightWOButton;
             $('#background').height(video);
         }
 
@@ -201,7 +206,7 @@ $(document).ready(function () {
 
         $('#welcome').css("padding-top", off_top + "px");
 
-        $(".header").height($("#background").height() -  $('#btnpresentation').height());
+        $(".header").height(heightWOButton);
     });
     $(window).resize();
 });
