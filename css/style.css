@@ -104,7 +104,7 @@ h6 {
  *------------------------------------------*/
 
 a {
-    color: #fd367e;
+    color: #ffffff;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -225,6 +225,7 @@ button:focus,
 #main-wrapper {
     background: #ffffff;
     overflow: hidden;
+    margin-top: -0.8rem;
 }
 
 
@@ -455,6 +456,25 @@ button:focus,
 .section-title p {
     font-size: 18px;
     color: #888888;
+}
+
+.btnGlass {
+    background-color: #fd367e;
+    padding: 1% 0%;
+    margin-top: -2.8rem;
+}
+
+#section-intro svg {
+    margin-right: 1rem;
+}
+
+#section-intro:hover {
+    opacity: 0.8;
+}
+
+#btnpresentation:hover,
+#btnpresentation:active {
+    color: #6b1535;
 }
 
 
