@@ -225,7 +225,6 @@ button:focus,
 #main-wrapper {
     background: #ffffff;
     overflow: hidden;
-    margin-top: -0.8rem;
 }
 
 
@@ -234,10 +233,11 @@ button:focus,
  *-------------------------------*/
 
 .header {
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 9;
+    overflow: hidden;
 }
 
 
@@ -458,10 +458,9 @@ button:focus,
     color: #888888;
 }
 
-.btnGlass {
+#section-btn {
     background-color: #68abbe;
     padding: 1% 0%;
-    margin-top: -2.8rem;
 }
 
 #section-intro svg {
@@ -480,6 +479,9 @@ button:focus,
 
 .letterbtn {
     color: #fff;
+    position: absolute;
+    width: 100%;
+    padding: 0;
 }
 
 
@@ -835,6 +837,9 @@ button:focus,
 
 #background {
     width: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
 }
 
 #welcome {
@@ -1053,8 +1058,8 @@ span.typed-cursor {
     .container {
         width: 100%;
     }
-    section {
-        padding: 40px 0 !important;
+    .section-wrapper {
+        padding: 40px 0;
     }
 }
 
@@ -1093,6 +1098,10 @@ span.typed-cursor {
         width: 100%;
         height: 5.4rem;
     }
+}
+
+.description {
+    padding-top: 6rem;
 }
 
 .asterisk {
@@ -1149,6 +1158,6 @@ span.typed-cursor {
 .bronzeitem {
     text-align: center;
     width: 10%;
-    margin: 2% 10% 0% 10%;
+    margin: 2% 3% 0% 3%;
     display: inline-block;
 }

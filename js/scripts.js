@@ -183,8 +183,19 @@ var typed3 = new Typed('#text', {
 
 $(document).ready(function () {
     $(window).resize(function () {
-        var video = $('#background').height();
-        var welcome = $('#welcome').height();
+        var height = $(window).height();
+        var video = $('#background').outerHeight();
+        var welcome = $('#welcome').outerHeight();
+        var heightWOButton = height - $('#btnpresentation section').outerHeight();
+
+        console.log(height);
+        console.log(video);
+        console.log(heightWOButton);
+
+        if (video >= (height - heightWOButton)) {
+            video = heightWOButton;
+            $('#background').height(video);
+        }
 
         var free_space = video - (welcome + 62);
         free_space = free_space - (free_space * 0.1) // 0.1 of adjust to top
@@ -195,7 +206,7 @@ $(document).ready(function () {
 
         $('#welcome').css("padding-top", off_top + "px");
 
-        $(".header").height($("#background").height());
+        $(".header").height(heightWOButton);
     });
     $(window).resize();
 });
