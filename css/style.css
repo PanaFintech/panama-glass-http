@@ -458,7 +458,7 @@ button:focus,
     color: #888888;
 }
 
-.btnGlass {
+#section-btn {
     background-color: #68abbe;
     padding: 1% 0%;
 }
@@ -1058,8 +1058,8 @@ span.typed-cursor {
     .container {
         width: 100%;
     }
-    section {
-        padding: 40px 0 !important;
+    .section-wrapper {
+        padding: 40px 0;
     }
 }
 
@@ -1098,6 +1098,10 @@ span.typed-cursor {
         width: 100%;
         height: 5.4rem;
     }
+}
+
+.description {
+    padding-top: 6rem;
 }
 
 .asterisk {
