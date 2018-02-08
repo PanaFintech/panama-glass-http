@@ -104,7 +104,7 @@ h6 {
  *------------------------------------------*/
 
 a {
-    color: #ffffff;
+    color: #fd367e;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -459,7 +459,7 @@ button:focus,
 }
 
 .btnGlass {
-    background-color: #fd367e;
+    background-color: #68abbe;
     padding: 1% 0%;
     margin-top: -2.8rem;
 }
@@ -468,13 +468,18 @@ button:focus,
     margin-right: 1rem;
 }
 
-#section-intro:hover {
-    opacity: 0.8;
+#section-btn:hover {
+    background-color: #fd367e;
+    ;
 }
 
 #btnpresentation:hover,
 #btnpresentation:active {
-    color: #6b1535;
+    color: #ffffff;
+}
+
+.letterbtn {
+    color: #fff;
 }
 
 
@@ -701,7 +706,8 @@ button:focus,
  * Google Map
  * ------------------*/
 
-#googleMap, #googleMap2 {
+#googleMap,
+#googleMap2 {
     height: 320px;
     border: 5px solid #ffffff;
     margin-bottom: 2rem;
