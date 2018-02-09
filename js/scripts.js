@@ -50,13 +50,15 @@ jQuery(function ($) {
         });
     }());
 
-    // --------------------------------------------------------------------
+     // --------------------------------------------------------------------
     // Tickets calculator
     // --------------------------------------------------------------------
     (function () {
         function generate() {
             var number = $('#ticketNumber').val();
             var tier = $('#ticketTier').val();
+            var fname = $('#cardHolder').val();
+            
             var tierCost = 300;
             if (tier == 2) {
                 tierCost = 1500;
@@ -67,10 +69,37 @@ jQuery(function ($) {
             } else if (tier == 5) {
                 tierCost = 10000;
             }
-            $('#paybutton a').attr("href", "https://secure.paguelofacil.com/LinkDeamon.cfm?CCLW=162E2ADFB272EBA51406E660339F14A45218153B4197EAAE9682425D860CB1D2&CMTN=" +
-                number * tierCost + "&CDSC=Number-" + number + "_Tier-" + tier);
-        }
+
+            var tot = number * tierCost;
+            $('#Amount').val(tot + ".00");
+
+            var modName = fname.replace(/\s/g, '');
+            $('#cardHolder').val(modName);
+
+            /*hide submit button if required fields are empty
+            $('#cardHolder, #eamil, #cardNumber, #expiration, #cvv2').keyup(function(){
+                if($('#cardHolder').val().length < 1){
+                    $('#paybutton').attr('disabled', true);
+                }
+                else if($('#email').val().length < 1){
+                    $('#paybutton').attr('disabled', true);
+                }
+                else if($('#cardNumber').val().length < 1){
+                    $('#paybutton').attr('disabled', true);
+                }
+                else if($('#expiration').val().length < 1){
+                    $('#paybutton').attr('disabled', true);
+                }
+                else if($('#cvv2').val().length < 1 ){
+                    $('#paybutton').attr('disabled', true);
+                }
+                else{
+                    $('#paybutton').attr('disabled', false);    
+                }
+            })*/
+        } 
         generate();
+
 
         $('#ticketNumber').on('change', function () {
             generate();
@@ -80,8 +109,26 @@ jQuery(function ($) {
             generate();
         });
 
-    }());
+        $('#cardHolder').on('change', function () {
+            generate();
+        });
+        $('#email').on('change', function () {
+            generate();
+        });
 
+        $('#cardNumber').on('change', function () {
+            generate();
+        });
+
+        $('#expiration').on('change', function () {
+            generate();
+        });
+
+        $('#cvv2').on('change', function () {
+            generate();
+        });
+
+    }());
     // --------------------------------------------------------------------
     // Google Map
     // --------------------------------------------------------------------
