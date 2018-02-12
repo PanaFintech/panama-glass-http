@@ -288,7 +288,7 @@ button:focus,
 }
 
 .navbar-toggle .icon-bar {
-    background: #fff;
+    background: #333;
 }
 
 .internal-nav {
