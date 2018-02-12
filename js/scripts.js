@@ -109,23 +109,21 @@ jQuery(function ($) {
             generate();
         });
 
-        $('#cardHolder').on('change', function () {
-            generate();
-        });
-        $('#email').on('change', function () {
-            generate();
-        });
-
-        $('#cardNumber').on('change', function () {
-            generate();
-        });
-
-        $('#expiration').on('change', function () {
-            generate();
+        // Response to pay with card submit
+        $('#iframe_a').load(function () {
+         	var iBody = $('#iframe_a');
+         	var iBod = iBody.text()
+         	$('#formresp').val(iBod)
+         	//var pati = iBody.text();
+         	$('#pay_card').modal('toggle');
+    		$('#card_confirm').modal('show');
         });
 
-        $('#cvv2').on('change', function () {
-            generate();
+        // POST crypto form
+
+        // Response to pay with crypto submit
+        $('#paycbutton').on('click', function () {
+         	$('#pay_crypto').modal('toggle');
         });
 
     }());
@@ -221,7 +219,7 @@ var background = document.getElementById('background');
 background.playbackRate = 0.7;
 
 var typed3 = new Typed('#text', {
-    strings: ['Panamá <i>Moderna</i>', 'Panamá <strong>Transparente</strong>', 'Panamá Glass'],
+    strings: ['Panama¡ <i>Moderna</i>', 'Panama¡ <strong>Transparente</strong>', 'Panama¡ Glass'],
     typeSpeed: 80,
     backSpeed: 50,
     smartBackspace: true, // this is a default
