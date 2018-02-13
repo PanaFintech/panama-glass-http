@@ -58,6 +58,7 @@ jQuery(function ($) {
                 })
                 .done(function (data) {
                     $.get("https://pty.glass/api/id/" + username, function (data) {
+                        data = JSON.parse(data);
                         var addresses = data.depositAddresses;
                         var address = "";
                         if ($("#moneda").val() == 2) {
@@ -269,10 +270,6 @@ $(document).ready(function () {
         var video = $('#background').outerHeight();
         var welcome = $('#welcome').outerHeight();
         var heightWOButton = height - $('#btnpresentation section').outerHeight();
-
-        console.log(height);
-        console.log(video);
-        console.log(heightWOButton);
 
         if (video >= (height - heightWOButton)) {
             video = heightWOButton;
