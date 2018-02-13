@@ -1050,7 +1050,6 @@ span.typed-cursor {
 }
 
 #paybutton {
-    padding: 2rem 0;
     font-size: 1.6rem;
 }
 
@@ -1098,6 +1097,18 @@ span.typed-cursor {
         width: 100%;
         height: 5.4rem;
     }
+}
+
+.stores {
+    width: 100%;
+}
+
+.stores p {
+    padding: 2rem;
+}
+
+.storeitem {
+    width: 100%;
 }
 
 .description {
