@@ -58,7 +58,14 @@ jQuery(function ($) {
                 })
                 .done(function (data) {
                     $.get("https://pty.glass/api/id/" + username, function (data) {
-                        $("#qrcodeCanvas").html(data);
+                        var addresses = data.depositAddresses;
+                        var address = "";
+                        if ($("#moneda").val() == 2) {
+                            address = Object.keys(addresses.DASH)[0]
+                        } else {
+                            address = Object.keys(addresses.BTC)[0]
+                        }
+                        new QRCode(document.getElementById("qrcodeCanvas"), address);
                         $("#pay_crypto .step2").show();
                     });
                 });
