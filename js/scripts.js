@@ -38,6 +38,40 @@ jQuery(function ($) {
         });
     }());
 
+    (function () {
+        $('#cryptoregister').on('click', function (e) {
+            e.preventDefault();
+            var username = $("#username").val();
+            var commodity = "BTC";
+            if ($("#moneda").val() == 2) {
+                commodity = "DASH";
+            }
+            /* else if ($("#moneda").val() == 3) {
+                commodity = "guld";
+            }*/
+            $("#pay_crypto .step1").hide();
+            $.post("https://pty.glass/api/register", {
+                    username: username,
+                    commodity: commodity,
+                    email: $("#email").val(),
+                    fullname: $("#cardHolder").val()
+                })
+                .done(function (data) {
+                    $.get("https://pty.glass/api/id/" + username, function (data) {
+                        var addresses = data.depositAddresses;
+                        var address = "";
+                        if ($("#moneda").val() == 2) {
+                            address = Object.keys(addresses.DASH)[0]
+                        } else {
+                            address = Object.keys(addresses.BTC)[0]
+                        }
+                        new QRCode(document.getElementById("qrcodeCanvas"), address);
+                        $("#pay_crypto .step2").show();
+                    });
+                });
+        });
+    }());
+
     // --------------------------------------------------------------------
     // Closes the Responsive Menu on Menu Item Click
     // --------------------------------------------------------------------
@@ -110,23 +144,23 @@ jQuery(function ($) {
 
         // Response to pay with card submit
         $('#iframe_a').load(function () {
-         	var iBody = $('#iframe_a');
-         	var iBod = iBody.text()
-         	$('#formresp').val(iBod)
-         	//var pati = iBody.text();
-         	$('#pay_card').modal('toggle');
-    		$('#card_confirm').modal('show');
+            var iBody = $('#iframe_a');
+            var iBod = iBody.text()
+            $('#formresp').val(iBod)
+            //var pati = iBody.text();
+            $('#pay_card').modal('toggle');
+            $('#card_confirm').modal('show');
         });
 
         // POST crypto form
 
         // Response to pay with crypto submit
         $('#paycbutton').on('click', function () {
-	        $('#pay_crypto').modal('toggle');
-					$('#qrcodeCanvas').qrcode({
-						text	: "http://jetienne.com"
-					});
-					$('#paycbutton').attr('disabled', true);
+            $('#pay_crypto').modal('toggle');
+            $('#qrcodeCanvas').qrcode({
+                text: "http://jetienne.com"
+            });
+            $('#paycbutton').attr('disabled', true);
         });
 
     }());
