@@ -288,7 +288,7 @@ button:focus,
 }
 
 .navbar-toggle .icon-bar {
-    background: #fff;
+    background: #333;
 }
 
 .internal-nav {
@@ -1105,11 +1105,54 @@ span.typed-cursor {
 }
 
 .stores p {
-    padding: 2rem;
+    padding: 0 0 0.2 0rem;
+}
+
+.socialstore a {
+    display: inline-block;
 }
 
 .storeitem {
     width: 100%;
+    margin-top: 0.6rem;
+}
+
+.socialItem li {
+    display: inline-block;
+}
+
+.socialItem li a {
+    display: inline-block;
+    margin-top: 0rem;
+    text-align: center;
+    color: #68abbe;
+}
+
+.socialItem li a:hover {
+    color: #fd367e;
+}
+
+.namestore {
+    font-weight: 400;
+    margin: 0%;
+}
+
+.directionstore {
+    color: #99a0ad;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.infostore {
+    color: #99a0ad;
+    font-size: 1.2rem;
+    line-height: 0.2rem;
+    margin-left: 1rem;
+}
+
+.infostore p {
+    color: #fff;
 }
 
 .description {
