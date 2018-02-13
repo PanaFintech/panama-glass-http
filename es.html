@@ -13,7 +13,7 @@
 
     <!-- web-fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
-    
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -41,9 +41,10 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 
     <div id="framediv">
-    </div> 
+    </div>
     <!-- MODAL PAY FIAT -->
-    <div id="pay_fiat" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_fiat_label" style="display: none;" aria-hidden="true">
+    <div id="pay_fiat" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_fiat_label" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -194,8 +195,9 @@
         </div>
     </div>
 
-     <!-- MODAL CONFIRM CREDIT CARD PAYMENT-->
-     <div id="card_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
+    <!-- MODAL CONFIRM CREDIT CARD PAYMENT-->
+    <div id="card_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -209,16 +211,17 @@
                         <iframe height="150px" width="100%" src="" style="border:none" name="iframe_a" id="iframe_a">
                         </iframe>
                         <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">OK</span>
+                            <span aria-hidden="true">OK</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>            
+    </div>
 
     <!-- MODAL FORM PAY CREDIT CARD-->
-     <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
+    <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -228,7 +231,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="cardForm" action="http://gatewaysandbox.merchantprocess.net/transaction.aspx?" method="POST" autocomplete="off" target="iframe_a">
+                    <form id="cardForm" action="http://gatewaysandbox.merchantprocess.net/transaction.aspx?" method="POST" autocomplete="off"
+                        target="iframe_a">
                         <input type="hidden" name="AccCode" value="32.00">
                         <input type="hidden" name="procCode" value="000000">
                         <input type="hidden" name="merchant" value="104886">
@@ -286,7 +290,8 @@
                             <div class="col-sm-4">
                                 <label for="cardNumber">Numero de Tarjeta</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
+                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
@@ -337,7 +342,7 @@
                             <div class="col-sm-2 text-center">
                                 <input class="btn btn-success" type="submit" value="Pagar" align="right">
                             </div>
-                        </div>              
+                        </div>
                     </form>
                 </div>
             </div>
@@ -346,7 +351,8 @@
     <div id="output"></div>
 
     <!-- MODAL FOR CONFIRM QR CODE-->
-    <div id="crypto_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
+    <div id="crypto_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -357,15 +363,16 @@
                 </div>
                 <div class="modal-body">
                     <div>
-                       <div id="qrcodeCanvas"></div>
+                        <div id="qrcodeCanvas"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>            
+    </div>
 
-     <!-- MODAL FORM PAY CRYPTO-->
-     <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
+    <!-- MODAL FORM PAY CRYPTO-->
+    <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -421,11 +428,11 @@
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                            <label for="cardHolder">Nombre de Usuario</label>
-                            <div class="col-10">
-                                <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                <label for="cardHolder">Nombre de Usuario</label>
+                                <div class="col-10">
+                                    <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                </div>
                             </div>
-                        </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
@@ -440,24 +447,24 @@
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="email" placeholder="john@mail.com" required>
                                 </div>
-                            </div>          
+                            </div>
                         </div>
                         <div class="row"></div>
                         <label></label>
                         <div class="row">
                             <div class="col-sm-2">
-                            <h3>Total USD:</h3>
+                                <h3>Total USD:</h3>
                                 <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
-                            </div>    
+                            </div>
                             <div class="col-sm-2">
-                            <h3>Total Crypto:</h3>
+                                <h3>Total Crypto:</h3>
                                 <input class="form-control form-control-lg" type="text" name="amount" id="Cmount" readonly>
                             </div>
                             <div class="col-sm-5"></div>
                             <div class="col-sm-2 text-center">
-                            <label></label>
+                                <label></label>
                                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#crypto_confirm" id="paycbutton">
-                                Pagar
+                                    Pagar
                                 </a>
                             </div>
                         </div>
@@ -467,8 +474,9 @@
         </div>
     </div>
 
-     <!-- MODAL FORM PAY CRYPTO-->
-     <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
+    <!-- MODAL FORM PAY CRYPTO-->
+    <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -524,11 +532,11 @@
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                            <label for="cardHolder">Nombre de Usuario</label>
-                            <div class="col-10">
-                                <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                <label for="cardHolder">Nombre de Usuario</label>
+                                <div class="col-10">
+                                    <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                </div>
                             </div>
-                        </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
@@ -549,18 +557,18 @@
                         <label></label>
                         <div class="row">
                             <div class="col-sm-2">
-                            <h3>Total USD:</h3>
+                                <h3>Total USD:</h3>
                                 <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
                             </div>
                             <div class="col-sm-2">
-                            <h3>Total Crypto:</h3>
+                                <h3>Total Crypto:</h3>
                                 <input class="form-control form-control-lg" type="text" name="amount" id="Cmount" readonly>
                             </div>
                             <div class="col-sm-5"></div>
                             <div class="col-sm-2 text-center">
-                            <label></label>
+                                <label></label>
                                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#crypto_confirm" id="paycbutton">
-                                Pagar
+                                    Pagar
                                 </a>
                             </div>
                         </div>
@@ -578,8 +586,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="pay_card_label">Stores</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -831,11 +839,13 @@
                 <div id="text"></div>
                 <div class="lead">Un discurso público sobre la modernización y la transparencia del sistema financiero de Panamá.</div>
                 <div id="buy">
+                    <!--
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_crypto">
                         COMPRA BOLETOS
                         <div>con Crypto</div>
                     </a>
-                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
+                    -->
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#at_stores">
                         COMPRA BOLETOS
                         <div>en tienda</div>
                         <!--
@@ -1285,7 +1295,8 @@
                                         <a href="mailto:someone@example.com">ptyglass@gmail.com</a> o por git
                                         <a target="_blank" href="https://github.com/PanaFintech/panama-glass">https://github.com/PanaFintech/panama-glass</a> a más tardar a la medianoche del
                                         12 de Febrero de 2018. No se aceptarán otros formatos, incluyendo PDF o Microsoft
-                                        Word.</p>
+                                        Word.
+                                    </p>
                                 </li>
                                 <li>
                                     <p>Incluya su nombre, número de cédula, y correo electrónico arriba del ensayo. Una foto
@@ -1299,15 +1310,15 @@
                                         principales que usted piensa que se producen debido a la falta de transparencia y
                                         corrupción en Panamá. b. En el segundo párrafo, describa como usted cree que la tecnología
                                         puede mejorar la trasparencia y disminuir la corrupción en Panamá para resolver estos
-                                        problemas.</p>
+                                        problemas.
+                                    </p>
                                 </li>
                                 <li>
                                     <p>Todos los estudiantes que envíen un ensayo al concurso recibirán una invitación personal
                                         a un evento gratuito de networking con un invitado en la
                                         <a target="_blank" href="https://www.embassypty.com/es/">Blockchain Embassy</a> en la Avenida Balboa., que incluye una presentación de
-                                        <a
-                                            target="_blank" href="https://iramiller.com/">Ira Miller</a>. Las invitaciones con los detalles sobre el evento se enviarán con
-                                            la recepción del correo.</p>
+                                        <a target="_blank" href="https://iramiller.com/">Ira Miller</a>. Las invitaciones con los detalles sobre el evento se enviarán con
+                                        la recepción del correo.</p>
                                 </li>
                                 <li>
                                     <p>Un comité leerá los ensayos y escogerá los ganadores. El comité considerará: a. El estilo
@@ -1337,10 +1348,9 @@
                                 <li>
                                     <p>Los ensayos se enviarán por correo electrónico a
                                         <a href="mailto:someone@example.com">
-                                        ptyglass@gmail.com </a> o por Git a
+                                            ptyglass@gmail.com </a> o por Git a
                                         <a target="_blank" href="https://github.com/PanaFintech/panama-glass">https://github.com/PanaFintech/panama-glass</a>. La guia sobre la
-                                        <a target="_blank"
-                                            href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">solicitud de integración (pull request) se encuentra aquí</a>
+                                        <a target="_blank" href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">solicitud de integración (pull request) se encuentra aquí</a>
                                     </p>
                                 </li>
                             </ol>
@@ -1381,7 +1391,8 @@
                                 </li>
                                 <li>
                                     <p>Contacto directo con expertos en Cadenas de bloques, Contrato inteligente y transparencia
-                                        tecnológica.</p>
+                                        tecnológica.
+                                    </p>
                                 </li>
                             </ol>
                             <p>
@@ -1550,14 +1561,20 @@
                         <div class="session">
                             <time>9:00AM</time>
                             <h2>Comentarios de iniciando</h2>
-                            <h3>Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
+                            <h3>Ira Miller
+                                <span>
+                                    <a target="_blank" href="https://guld.io">guld</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>9:30 - 10:30AM</time>
                             <h2>Dirección del Estado de Panamá</h2>
-                            <h3>Adolfo Linares <span></span></h3>
+                            <h3>Adolfo Linares
+                                <span></span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
@@ -1571,9 +1588,22 @@
                             <time>11:00 - 12:00AM</time>
                             <h2>Invertir en blockchain</h2>
                             <h4>Una Perspectiva Legal, Financiera y Mediática</h4>
-                            <h3><span style="font-style: bold;">Moderador:</span> Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
-                            <h3>Giuseppe Cicatelli <span><a target="_blank" href="http://300eholdings.com">300E</a></span></h3>
-                            <h3>Randy Hilarski <span><a target="_blank" href="https://www.facebook.com/Token-Magic-369496630154896/">Token Magic</a></span></h3>
+                            <h3>
+                                <span style="font-style: bold;">Moderador:</span> Ira Miller
+                                <span>
+                                    <a target="_blank" href="https://guld.io">guld</a>
+                                </span>
+                            </h3>
+                            <h3>Giuseppe Cicatelli
+                                <span>
+                                    <a target="_blank" href="http://300eholdings.com">300E</a>
+                                </span>
+                            </h3>
+                            <h3>Randy Hilarski
+                                <span>
+                                    <a target="_blank" href="https://www.facebook.com/Token-Magic-369496630154896/">Token Magic</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
                     </div>
@@ -1586,24 +1616,49 @@
                         <div class="session">
                             <time>1:00PM</time>
                             <h2>Digital Dollar</h2>
-                            <h3>Gabriel Abed <span><a target="_blank" href="http://bitt.com">Bitt</a></span></h3>
+                            <h3>Gabriel Abed
+                                <span>
+                                    <a target="_blank" href="http://bitt.com">Bitt</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>1:30PM</time>
                             <h2>Blockchain Law Intro</h2>
-                            <h3>Adella Toulon <span><a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a></span></h3>
+                            <h3>Adella Toulon
+                                <span>
+                                    <a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>2:00 - 3:00PM</time>
                             <h2>Digital Balboa Panel</h2>
-                            <h3><span style="font-style: bold;">Moderador:</span> Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
-                            <h3>Gabriel Abed <span><a target="_blank" href="http://bitt.com">Bitt</a></span></h3>
-                            <h3>Aldo Antinori <span><a target="_blank" href="http://pty.glass/docs/balboa-coin.html">Balboa Coin Whitepaper</a></span></h3>
-                            <h3>Jorge Farias <span><a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a></span></h3>
+                            <h3>
+                                <span style="font-style: bold;">Moderador:</span> Ira Miller
+                                <span>
+                                    <a target="_blank" href="https://guld.io">guld</a>
+                                </span>
+                            </h3>
+                            <h3>Gabriel Abed
+                                <span>
+                                    <a target="_blank" href="http://bitt.com">Bitt</a>
+                                </span>
+                            </h3>
+                            <h3>Aldo Antinori
+                                <span>
+                                    <a target="_blank" href="http://pty.glass/docs/balboa-coin.html">Balboa Coin Whitepaper</a>
+                                </span>
+                            </h3>
+                            <h3>Jorge Farias
+                                <span>
+                                    <a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
                     </div>
@@ -1617,21 +1672,33 @@
                         <div class="session">
                             <time>3:30PM</time>
                             <h2>Steem and Local Community</h2>
-                            <h3>Anabell Hilarski <span><a target="_blank" href="http://200social.com/">200 Social</a></span></h3>
+                            <h3>Anabell Hilarski
+                                <span>
+                                    <a target="_blank" href="http://200social.com/">200 Social</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>4:00PM</time>
                             <h2>Academy</h2>
-                            <h3>Jason King <span><a target="_blank" href="http://academytoken.com/">Academy</a></span></h3>
+                            <h3>Jason King
+                                <span>
+                                    <a target="_blank" href="http://academytoken.com/">Academy</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>4:30PM</time>
                             <h2>Soluciones Blockchain para la Corrupción</h2>
-                            <h3>Alejandro Palomar <span><a target="_blank" href="http://www.blockchain360solutions.com">Blockchain 360 solutions</a></span></h3>
+                            <h3>Alejandro Palomar
+                                <span>
+                                    <a target="_blank" href="http://www.blockchain360solutions.com">Blockchain 360 solutions</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
                     </div>
@@ -1653,21 +1720,33 @@
                         <div class="session">
                             <time>9:00AM</time>
                             <h2>Panama Blockchain Embajada</h2>
-                            <h3>Jorge Farias <span><a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a></span></h3>
+                            <h3>Jorge Farias
+                                <span>
+                                    <a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>9:30AM</time>
                             <h2>Privacidad en la Era Digital</h2>
-                            <h3>Cindy Zimmerman <span><a target="_blank" href="https://tigoctm.com">TigoCTM</a></span></h3>
+                            <h3>Cindy Zimmerman
+                                <span>
+                                    <a target="_blank" href="https://tigoctm.com">TigoCTM</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>10:00AM</time>
                             <h2>100 Dias de Transparencia</h2>
-                            <h3>Tomer Avital <span><a target="_blank" href="https://shkifut.info/english/">100 Days of Transparency</a></span></h3>
+                            <h3>Tomer Avital
+                                <span>
+                                    <a target="_blank" href="https://shkifut.info/english/">100 Days of Transparency</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
@@ -1680,10 +1759,27 @@
                         <div class="session">
                             <time>11:00 - 12:00AM</time>
                             <h2>Modernización de la Ley y los Títulos</h2>
-                            <h3><span style="font-style: bold;">Moderador:</span> Felipe Echandi <span><a target="_blank" href="https://panafintech.com">PanaFintech</a></span></h3>
-                            <h3>Adella Toulon <span><a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a></span></h3>
-                            <h3>Virginia Laniado <span><a target="_blank" href="http://www.motta-int.com">Motta International Group</a></span></h3>
-                            <h3>Gonzalo De La Guardia <span><a target="_blank" href="http://denfablaw.com">DENFAB Law Group</a></span></h3>
+                            <h3>
+                                <span style="font-style: bold;">Moderador:</span> Felipe Echandi
+                                <span>
+                                    <a target="_blank" href="https://panafintech.com">PanaFintech</a>
+                                </span>
+                            </h3>
+                            <h3>Adella Toulon
+                                <span>
+                                    <a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a>
+                                </span>
+                            </h3>
+                            <h3>Virginia Laniado
+                                <span>
+                                    <a target="_blank" href="http://www.motta-int.com">Motta International Group</a>
+                                </span>
+                            </h3>
+                            <h3>Gonzalo De La Guardia
+                                <span>
+                                    <a target="_blank" href="http://denfablaw.com">DENFAB Law Group</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
                     </div>
@@ -1696,24 +1792,49 @@
                         <div class="session">
                             <time>1:00PM</time>
                             <h2>Decent.bet</h2>
-                            <h3>Jed Taylor <span><a target="_blank" href="http://decent.bet">Decent.bet</a></span></h3>
+                            <h3>Jed Taylor
+                                <span>
+                                    <a target="_blank" href="http://decent.bet">Decent.bet</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>1:30PM</time>
                             <h2>Registros médicos digitales</h2>
-                            <h3>Rachel Fogel <span><a target="_blank" href="http://drprx.com/">DrPrx</a></span></h3>
+                            <h3>Rachel Fogel
+                                <span>
+                                    <a target="_blank" href="http://drprx.com/">DrPrx</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>2:00 - 3:00PM</time>
                             <h2>Digital Identidad Panel</h2>
-                            <h3><span style="font-style: bold;">Moderador:</span> Aldo Antinori <span><a target="_blank" href="http://pty.glass/docs/balboa-coin.html">Balboa Coin Whitepaper</a></span></h3>
-                            <h3>Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
-                            <h3>Cindy Zimmerman <span><a target="_blank" href="https://tigoctm.com">TigoCTM</a></span></h3>
-                            <h3>Adella Toulon <span><a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a></span></h3>
+                            <h3>
+                                <span style="font-style: bold;">Moderador:</span> Aldo Antinori
+                                <span>
+                                    <a target="_blank" href="http://pty.glass/docs/balboa-coin.html">Balboa Coin Whitepaper</a>
+                                </span>
+                            </h3>
+                            <h3>Ira Miller
+                                <span>
+                                    <a target="_blank" href="https://guld.io">guld</a>
+                                </span>
+                            </h3>
+                            <h3>Cindy Zimmerman
+                                <span>
+                                    <a target="_blank" href="https://tigoctm.com">TigoCTM</a>
+                                </span>
+                            </h3>
+                            <h3>Adella Toulon
+                                <span>
+                                    <a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
                     </div>
@@ -1727,14 +1848,22 @@
                         <div class="session">
                             <time>3:30 - 4:30PM</time>
                             <h2>Titulos de la Tierra</h2>
-                            <h3>Patrick Byrne <span><a target="_blank" href="http://overstock.com/">Overstock</a></span></h3>
+                            <h3>Patrick Byrne
+                                <span>
+                                    <a target="_blank" href="http://overstock.com/">Overstock</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>4:30PM</time>
                             <h2>Palabras de Clausura</h2>
-                            <h3>Felipe Echandi <span><a target="_blank" href="http://panafintech.com/">PanaFintech</a></span></h3>
+                            <h3>Felipe Echandi
+                                <span>
+                                    <a target="_blank" href="http://panafintech.com/">PanaFintech</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
