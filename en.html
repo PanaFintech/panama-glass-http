@@ -387,25 +387,6 @@
     </div>
     <div id="output"></div>
 
-    <!-- MODAL FOR CONFIRM QR CODE-->
-    <div id="crypto_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="pay_card_label"> Send your coins to this adress</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <div id="qrcodeCanvas"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- MODAL FORM PAY CRYPTO-->
     <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -487,19 +468,10 @@
                         <div class="row"></div>
                         <label></label>
                         <div class="row">
-                            <div class="col-sm-2">
-                                <h3>Total USD:</h3>
-                                <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
-                            </div>
-                            <div class="col-sm-2">
-                                <h3>Total Crypto:</h3>
-                                <input class="form-control form-control-lg" type="text" name="amount" id="Cmount" readonly>
-                            </div>
-                            <div class="col-sm-5"></div>
                             <div class="col-sm-2 text-center">
                                 <label></label>
                                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#crypto_confirm" id="paycbutton">
-                                Pagar
+                                Pay
                                 </a>
                             </div>
                         </div>
@@ -663,9 +635,7 @@
                                 <p class="directionstore">Balboa Boutiques Strip Mall, PB, local 004, Av. Balboa, Panama</p>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -815,17 +785,22 @@
                 <div id="text"></div>
                 <div class="lead">A public discourse on the modernization and transparency of the Panamá financial system.</div>
                 <div id="buy">
-                    <!--
-                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_crypto">
+                    <!--<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_crypto">
                         BUY TICKETS
                         <div>with Crypto</div>
                     </a>
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
+                        BUY TICKETS
+                        <div>with credit card</div>
                     -->
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#at_stores">
                         BUY TICKETS
                         <div>at stores</div>
                     </a>
+<<<<<<< e2387c922ff7797eac90bb42e66827b80656af12
 
+=======
+>>>>>>> merge with cmejia too
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_fiat">
                         BUY TICKETS
                         <div>with USD</div>
@@ -1573,122 +1548,6 @@
                             <time>4:30PM</time>
                             <h2>Blockchain solutions for corruption</h2>
                             <h3>Alejandro Palomar <span><a target="_blank" href="https://www.blockchain360solutions.com">Blockchain 360 solutions</a></span></h3>
-                        </div>
-                        <!-- .session -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h1>DAYS 1 and 2</h1>
-                        </div>
-                    </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <time>10:00AM - 5:00PM</time>
-                        <h2>VIP Work Groups</h2>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h1>DAY 3</h1>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="session">
-                            <time>8:30AM</time>
-                            <h2>Doors Open</h2>
-                            <h3>Film - Decolonize Your Life</h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>9:00AM</time>
-                            <h2>Opening Remarks</h2>
-                            <h3>Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>9:30 - 10:30AM</time>
-                            <h2>State of Panama Address</h2>
-                            <h3>Adolfo Linares <span></span></h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>10:30AM</time>
-                            <h2>Coffee Break</h2>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>11:00 - 12:00AM</time>
-                            <h2>Investing in blockchain</h2>
-                            <h4>A Legal, Financial and Media Perspective</h4>
-                            <h3><span style="font-style: bold;">Moderator:</span> Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
-                            <h3>Giuseppe Cicatelli <span><a target="_blank" href="http://300eholdings.com">300E</a></span></h3>
-                            <h3>Randy Hilarski <span><a target="_blank" href="https://www.facebook.com/Token-Magic-369496630154896/">Token Magic</a></span></h3>
-                        </div>
-                        <!-- .session -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="session">
-                            <time>12:00 - 1:00PM</time>
-                            <h2>Lunch</h2>
-                        </div>
-                        <!-- .session -->
-                        <div class="session">
-                            <time>1:00PM</time>
-                            <h2>Digital Dollar</h2>
-                            <h3>Gabriel Abed <span><a target="_blank" href="http://bitt.com">Bitt</a></span></h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>1:30PM</time>
-                            <h2>Blockchain Law Intro</h2>
-                            <h3>Adella Toulon <span><a target="_blank" href="http://cogentlaw.co/">Cogent Law Group</a></span></h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>2:00 - 3:00PM</time>
-                            <h2>Digital Balboa Panel</h2>
-                            <h3><span style="font-style: bold;">Moderator:</span> Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
-                            <h3>Gabriel Abed <span><a target="_blank" href="http://bitt.com">Bitt</a></span></h3>
-                            <h3>Aldo Antinori <span><a target="_blank" href="http://pty.glass/docs/balboa-coin.html">Balboa Coin Whitepaper</a></span></h3>
-                            <h3>Jorge Farias <span><a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a></span></h3>
-                        </div>
-                        <!-- .session -->
-                    </div>
-                    <div class="col-md-4">
-                        <div class="session">
-                            <time>3:00PM</time>
-                            <h2>Coffee Break</h2>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>3:30PM</time>
-                            <h2>Steem and Local Community</h2>
-                            <h3>Anabell Hilarski <span><a target="_blank" href="http://200social.com/">200 Social</a></span></h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>4:00PM</time>
-                            <h2>Academy</h2>
-                            <h3>Jason King <span><a target="_blank" href="http://academytoken.com/">Academy</a></span></h3>
-                        </div>
-                        <!-- .session -->
-
-                        <div class="session">
-                            <time>4:30PM</time>
-                            <h2>Blockchain solutions for corruption</h2>
-                            <h3>Alejandro Palomar <span><a target="_blank" href="http://www.blockchain360solutions.com">Blockchain 360 solutions</a></span></h3>
                         </div>
                         <!-- .session -->
                     </div>
