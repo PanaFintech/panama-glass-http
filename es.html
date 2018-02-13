@@ -100,7 +100,6 @@
                                             </p>
                                         </div>
                                     </div>
-
                                     <div id="internationalpayments" class="tab-pane fade">
                                         <div class="col-sm-6">
                                             <ul class="text-left">
@@ -287,8 +286,7 @@
                             <div class="col-sm-4">
                                 <label for="cardNumber">Numero de Tarjeta</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx"
-                                        required>
+                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
@@ -469,16 +467,119 @@
         </div>
     </div>
 
+     <!-- MODAL FORM PAY CRYPTO-->
+     <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pay_crypto_label">Pago con Cryptomonedas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="cryptoForm" autocomplete="off" target="iframe_b">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="ticketNumber" class="col-2 col-form-label">Cantidad</label>
+                                <div class="col-10">
+                                    <select id="ticketNumber" class="form-control form-control-lg">
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-6">
+                                <label for="ticketNumber" class="col-2 col-form-label">Boleto</label>
+                                <div class="col-10">
+                                    <select id="ticketTier" class="form-control form-control-lg">
+                                        <option value="1" selected>Regular - 2 días ($300)</option>
+                                        <option value="2">VIP - 4 días ($1500)</option>
+                                        <option value="3">Patrocinador Bronce ($2500)</option>
+                                        <option value="3">Patrocinador Plata ($5000)</option>
+                                        <option value="3">Patrocinador Oro ($10000)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="moneda" class="col-2 col-form-label">Moneda</label>
+                                <div class="col-10">
+                                    <select id="moneda" class="form-control form-control-lg">
+                                        <option value="1" selected>BTC - Bitcoin</option>
+                                        <option value="2">DSH - Dash</option>
+                                        <option value="3"> GULD </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-6">
+                            <label for="cardHolder">Nombre de Usuario</label>
+                            <div class="col-10">
+                                <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="cardHolder">Nombre Completo</label>
+                                <div class="col-10">
+                                    <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-6">
+                                <label for="cardHolder">Correo Electronico</label>
+                                <div class="col-10">
+                                    <input class="form-control form-control-lg" type="text" name="email" placeholder="john@mail.com" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row"></div>
+                        <label></label>
+                        <div class="row">
+                            <div class="col-sm-2">
+                            <h3>Total USD:</h3>
+                                <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                            <h3>Total Crypto:</h3>
+                                <input class="form-control form-control-lg" type="text" name="amount" id="Cmount" readonly>
+                            </div>
+                            <div class="col-sm-5"></div>
+                            <div class="col-sm-2 text-center">
+                            <label></label>
+                                <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#crypto_confirm" id="paycbutton">
+                                Pagar
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- BUY TCKETS AT STORES-->
     <div id="at_stores" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
         aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="pay_card_label">Tiendas</h5>
+                    <h5 class="modal-title" id="pay_card_label">Stores</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+                    <span aria-hidden="true">×</span>
+                </button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -730,7 +831,11 @@
                 <div id="text"></div>
                 <div class="lead">Un discurso público sobre la modernización y la transparencia del sistema financiero de Panamá.</div>
                 <div id="buy">
-                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#at_stores">
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_crypto">
+                        COMPRA BOLETOS
+                        <div>con Crypto</div>
+                    </a>
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
                         COMPRA BOLETOS
                         <div>en tienda</div>
                         <!--
@@ -781,10 +886,8 @@
                                 <li>Títulos de tierras y Naves</li>
                             </ul>
                         </p>
-
                     </div>
                     <div class="col-md-4">
-
                         <h5>En 2017, Panamá fue golpeado muchas veces</h5>
                         <ol>
                             <li>Incluido en la
@@ -798,7 +901,6 @@
                             <li>Está siendo presionado para revisar o eliminar las zonas económicas especiales.</li>
                             <li>Está siendo presionado para regular estrictamente la tecnología financiera.</li>
                         </ol>
-
                     </div>
                 </div>
             </div>
@@ -941,8 +1043,6 @@
                             <!-- /.col-sm-6 -->
 
 
-                            <!-- /.col-sm-6 -->
-
                             <div class="col-sm-6 col-md-3">
                                 <figure class="thumbnail">
                                     <a target="_blank" href="https://tigoctm.com">
@@ -989,8 +1089,6 @@
                                     </figcaption>
                                 </figure>
                             </div>
-
-                            <!-- **** -->
                             <div class="col-sm-6 col-md-3">
                                 <figure class="thumbnail">
                                     <a target="_blank" href="https://www.motta-int.com">
@@ -1698,7 +1796,7 @@
                             </div>
                             <div class="golditem">
                                 <a target="_blank" href="https://300eholdings.com" alt="300eholding">
-                                    <img src="img/sponsors/300e.png" alt="Image">
+                                    <img src="img/sponsors/300e.png" alt="300eholdings">
                                 </a>
                             </div>
 
@@ -1759,9 +1857,6 @@
             <!-- /.container -->
         </section>
         <!-- .pricing-section -->
-
-
-
 
 
         <!-- LUGAR-->
