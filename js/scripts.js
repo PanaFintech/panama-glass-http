@@ -54,7 +54,7 @@ jQuery(function ($) {
                     username: username,
                     commodity: commodity,
                     email: $("#email").val(),
-                    fullname: $("#cardHolder").val()
+                    fullname: $("#fullname").val()
                 })
                 .done(function (data) {
                     $.get("https://pty.glass/api/id/" + username, function (data) {
