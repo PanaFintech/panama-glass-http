@@ -54,7 +54,7 @@ jQuery(function ($) {
                     username: username,
                     commodity: commodity,
                     email: $("#email").val(),
-                    fullname: $("#cardHolder").val()
+                    fullname: $("#fullname").val()
                 })
                 .done(function (data) {
                     $.get("https://pty.glass/api/id/" + username, function (data) {
@@ -252,9 +252,7 @@ jQuery(function ($) {
     }());
 }); // JQuery end
 
-
-var background = document.getElementById('background');
-background.playbackRate = 0.7;
+$('#background').playbackRate = 0.7;
 
 var typed3 = new Typed('#text', {
     strings: ['Panamá <i>Moderna</i>', 'Panamá <strong>Transparente</strong>', 'Panamá Glass'],
