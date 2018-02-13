@@ -124,7 +124,7 @@ jQuery(function ($) {
         $('#paycbutton').on('click', function () {
 	        $('#pay_crypto').modal('toggle');
 					$('#qrcodeCanvas').qrcode({
-						text	: "http://jetienne.com"
+						text	: "https://jetienne.com"
 					});
 					$('#paycbutton').attr('disabled', true);
         });
@@ -154,7 +154,7 @@ jQuery(function ($) {
         if ($('#googleMap').length > 0) {
 
             //set your google maps parameters
-            var $latitude = 8.9936856, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
+            var $latitude = 8.9936856, //If you unable to find latitude and longitude of your address. Please visit https://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
                 $longitude = -79.5830599,
                 $map_zoom = 14;
             /* ZOOM SETTING */
@@ -186,7 +186,7 @@ jQuery(function ($) {
         if ($('#googleMap2').length > 0) {
 
             //set your google maps parameters
-            var $latitude2 = 9.002099, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
+            var $latitude2 = 9.002099, //If you unable to find latitude and longitude of your address. Please visit https://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
                 $longitude2 = -79.582579,
                 $map_zoom2 = 14;
             /* ZOOM SETTING */
@@ -235,10 +235,6 @@ $(document).ready(function () {
         var video = $('#background').outerHeight();
         var welcome = $('#welcome').outerHeight();
         var heightWOButton = height - $('#btnpresentation section').outerHeight();
-
-        console.log(height);
-        console.log(video);
-        console.log(heightWOButton);
 
         if (video >= (height - heightWOButton)) {
             video = heightWOButton;
