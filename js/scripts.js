@@ -50,7 +50,7 @@ jQuery(function ($) {
         });
     }());
 
-     // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
     // Tickets calculator
     // --------------------------------------------------------------------
     (function () {
@@ -58,7 +58,7 @@ jQuery(function ($) {
             var number = $('#ticketNumber').val();
             var tier = $('#ticketTier').val();
             var fname = $('#cardHolder').val();
-            
+
             var tierCost = 300;
             if (tier == 2) {
                 tierCost = 1500;
@@ -94,12 +94,11 @@ jQuery(function ($) {
                     $('#paybutton').attr('disabled', true);
                 }
                 else{
-                    $('#paybutton').attr('disabled', false);    
+                    $('#paybutton').attr('disabled', false);
                 }
             })*/
-        } 
+        }
         generate();
-
 
         $('#ticketNumber').on('change', function () {
             generate();
@@ -123,7 +122,11 @@ jQuery(function ($) {
 
         // Response to pay with crypto submit
         $('#paycbutton').on('click', function () {
-         	$('#pay_crypto').modal('toggle');
+	        $('#pay_crypto').modal('toggle');
+					$('#qrcodeCanvas').qrcode({
+						text	: "http://jetienne.com"
+					});
+					$('#paycbutton').attr('disabled', true);
         });
 
     }());
@@ -219,7 +222,7 @@ var background = document.getElementById('background');
 background.playbackRate = 0.7;
 
 var typed3 = new Typed('#text', {
-    strings: ['Panama¡ <i>Moderna</i>', 'Panama¡ <strong>Transparente</strong>', 'Panama¡ Glass'],
+    strings: ['Panamá <i>Moderna</i>', 'Panamá <strong>Transparente</strong>', 'Panamá Glass'],
     typeSpeed: 80,
     backSpeed: 50,
     smartBackspace: true, // this is a default
