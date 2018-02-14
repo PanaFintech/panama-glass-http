@@ -76,13 +76,21 @@ jQuery(function ($) {
                 } else {
                     total = subtotal / data.prices.BTC;
                 }
+                total = total.toFixed(8);
                 $("#total").text(total);
 
 
                 $("#pay_crypto .step2").show();
+
+                var d = new Date();
+                var epoch = d.getTime() / 1000;
+
+                var secondsSinceLastTimerTrigger = epoch % 600; // 600 seconds (10 minutes)
+                var secondsUntilNextTimerTrigger = 600 - secondsSinceLastTimerTrigger;
+
                 setTimeout(function () {
                     getData()
-                }, 900000);
+                }, secondsUntilNextTimerTrigger * 1000);
             });
         }
 
