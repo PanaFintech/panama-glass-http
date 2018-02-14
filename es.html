@@ -336,7 +336,7 @@
 
     <!-- MODAL FORM PAY CRYPTO-->
     <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="pay_crypto_label">Pagos en criptomonedas</h5>
@@ -440,33 +440,33 @@
                     </div>
 
 
-                    <div class="step2">
+                    <div class="step2 ">
+                        <p class=" title" id="pay_card_label"> Envíe sus monedas a esta dirección:</p>
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <h6 class="modal-title" id="pay_card_label"> Envía tus monedas a esta dirección:</h6>
-                                <div id="qrcodeCanvas"></div>
+
+                            <div class="col-md-6 col-sm-6 divqr">
+
+                                <div id="qrcodeCanvas">
+
+                                </div>
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <p>Total a pagar:
-                                    <div id="total" class="total"></div>
-                                </p>
+                            <div class="col-md-6 col-sm-6 divqr">
+                                <div class="total">Total: </div>
+                                <p id="totalamount"><span id="total"></span><span id="totalcurrency"></span></p>
 
-                                <!--<div>
-                                    <p>Se refrescará en:
-                                        <div>15:00</div>
-                                    </p>
+                                <div class="generate">Regenerate in:</div>
+                                <div id="timedown" class="space"><i class="far fa-clock"></i>
+                                    <span>15:00</span>
+                                </div>
 
-                                </div>-->
                             </div>
                         </div>
 
-
-
                         <!--  <div class="modal-footer">
-                            <a class="btn btn-primary btn-lg" id="back">
-                                Regresar
-                            </a>
-                        </div> -->
+                                <a class="btn btn-primary btn-lg" id="back">
+                                    Regresar
+                                </a>
+                            </div> -->
 
                     </div>
                 </div>
