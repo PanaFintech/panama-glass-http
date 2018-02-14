@@ -39,17 +39,36 @@ jQuery(function ($) {
     }());
 
     (function () {
+        var data = {
+            "username": "isysd",
+            "prices": {
+                "DASH": "607.00000000",
+                "guld": "50",
+                "BTC": "8701.20000000"
+            },
+            "depositAddresses": {
+                "DASH": {
+                    "XvwUr3gNnVhTZjkYUV6cPUhX8GrthDRZts": "0",
+                    "sub-total": "0",
+                    "XcM5hwbHS383MHEtW8KQ49fFcdgBZBmgbr": "0"
+                },
+                "BTC": {
+                    "1Kgq7QkvNNHhH4Qm7vRbQriFu64jf8MQ8J": "0",
+                    "1AM38mDYmNvBUJsGVZikipv63k2LaewEML": "0",
+                    "sub-total": "0"
+                }
+            }
+        };
+
+
         $('#cryptoregister').on('click', function (e) {
             e.preventDefault();
+            $("#pay_crypto .step1").hide();
             var username = $("#username").val();
             var commodity = "BTC";
-            if ($("#moneda").val() == 2) {
+            if ($("#cryptoMoneda").val() == 2) {
                 commodity = "DASH";
             }
-            /* else if ($("#moneda").val() == 3) {
-                commodity = "guld";
-            }*/
-            $("#pay_crypto .step1").hide();
             $.post("https://pty.glass/api/register", {
                     username: username,
                     commodity: commodity,
@@ -58,18 +77,63 @@ jQuery(function ($) {
                 })
                 .done(function (data) {
                     $.get("https://pty.glass/api/id/" + username, function (data) {
-                        data = JSON.parse(data);
                         var addresses = data.depositAddresses;
                         var address = "";
-                        if ($("#moneda").val() == 2) {
+                        if ($("#cryptoMoneda").val() == 2) {
                             address = Object.keys(addresses.DASH)[0]
                         } else {
                             address = Object.keys(addresses.BTC)[0]
                         }
+                        $("#qrcodeCanvas").html("");
                         new QRCode(document.getElementById("qrcodeCanvas"), address);
+
+                        var ticketNumber = $("#cryptoTicketNumber").val();
+                        var ticketTier = $("#cryptoTicketTier").val();
+
+                        console.log(ticketNumber);
+                        console.log(ticketTier);
+                        var price = 0;
+
+                        if (ticketTier == 1) {
+                            price = 300;
+                        } else if (ticketTier == 2) {
+                            price = 1500;
+                        } else if (ticketTier == 3) {
+                            price = 2500;
+                        } else if (ticketTier == 4) {
+                            price = 5000;
+                        } else if (ticketTier == 5) {
+                            price = 10000;
+                        }
+
+                        var subtotal = ticketNumber * price;
+                        var total = 0;
+
+                        if ($("#cryptoMoneda").val() == 2) { //DASH
+                            total = subtotal / data.prices.DASH;
+                        } else {
+                            total = subtotal / data.prices.BTC;
+                        }
+
+                        $("#total").text(total);
+
+
                         $("#pay_crypto .step2").show();
                     });
                 });
+        });
+
+    }());
+
+    // --------------------------------------------------------------------
+    // Show step1
+    // --------------------------------------------------------------------
+
+    (function () {
+        $('#back').on('click', function (e) {
+            console.log("fired");
+            $("#pay_crypto .step2").hide();
+            $("#pay_crypto .step1").show();
         });
     }());
 
