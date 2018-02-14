@@ -39,27 +39,52 @@ jQuery(function ($) {
     }());
 
     (function () {
-        var data = {
-            "username": "isysd",
-            "prices": {
-                "DASH": "607.00000000",
-                "guld": "50",
-                "BTC": "8701.20000000"
-            },
-            "depositAddresses": {
-                "DASH": {
-                    "XvwUr3gNnVhTZjkYUV6cPUhX8GrthDRZts": "0",
-                    "sub-total": "0",
-                    "XcM5hwbHS383MHEtW8KQ49fFcdgBZBmgbr": "0"
-                },
-                "BTC": {
-                    "1Kgq7QkvNNHhH4Qm7vRbQriFu64jf8MQ8J": "0",
-                    "1AM38mDYmNvBUJsGVZikipv63k2LaewEML": "0",
-                    "sub-total": "0"
+        function getData() {
+            $.get("https://pty.glass/api/id/" + username, function (data) {
+                var addresses = data.depositAddresses;
+                var address = "";
+                if ($("#cryptoMoneda").val() == 2) {
+                    address = Object.keys(addresses.DASH)[0]
+                } else {
+                    address = Object.keys(addresses.BTC)[0]
                 }
-            }
-        };
+                $("#qrcodeCanvas").html("");
+                new QRCode(document.getElementById("qrcodeCanvas"), address);
 
+                var ticketNumber = $("#cryptoTicketNumber").val();
+                var ticketTier = $("#cryptoTicketTier").val();
+
+                var price = 0;
+
+                if (ticketTier == 1) {
+                    price = 300;
+                } else if (ticketTier == 2) {
+                    price = 1500;
+                } else if (ticketTier == 3) {
+                    price = 2500;
+                } else if (ticketTier == 4) {
+                    price = 5000;
+                } else if (ticketTier == 5) {
+                    price = 10000;
+                }
+
+                var subtotal = ticketNumber * price;
+                var total = 0;
+
+                if ($("#cryptoMoneda").val() == 2) { //DASH
+                    total = subtotal / data.prices.DASH;
+                } else {
+                    total = subtotal / data.prices.BTC;
+                }
+                $("#total").text(total);
+
+
+                $("#pay_crypto .step2").show();
+                setTimeout(function () {
+                    getData()
+                }, 900000);
+            });
+        }
 
         $('#cryptoregister').on('click', function (e) {
             e.preventDefault();
@@ -76,50 +101,7 @@ jQuery(function ($) {
                     fullname: $("#fullname").val()
                 })
                 .done(function (data) {
-                    $.get("https://pty.glass/api/id/" + username, function (data) {
-                        var addresses = data.depositAddresses;
-                        var address = "";
-                        if ($("#cryptoMoneda").val() == 2) {
-                            address = Object.keys(addresses.DASH)[0]
-                        } else {
-                            address = Object.keys(addresses.BTC)[0]
-                        }
-                        $("#qrcodeCanvas").html("");
-                        new QRCode(document.getElementById("qrcodeCanvas"), address);
-
-                        var ticketNumber = $("#cryptoTicketNumber").val();
-                        var ticketTier = $("#cryptoTicketTier").val();
-
-                        console.log(ticketNumber);
-                        console.log(ticketTier);
-                        var price = 0;
-
-                        if (ticketTier == 1) {
-                            price = 300;
-                        } else if (ticketTier == 2) {
-                            price = 1500;
-                        } else if (ticketTier == 3) {
-                            price = 2500;
-                        } else if (ticketTier == 4) {
-                            price = 5000;
-                        } else if (ticketTier == 5) {
-                            price = 10000;
-                        }
-
-                        var subtotal = ticketNumber * price;
-                        var total = 0;
-
-                        if ($("#cryptoMoneda").val() == 2) { //DASH
-                            total = subtotal / data.prices.DASH;
-                        } else {
-                            total = subtotal / data.prices.BTC;
-                        }
-
-                        $("#total").text(total);
-
-
-                        $("#pay_crypto .step2").show();
-                    });
+                    getData();
                 });
         });
 
