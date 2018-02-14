@@ -1105,6 +1105,10 @@ span.typed-cursor {
     }
 }
 
+.total {
+    border-bottom-color: #137bc3;
+}
+
 .stores {
     width: 100%;
 }
