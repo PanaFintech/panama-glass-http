@@ -39,10 +39,9 @@ jQuery(function ($) {
     }());
 
     (function () {
-        var username = "";
-        
-        function getData() {
+        function getData(username) {
             $.get("https://pty.glass/api/id/" + username, function (data) {
+                data = JSON.parse(data);
                 var addresses = data.depositAddresses;
                 var address = "";
                 if ($("#cryptoMoneda").val() == 2) {
@@ -91,7 +90,7 @@ jQuery(function ($) {
                 var secondsUntilNextTimerTrigger = 600 - secondsSinceLastTimerTrigger;
 
                 setTimeout(function () {
-                    getData()
+                    getData(username)
                 }, secondsUntilNextTimerTrigger * 1000);
             });
         }
@@ -111,7 +110,7 @@ jQuery(function ($) {
                     fullname: $("#fullname").val()
                 })
                 .done(function (data) {
-                    getData();
+                    getData(username);
                 });
         });
 
