@@ -38,7 +38,7 @@ jQuery(function ($) {
         });
     }());
 
-    (function () {
+    (function () {        
         function getData(username) {
             $.get("https://pty.glass/api/id/" + username, function (data) {
                 data = JSON.parse(data);
@@ -98,7 +98,7 @@ jQuery(function ($) {
         $('#cryptoregister').on('click', function (e) {
             e.preventDefault();
             $("#pay_crypto .step1").hide();
-            username = $("#username").val();
+            var username = $("#username").val();
             var commodity = "BTC";
             if ($("#cryptoMoneda").val() == 2) {
                 commodity = "DASH";
