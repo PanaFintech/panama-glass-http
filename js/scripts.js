@@ -110,7 +110,7 @@ jQuery(function($) {
             });
         }
 
-        $('#cryptoregister').on('click', function(e) {
+        $('#cryptoForm').on('submit', function(e) {
             e.preventDefault();
             $("#pay_crypto .step1").hide();
             var username = $("#username").val();
