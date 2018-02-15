@@ -219,13 +219,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="cardForm" action="https://gatewaysandbox.merchantprocess.net/transaction.aspx?" method="POST" autocomplete="off" target="iframe_a">
-                        <input type="hidden" name="AccCode" value="32.00">
+                    <form id="cardForm" action="https://gateway.merchantprocess.net/v2/transaction.aspx" method="POST" autocomplete="off" target="iframe_a">
+                        <input type="hidden" name="AccCode" value="123123">
                         <input type="hidden" name="procCode" value="000000">
-                        <input type="hidden" name="merchant" value="104886">
-                        <input type="hidden" name="terminal" value="104886001">
+                        <input type="hidden" name="merchant" value="101360">
+                        <input type="hidden" name="terminal" value="101360001">
                         <input type="hidden" name="currencyCode" value="840">
-                        <input type="hidden" name="SiteIPAddress" value="10.0.2.15">
+                        <input type="hidden" name="SiteIPAddress" value="54.202.148.7">
                         <div class="row">
                             <div class="col-sm-4">
                                 <label for="ticketNumber" class="col-2 col-form-label">Cantidad</label>
@@ -302,35 +302,6 @@
                             <a data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
                             <input type="checkbox" id="agree" required>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label for="cardNumber">Credit Card Number</label>
-                                <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-4">
-                                <label for="expiration">Expiration</label>
-                                <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="expiration" placeholder="mmyy" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <label for="cvv2">CVV</label>
-                                <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cvv2" placeholder="xxx" id="cvv2" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row"></div>
-                        <label></label>
-                        <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
-                        <div class="row">
-                            I accetpt the
-                            <a data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
-                            <input type="checkbox" id="agree" required>
-                        </div>
 
                         <label></label>
                         <div class="row">
@@ -341,15 +312,11 @@
                                 <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
                             </div>
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-2">
-                                <a href="https://www.credit-card-logos.com/">
-                                    <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.credit-card-logos.com/images/visa_credit-card-logos/new_visa_medium.gif" border="0" align="center" />
-                                </a>
+                             <div class="col-sm-2">
+                                <img src="img/vcard.png" class="img-responsive" alt="Image">
                             </div>
-                            <div class="col-sm-1">
-                                <a href="https://www.credit-card-logos.com/">
-                                    <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.credit-card-logos.com/images/mastercard_credit-card-logos/mastercard_logo_1.gif" width="67" height="40" border="0" align="center" />
-                                </a>
+                            <div class="col-sm-2">
+                                <img src="img/mcard.png" class="img-responsive" alt="Image">
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-2 text-center">
@@ -709,11 +676,11 @@
                         BUY TICKETS
                         <div>with Crypto</div>
                     </a>
-                    <!--
+                    
                         <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
                         BUY TICKETS
                         <div>with credit card</div>
-                    -->
+    
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#at_stores">
                         BUY TICKETS
                         <div>at stores</div>
