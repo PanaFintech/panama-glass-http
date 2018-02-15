@@ -128,6 +128,7 @@ jQuery(function ($) {
         });
     }());
 
+   
     // --------------------------------------------------------------------
     // pay with card stuff
     // --------------------------------------------------------------------
@@ -178,15 +179,15 @@ jQuery(function ($) {
 
         // Response to pay with card submit
         $('#iframe_a').load(function () {
-            var iBody = $('#iframe_a');
-            var iBod = iBody.text()
-            $('#formresp').val(iBod)
-            //var pati = iBody.text();
             $('#pay_card').modal('toggle');
             $('#card_confirm').modal('show');
         });
 
     }());
+
+    // --------------------------------------------------------------------
+    // Closes the Responsive Menu on Menu Item Click
+    // --------------------------------------------------------------------
 
     // --------------------------------------------------------------------
     // Closes the Responsive Menu on Menu Item Click
