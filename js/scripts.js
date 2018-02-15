@@ -146,6 +146,67 @@ jQuery(function ($) {
         });
     }());
 
+   
+    // --------------------------------------------------------------------
+    // pay with card stuff
+    // --------------------------------------------------------------------
+
+     (function () {
+        function generate() {
+            var number = $('#ticketNumber').val();
+            var tier = $('#ticketTier').val();
+            var fname = $('#cardHolder').val();
+            
+            var tierCost = 300;
+            if (tier == 2) {
+                tierCost = 1500;
+            } else if (tier == 3) {
+                tierCost = 2500;
+            } else if (tier == 4) {
+                tierCost = 5000;
+            } else if (tier == 5) {
+                tierCost = 10000;
+            }
+
+            var tot = number * tierCost;
+            $('#Amount').val(tot + ".00");
+
+            var modName = fname.replace(/\s/g, '');
+            $('#cardHolder').val(modName);
+
+            
+        } 
+        generate();
+
+
+        $('#ticketNumber').on('change', function () {
+            generate();
+        });
+
+        $('#ticketTier').on('change', function () {
+            generate();
+        });
+
+        $('#cvv2').on('change', function () {
+            generate();
+        });
+
+        $('#cardNumber').on('change', function () {
+            generate();
+        });
+
+        // Response to pay with card submit
+        $('#iframe_a').load(function () {
+            $('#pay_card').modal('toggle');
+            $('#card_confirm').modal('show');
+        });
+
+    }());
+
+    // --------------------------------------------------------------------
+    // Closes the Responsive Menu on Menu Item Click
+    // --------------------------------------------------------------------
+
     // --------------------------------------------------------------------
     // Closes the Responsive Menu on Menu Item Click
     // --------------------------------------------------------------------
