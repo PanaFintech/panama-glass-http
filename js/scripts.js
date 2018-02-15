@@ -85,6 +85,7 @@ jQuery(function($) {
                 $("#total").text(total);
 
                 $("#qrcodeCanvas").html("");
+                $("#address").text(address);
                 new QRCode(document.getElementById("qrcodeCanvas"), currency + ":" + address + "[?amount=" + total + "][?label=Tickets][?message=Number: " + ticketNumber + " Tier: " + ticketTier + "]");
 
                 $("#pay_crypto .step2").show();
@@ -110,7 +111,7 @@ jQuery(function($) {
             });
         }
 
-        $('#cryptoregister').on('click', function(e) {
+        $('#cryptoForm').on('submit', function(e) {
             e.preventDefault();
             $("#pay_crypto .step1").hide();
             var username = $("#username").val();

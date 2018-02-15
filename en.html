@@ -438,7 +438,7 @@
                                 <div class="col-sm-6">
                                     <label for="email">Email</label>
                                     <div class="col-10">
-                                        <input id="email" class="form-control form-control-lg" type="text" name="email" placeholder="john@mail.com" required>
+                                        <input id="email" class="form-control form-control-lg" type="email" name="email" placeholder="john@mail.com" required>
                                     </div>
                                 </div>
                             </div>
@@ -459,18 +459,22 @@
                             </div>
                         </div>
                     -->
-                        </form>
-                        </br>
-                        <div class="modal-footer">
-                            <a class="btn btn-primary btn-lg" id="cryptoregister">
+
+                            </br>
+                            <div class="modal-footer">
+                                <button class='btn btn-primary ' type='submit'>
                                 Pay
-                            </a>
-                        </div>
+                            </button>
+                            </div>
+                        </form>
                     </div>
 
 
                     <div class="step2 ">
                         <p class=" title" id="pay_card_label"> Send your coins to this address:</p>
+                        <div class="row text-center">
+                            <div id="address"></div>
+                        </div>
                         <div class="row">
 
                             <div class="col-md-6 col-sm-6 divqr">
