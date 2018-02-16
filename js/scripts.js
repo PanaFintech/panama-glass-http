@@ -170,6 +170,7 @@ jQuery(function($) {
 
             var tot = number * tierCost;
             $('#amount').text(tot + ".00");
+            $('#amountField').text(tot + ".00");
 
             var modName = fname.replace(/\s/g, '');
             $('#cardHolder').val(modName);
@@ -219,88 +220,6 @@ jQuery(function($) {
         });
     }());
 
-    // --------------------------------------------------------------------
-    // Tickets calculator
-    // --------------------------------------------------------------------
-    (function() {
-        function generate() {
-            var number = $('#ticketNumber').val();
-            var tier = $('#ticketTier').val();
-            var fname = $('#cardHolder').val();
-
-            var tierCost = 300;
-            if (tier == 2) {
-                tierCost = 1500;
-            } else if (tier == 3) {
-                tierCost = 2500;
-            } else if (tier == 4) {
-                tierCost = 5000;
-            } else if (tier == 5) {
-                tierCost = 10000;
-            }
-
-            var tot = number * tierCost;
-            $('#Amount').val(tot + ".00");
-
-            var modName = fname.replace(/\s/g, '');
-            $('#cardHolder').val(modName);
-
-            /*hide submit button if required fields are empty
-            $('#cardHolder, #eamil, #cardNumber, #expiration, #cvv2').keyup(function(){
-                if($('#cardHolder').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#email').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#cardNumber').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#expiration').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#cvv2').val().length < 1 ){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else{
-                    $('#paybutton').attr('disabled', false);
-                }
-            })*/
-        }
-        generate();
-
-        $('#ticketNumber').on('change', function() {
-            generate();
-        });
-
-        $('#ticketTier').on('change', function() {
-            generate();
-        });
-
-        // Response to pay with card submit
-        $('#iframe_a').load(function() {
-            var iBody = $('#iframe_a');
-            var iBod = iBody.text()
-            $('#formresp').val(iBod)
-                //var pati = iBody.text();
-            $('#pay_card').modal('toggle');
-            $('#card_confirm').modal('show');
-        });
-
-        // POST crypto form
-
-        // Response to pay with crypto submit
-        $('#paycbutton').on('click', function() {
-            $('#pay_crypto').modal('toggle');
-            $('#qrcodeCanvas').qrcode({
-                text: "http://jetienne.com"
-            });
-            $('#paycbutton').attr('disabled', true);
-        });
-
-
-
-    }());
     // --------------------------------------------------------------------
     // Google Map
     // --------------------------------------------------------------------
