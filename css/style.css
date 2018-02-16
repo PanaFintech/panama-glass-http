@@ -1132,8 +1132,7 @@ span.typed-cursor {
 }
 
 .accept {
-    margin: 0%;
-    padding-top: 0.8rem;
+    font-size: 1.2rem;
 }
 
 .itemCredit {

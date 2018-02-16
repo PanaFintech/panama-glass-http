@@ -296,34 +296,34 @@
                         </div>
                         <div class="row"></div>
                         <label></label>
-                        <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
-                        <div class="row modal-footer">
-                            <div class="col-sm-6">
-                                <div class="col-sm-4 colTotal ">
-                                    <span class="spanTotal itemCredit">Total USD:</span>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="itemCredit" id="amount"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <img src="img/visa.png" class="img-responsive  credImg" alt="Image">
-                                <img src="img/mastercard.png" class="img-responsive  credImg" alt="Image">
-                            </div>
-                        </div>
-                        <div class="row modal-footer">
-                            <div class="col-sm-9 text-right rowTerms accept">
-                                <input type="checkbox" id="agree" class="checkbox" required>
-                                <span class="">Acepto los </span>
-                                <a data-toggle="modal" data-target="#terms"> Terminos y Condiciones</a>
-                            </div>
-                            <div class="col-sm-3 text-right itemCredit">
-                                <!--btn btn-success-->
-                                <input class="btn btn-primary" type="submit" value="Pagar" align="right">
-                            </div>
-                        </div>
-
                     </form>
+                </div>
+
+                <div class=" modal-footer">
+                    <div class="col-sm-6">
+                        <div class="col-sm-4 colTotal ">
+                            <span class="spanTotal itemCredit">Total USD:</span>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="itemCredit" id="amount"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <img src="img/visa.png" class="img-responsive  credImg" alt="Image">
+                        <img src="img/mastercard.png" class="img-responsive  credImg" alt="Image">
+                    </div>
+                </div>
+                <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
+                <div class=" modal-footer">
+                    <div class="col-sm-9 text-right rowTerms">
+                        <input type="checkbox" id="agree" class="checkbox" required>
+                        <span class="accept">Acepto los </span>
+                        <a class="accept" data-toggle="modal" data-target="#terms"> Terminos y Condiciones</a>
+                    </div>
+                    <div class="col-sm-3 text-right itemCredit">
+                        <!--btn btn-success-->
+                        <input class="btn btn-primary" type="submit" value="Pagar" align="right">
+                    </div>
                 </div>
             </div>
         </div>
@@ -344,7 +344,7 @@
                     <div class="step1">
                         <form id="cryptoForm">
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-5">
                                     <label for="ticketNumber" class="col-2 col-form-label">Cant</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketNumber" class="form-control form-control-lg">
@@ -376,7 +376,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-5">
                                     <label for="moneda" class="col-2 col-form-label">Moneda</label>
                                     <div class="col-10">
                                         <select id="cryptoMoneda" class="form-control form-control-lg">
@@ -395,7 +395,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-5">
                                     <label for="fullname">Nombre completo</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="fullname" id="fullname" placeholder="John A Doe" required>
@@ -428,11 +428,7 @@
                     -->
 
                             </br>
-                            <div class="modal-footer">
-                                <button class='btn btn-primary ' type='submit'>
-                                        Pagar
-                                    </button>
-                            </div>
+
                         </form>
                     </div>
 
@@ -469,6 +465,11 @@
                             </div> -->
 
                     </div>
+                </div>
+                <div class=" modal-footer">
+                    <button class='btn btn-primary ' type='submit'>
+                                Pagar
+                            </button>
                 </div>
             </div>
         </div>
