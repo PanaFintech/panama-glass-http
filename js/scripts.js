@@ -86,7 +86,7 @@ jQuery(function($) {
 
                 $("#qrcodeCanvas").html("");
                 $("#address").text(address);
-                new QRCode(document.getElementById("qrcodeCanvas"), currency + ":" + address + "[?amount=" + total + "][?label=Tickets][?message=Number: " + ticketNumber + " Tier: " + ticketTier + "]");
+                new QRCode(document.getElementById("qrcodeCanvas"), currency + ":" + address + "?amount=" + total);
 
                 $("#pay_crypto .step2").show();
 
