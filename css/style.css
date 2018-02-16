@@ -1105,6 +1105,10 @@ span.typed-cursor {
     }
 }
 
+.labelForm {
+    margin-top: 1rem;
+}
+
 .colTotal {
     padding-right: 0%;
 }
@@ -1164,6 +1168,11 @@ span.typed-cursor {
 #qrcodeCanvas img {
     width: 100%;
     padding: 2rem 5rem 4rem 5rem;
+}
+
+.btnPay {
+    padding-bottom: 0%;
+    padding-right: 0%;
 }
 
 .stores {
