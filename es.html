@@ -262,7 +262,7 @@
                             <div class="col-sm-5">
                                 <label for="cardHolder" class="labelForm">Nombre Completo</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                    <input class="form-control form-control-lg" type="text" name="Cardholder" id="cardHolder" placeholder="JohnADoe" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
@@ -277,14 +277,14 @@
                             <div class="col-sm-5">
                                 <label for="cardNumber" class="labelForm">Numero de Tarjeta</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
+                                    <input class="form-control form-control-lg" type="text" name="CardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-4">
                                 <label for="expiration" class="labelForm">Fecha de Expiracion</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="expiration" placeholder="mmyy" required>
+                                    <input class="form-control form-control-lg" type="text" name="Expiration" placeholder="mmyy" required>
                                 </div>
                             </div>
                             <div class="col-sm-2">
@@ -298,6 +298,21 @@
                         <label></label>
                     </div>
                     <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
+                    <div class="modal-footer">
+                        <div class="col-sm-6">
+                            <div class="col-sm-4 colTotal ">
+                                <span class="spanTotal itemCredit">Total USD:</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="itemCredit" id="amount"></div>
+                                <input type="hidden" name="Amount" id="amountField">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <img src="img/visa.png" class="img-responsive  credImg" alt="Visa">
+                            <img src="img/mastercard.png" class="img-responsive  credImg" alt="MasterCard">
+                        </div>
+                    </div>
                     <div class=" modal-footer">
                         <div class="col-sm-10 text-right rowTerms accept">
                             <input type="checkbox" id="agree" class="checkbox" required>

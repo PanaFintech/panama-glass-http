@@ -198,7 +198,7 @@ jQuery(function($) {
 
         // Response to pay with card submit
         $('#iframe_a').load(function() {
-            $('#pay_card').modal('toggle');
+            $('#pay_card').modal('hide');
             $('#card_confirm').modal('show');
         });
 
