@@ -35,8 +35,7 @@
     <div id="framediv">
     </div>
     <!-- MODAL PAY FIAT -->
-    <div id="pay_fiat" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_fiat_label" style="display: none;"
-        aria-hidden="true">
+    <div id="pay_fiat" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_fiat_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -148,8 +147,7 @@
                         </div>
                         <div class="row text-justify">
                             <div class="col-sm-6">
-                                Una vez realizado el pago, por favor contacte ptyglass@gmail.com con una captura de pantalla o foto del recibo de pago, junto
-                                con los siguientes detalles:
+                                Una vez realizado el pago, por favor contacte ptyglass@gmail.com con una captura de pantalla o foto del recibo de pago, junto con los siguientes detalles:
                             </div>
 
                             <div class="col-sm-6">
@@ -188,8 +186,7 @@
     </div>
 
     <!-- MODAL CONFIRM CREDIT CARD PAYMENT-->
-    <div id="card_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
-        aria-hidden="true">
+    <div id="card_confirm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -212,8 +209,7 @@
     </div>
 
     <!-- MODAL FORM PAY CREDIT CARD-->
-    <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
-        aria-hidden="true">
+    <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -232,7 +228,7 @@
                         <input type="hidden" name="SiteIPAddress" value="54.202.148.7">
                         <div class="row">
                             <div class="col-sm-5">
-                                <label for="ticketNumber" class="col-2 col-form-label">Cantidad</label>
+                                <label for="ticketNumber" class="col-2 col-form-label labelForm">Cantidad</label>
                                 <div class="col-10">
                                     <select id="ticketNumber" class="form-control form-control-lg">
                                         <option value="1" selected>1</option>
@@ -250,7 +246,7 @@
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                                <label for="ticketNumber" class="col-2 col-form-label">Boleto</label>
+                                <label for="ticketNumber" class="col-2 col-form-label labelForm">Boleto</label>
                                 <div class="col-10">
                                     <select id="ticketTier" class="form-control form-control-lg">
                                         <option value="1" selected>Regular - 2 días ($300)</option>
@@ -264,14 +260,14 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-5">
-                                <label for="cardHolder">Nombre Completo</label>
+                                <label for="cardHolder" class="labelForm">Nombre Completo</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                    <input class="form-control form-control-lg" type="text" name="Cardholder" id="cardHolder" placeholder="JohnADoe" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                                <label for="cardHolder">Correo Electronico</label>
+                                <label for="cardHolder" class="labelForm">Correo Electronico</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="email" placeholder="john@mail.com" required>
                                 </div>
@@ -279,21 +275,20 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-5">
-                                <label for="cardNumber">Numero de Tarjeta</label>
+                                <label for="cardNumber" class="labelForm">Numero de Tarjeta</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx"
-                                        required>
+                                    <input class="form-control form-control-lg" type="text" name="CardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-4">
-                                <label for="expiration">Fecha de Expiracion</label>
+                                <label for="expiration" class="labelForm">Fecha de Expiracion</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="expiration" placeholder="mmyy" required>
+                                    <input class="form-control form-control-lg" type="text" name="Expiration" placeholder="mmyy" required>
                                 </div>
                             </div>
                             <div class="col-sm-2">
-                                <label for="cvv2">CVV</label>
+                                <label for="cvv2" class="labelForm">CVV</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="cvv2" placeholder="xxx" id="cvv2" required>
                                 </div>
@@ -310,18 +305,24 @@
                             </div>
                             <div class="col-sm-2">
                                 <div class="itemCredit" id="amount"></div>
-                                <input type="hidden" name="amount" id="amountField">
+                                <input type="hidden" name="Amount" id="amountField">
                             </div>
                         </div>
                         <div class="col-sm-6 text-right">
-                            <img src="img/visa.png" class="img-responsive  credImg" alt="Image">
-                            <img src="img/mastercard.png" class="img-responsive  credImg" alt="Image">
+                            <img src="img/visa.png" class="img-responsive  credImg" alt="Visa">
+                            <img src="img/mastercard.png" class="img-responsive  credImg" alt="MasterCard">
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button class='btn btn-primary ' type='submit'>
-                            Pagar
-                        </button>
+                    <div class=" modal-footer">
+                        <div class="col-sm-10 text-right rowTerms accept">
+                            <input type="checkbox" id="agree" class="checkbox" required>
+                            <span class="">I accept the</span>
+                            <a data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
+                        </div>
+                        <div class="col-sm-2 text-right itemCredit">
+                            <!--btn btn-success-->
+                            <input class="btn btn-primary" type="submit" value="Pay" align="right">
+                        </div>
                     </div>
                 </form>
             </div>
@@ -330,8 +331,7 @@
     <div id="output"></div>
 
     <!-- MODAL FORM PAY CRYPTO-->
-    <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;"
-        aria-hidden="true">
+    <div id="pay_crypto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_crypto_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -345,7 +345,7 @@
                         <form id="cryptoForm">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <label for="ticketNumber" class="col-2 col-form-label">Cant</label>
+                                    <label for="ticketNumber" class="col-2 col-form-label labelForm">Cantidad</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketNumber" class="form-control form-control-lg">
                                             <option value="1" selected>1</option>
@@ -363,7 +363,7 @@
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="ticketNumber" class="col-2 col-form-label">Boleto</label>
+                                    <label for="ticketNumber" class="col-2 col-form-label labelForm">Boleto</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketTier" class="form-control form-control-lg">
                                             <option value="1" selected>Regular - 2 días ($300)</option>
@@ -377,7 +377,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <label for="moneda" class="col-2 col-form-label">Moneda</label>
+                                    <label for="moneda" class="col-2 col-form-label labelForm">Moneda</label>
                                     <div class="col-10">
                                         <select id="cryptoMoneda" class="form-control form-control-lg">
                                             <option value="1" selected>BTC - Bitcoin</option>
@@ -388,7 +388,7 @@
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="username">Usuario</label>
+                                    <label for="username" class="labelForm">Usuario</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="username" id="username" placeholder="JohnADoe" required>
                                     </div>
@@ -396,14 +396,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <label for="fullname">Nombre completo</label>
+                                    <label for="fullname" class="labelForm">Nombre completo</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="fullname" id="fullname" placeholder="John A Doe" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="email">Correo</label>
+                                    <label for="email" class="labelForm">Correo</label>
                                     <div class="col-10">
                                         <input id="email" class="form-control form-control-lg" type="email" name="email" placeholder="john@mail.com" required>
                                     </div>
@@ -428,7 +428,7 @@
                     -->
 
                             </br>
-                            <div class="modal-footer">
+                            <div class="modal-footer btnPay">
                                 <button class='btn btn-primary ' type='submit'>
                                     Pagar
                                 </button>
@@ -479,8 +479,7 @@
     </div>
 
     <!-- BUY TICKETS AT STORES-->
-    <div id="at_stores" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;"
-        aria-hidden="true">
+    <div id="at_stores" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -551,114 +550,51 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12">
-                                TERMINOS Y CONDICIONES SERVICIOS GENERALES POLITICA DE PRIVACIDAD Estamos comprometidos con la protección de la privacidad
-                                de todas aquellas personas que visiten https://pty.glass (PTY Glass) (la "Página Web"). Por
-                                favor, lea las siguientes políticas de privacidad donde se explica cómo utilizamos y protegemos
-                                su información. Al visitar y/o inscribirse y/o solicitar servicios en esta Página Web, usted
-                                acepta y donde se le requiera, consiente que los datos facilitados sean recabados, utilizados
-                                y transmitidos conforme a lo establecido en las presentes políticas de privacidad INFORMACIÓN
-                                QUE RECABAMOS SOBRE USTED 1.1. Cuando visite la Página Web o utilice nuestros Servicios on
-                                line para realizar una compra de boletos en Pty.glass a través de la Página Web, se le podrá
-                                solicitar que nos proporcione información sobre usted, incluidos su nombre, datos de contacto
-                                e información sobre una tarjeta de crédito o de débito. También podremos recabar información
-                                sobre su uso de la Página Web y de nuestros Servicios, de los mensajes que deje en la Página
-                                Web y de los correos electrónicos o cartas que nos remita. 1.2. Al acceder a la información
-                                de Pty.glass y/o a la Página web o al Servicio utilizando las rutas digitales de los móviles
-                                como por ejemplo (pero no limitados a estos tipos) móvil, tablet u otro dispositivo / tecnología,
-                                incluyendo las aplicaciones móviles, la recogida y utilización de sus datos se ajustará a
-                                lo establecido en la presente Política de Privacidad. Podemos recabar información técnica
-                                de su dispositivo móvil, del Sitio Web o del Servicio que se realiza a través de un dispositivo
-                                móvil, como, por ejemplo, los datos de localización y ciertas características de rendimiento
-                                y datos sobre, el dispositivo, soporte / sistema operativo, incluyendo el dispositivo y el
-                                tipo de conexión, dirección IP, métodos de pago móvil, la interacción con otras tecnologías
-                                de retail como el uso de NFC Tags, los códigos QR o el uso de cupones móviles. A menos que
-                                haya optado por permanecer en el anonimato a través de su dispositivo y / o configuración
-                                de la plataforma, esta información puede ser recogida y utilizada por nosotros de forma automática
-                                si utiliza el Sitio Web o el Servicio a través de su dispositivo móvil (s), a través de cualquier
-                                aplicación móvil Pty.glass, a través de su móvil navegador o de otra manera. USO DE SUS DATOS
-                                2.1. La información que nos facilite nos permitirá proporcionarles acceso a determinadas
-                                partes de la Página Web y prestarle los servicios que nos haya solicitado. También nos permitirá
-                                facturarle y contactarle nosotros o Fundacion PanaFintech, cuando resulte necesario con relación
-                                a nuestros servicios. Por ejemplo, nosotros podemos usar su información para ofrecerle actualizaciones
-                                del estado de su Boleto y otra información acerca de su Boleto por e-mail, teléfono, móvil
-                                o mensajería móvil (por ejemplo, SMS, MMS, etc.) Asimismo, utilizaremos y analizaremos la
-                                información recabada, de forma que podamos administrar, apoyar, mejorar y desarrollar nuestro
-                                negocio, así como con fines estadísticos y de análisis y para ayudar a prevenir el fraude.
-                                En su caso, ahora y en el futuro podrá manifestar sus preferencias con relación al uso de
-                                sus datos según lo establecido en esta Política de Privacidad, y podrá ser ejercido según
-                                el método que usted haya elegido para utilizar el Servicio, por ejemplo, aplicaciones de
-                                teléfonos móviles o a través de la Página Web. 2.2. Podremos utilizar sus datos para contactarle
-                                en aras a obtener su opinión sobre nuestros servicios y ocasionalmente para notificarle cambios
-                                o desarrollos importantes en nuestra Página Web y en nuestros Servicios. 2.3. En el caso
-                                de que lo hubiera consentido podríamos utilizar sus datos para informarle sobre otros de
-                                nuestros productos y servicios que pudieran ser de su interés, incluidos servicios que puedan
-                                ser objeto de marketing directo, para lo cual podremos ponernos en contacto con Ud. por teléfono,
-                                SMS, así como por correo electrónico. 2.4. Si así lo indicara, Ud. acepta que compartamos
-                                sus datos con terceros que colaboran con nosotros con el fin de usar su información para
-                                darle a conocer mercancías y servicios que puedan ser de su interés (por correo, teléfono,
-                                mensajes de móvil (p. ej. SMS, MMS) y/o correo electrónico). 2.5. Si usted no desea que utilicemos
-                                sus datos para estos fines o cambiara de opinión sobre ser contactado en el futuro, por favor,
-                                póngase en contacto con nosotros utilizando los datos de contacto por correo electrónico
-                                a: info@pty.glass y/o modificando su perfil convenientemente. 2.6. Por favor, tenga en cuenta
-                                que al realizar comentarios y opiniones sobre la Página Web y sobre los servicios, usted
-                                consiente en que incluyamos dichos comentarios y opiniones en la Página Web y en cualesquiera
-                                materiales de marketing o publicidad. A estos efectos sólo le identificaremos por su nombre
-                                de pila y por su ciudad de residencia. Divulgación de sus datos 3.1. La información que usted
-                                nos proporcione será transferida y se conservará en nuestros servidores y podrán acceder
-                                a la misma tanto nuestro personal como terceros que pertenezcan al grupo de empresas Pty.glass.,
-                                que actúen para nosotros a los efectos establecidos en estas políticas o a otros efectos
-                                que le serán periódicamente notificados en estas políticas. 3.2. Dichos terceros serán encargados
-                                de tratar la información, tal como procesar pagos con tarjetas de crédito y proporcionar
-                                servicios de asistencia para nosotros. En cualquier caso, todos estos terceros, actuarán
-                                como encargados del tratamiento de Pty.glass y se verán vinculados por el correspondiente
-                                contrato de protección de datos. Al facilitar sus datos, Ud. acepta que los mismos sean transferidos,
-                                almacenados y tratados. Pty.glass adoptará todas las medidas que considere razonable para
-                                en aras de asegurarse que sus datos son tratados con seguridad de conformidad las presentes
-                                políticas de privacidad. 3.3. Si nuestro negocio participara en una jointventure, comprara,
-                                fuera vendida a, o fusionada con, otra entidad mercantil, la información sobre usted podrá
-                                ser revelada o transmitida a nuestros nuevos socios comerciales o propietarios o a sus asesores.
-                                3.4. Podremos utilizar la información que usted nos proporcione si tuviéramos el deber de
-                                revelar o compartir su información para cumplir con (y/o creamos tener la obligación de tener
-                                que cumplir con) cualquier obligación legal; o con el fin de aplicar las Condiciones de nuestra
-                                Página Web y de cualquier otro contrato suscrito con usted, o para proteger los derechos
-                                de Pty.glass o demás colaboradores nuestros. Con ellos nos referimos a cruzar información
-                                con otras empresas y organizaciones con el objeto de evitar y proteger el fraude. Seguridad
-                                y retención de datos 4.1. Adoptaremos las medidas de protección de datos necesarias para
-                                evitar accesos no autorizados y tratamientos ilegales, pérdidas accidentales, destrucción
-                                y daños. Conservaremos su información por el plazo que resulte legalmente exigible. 4.2.
-                                En el supuesto de que hubiera escogido una contraseña que le permita acceder a determinadas
-                                partes de la Página Web, será responsable de mantener la confidencialidad de dicha contraseña.
-                                Le recomendamos no compartir su contraseña con nadie. 4.3. Desafortunadamente, la transmisión
-                                de información a través de internet no es completamente segura. A pesar de que adoptaremos
-                                las medidas para proteger sus datos, no podemos garantizar la seguridad de los datos que
-                                transmita a la Página Web; toda transmisión se realizará a su propio riesgo. Una vez recibida
-                                la información, utilizaremos procedimientos estrictos y medidas de seguridad para trata de
-                                evitar los accesos no autorizados. Derechos de acceso y actualización Le informamos que:
-                                5.1. Sus datos personales, serán tratados y quedarán incorporados en los archivos de Pty.glass
-                                con el fin de dar una efectiva respuesta o prestación de los servicios solicitados, facilitar
-                                la tramitación de los Boletos, la realización de estudios estadísticos y el envío de publicidad
-                                de las promociones ofertadas por Pty.glass a través de su Sitio Web. En este sentido, el
-                                usuario consiente de forma expresa, el tratamiento de sus datos personales remitidos a Pty.glass
-                                para las finalidades indicadas en este documento. 5.2. Usted tendrá derecho de acceso a sus
-                                datos personales para verificar la fidelidad e integridad de los mismos, así como a los efectos
-                                de consultar el uso que de los mismos se está dando y los nombres de las personas a los que
-                                se hayan facilitado. 5.3. También tiene derecho a solicitar la corrección o eliminación de
-                                datos personales o a objetar cualquier tratamiento de los mismos. 5.4. Para obtener información
-                                y ejercitar sus derechos de acceso, rectificación, cancelación y oposición al tratamiento
-                                de los mismos, por favor contacte con nosotros utilizando los datos de contacto o un correo
-                                a info@pty.glass . 5.5. En todo caso, Pty.glass conservará de forma confidencial y cumpliendo
-                                la obligación de secreto de todos los datos personales recabados y contenidos en sus archivos
-                                según lo dispuesto en la normativa vigente en materia de protección de datos y de carácter
-                                personal. Cambios a nuestras políticas de privacidad 6.1. Cualesquiera cambios a nuestras
-                                Políticas de Privacidad serán incluidos en la Página Web y, cuando corresponda, a través
-                                de notificación por correo electrónico. Contacto 7.1. Todos los comentarios, consultas y
-                                solicitudes relativas a nuestra utilización de la información sobre usted serán bienvenidos
-                                y deberán remitirse a info@pty.glass POLITICAS DE DEVOLUCION O CANCELACION PTY Glass, acepta
-                                exclusivamente devoluciones en las siguientes situaciones: Usted podrá realizar una devolución
-                                de su pedido durante los primeros 15 días naturales desde la fecha de recepción del mismo.
-                                Para ello, Usted podrá devolver su boleto, para ello debe enviar un correo a info@pty.glass,
-                                máximo 2 días antes del inicio del evento (20 de Febrero de 2018) con copia de su identificación
-                                y recibo de pago. Cualquier costo de transferencia bancaria correra por parte del comprador.
+                                TERMINOS Y CONDICIONES SERVICIOS GENERALES POLITICA DE PRIVACIDAD Estamos comprometidos con la protección de la privacidad de todas aquellas personas que visiten https://pty.glass (PTY Glass) (la "Página Web"). Por favor, lea las siguientes políticas
+                                de privacidad donde se explica cómo utilizamos y protegemos su información. Al visitar y/o inscribirse y/o solicitar servicios en esta Página Web, usted acepta y donde se le requiera, consiente que los datos facilitados
+                                sean recabados, utilizados y transmitidos conforme a lo establecido en las presentes políticas de privacidad INFORMACIÓN QUE RECABAMOS SOBRE USTED 1.1. Cuando visite la Página Web o utilice nuestros Servicios on line para
+                                realizar una compra de boletos en Pty.glass a través de la Página Web, se le podrá solicitar que nos proporcione información sobre usted, incluidos su nombre, datos de contacto e información sobre una tarjeta de crédito
+                                o de débito. También podremos recabar información sobre su uso de la Página Web y de nuestros Servicios, de los mensajes que deje en la Página Web y de los correos electrónicos o cartas que nos remita. 1.2. Al acceder a
+                                la información de Pty.glass y/o a la Página web o al Servicio utilizando las rutas digitales de los móviles como por ejemplo (pero no limitados a estos tipos) móvil, tablet u otro dispositivo / tecnología, incluyendo las
+                                aplicaciones móviles, la recogida y utilización de sus datos se ajustará a lo establecido en la presente Política de Privacidad. Podemos recabar información técnica de su dispositivo móvil, del Sitio Web o del Servicio
+                                que se realiza a través de un dispositivo móvil, como, por ejemplo, los datos de localización y ciertas características de rendimiento y datos sobre, el dispositivo, soporte / sistema operativo, incluyendo el dispositivo
+                                y el tipo de conexión, dirección IP, métodos de pago móvil, la interacción con otras tecnologías de retail como el uso de NFC Tags, los códigos QR o el uso de cupones móviles. A menos que haya optado por permanecer en el
+                                anonimato a través de su dispositivo y / o configuración de la plataforma, esta información puede ser recogida y utilizada por nosotros de forma automática si utiliza el Sitio Web o el Servicio a través de su dispositivo
+                                móvil (s), a través de cualquier aplicación móvil Pty.glass, a través de su móvil navegador o de otra manera. USO DE SUS DATOS 2.1. La información que nos facilite nos permitirá proporcionarles acceso a determinadas partes
+                                de la Página Web y prestarle los servicios que nos haya solicitado. También nos permitirá facturarle y contactarle nosotros o Fundacion PanaFintech, cuando resulte necesario con relación a nuestros servicios. Por ejemplo,
+                                nosotros podemos usar su información para ofrecerle actualizaciones del estado de su Boleto y otra información acerca de su Boleto por e-mail, teléfono, móvil o mensajería móvil (por ejemplo, SMS, MMS, etc.) Asimismo, utilizaremos
+                                y analizaremos la información recabada, de forma que podamos administrar, apoyar, mejorar y desarrollar nuestro negocio, así como con fines estadísticos y de análisis y para ayudar a prevenir el fraude. En su caso, ahora
+                                y en el futuro podrá manifestar sus preferencias con relación al uso de sus datos según lo establecido en esta Política de Privacidad, y podrá ser ejercido según el método que usted haya elegido para utilizar el Servicio,
+                                por ejemplo, aplicaciones de teléfonos móviles o a través de la Página Web. 2.2. Podremos utilizar sus datos para contactarle en aras a obtener su opinión sobre nuestros servicios y ocasionalmente para notificarle cambios
+                                o desarrollos importantes en nuestra Página Web y en nuestros Servicios. 2.3. En el caso de que lo hubiera consentido podríamos utilizar sus datos para informarle sobre otros de nuestros productos y servicios que pudieran
+                                ser de su interés, incluidos servicios que puedan ser objeto de marketing directo, para lo cual podremos ponernos en contacto con Ud. por teléfono, SMS, así como por correo electrónico. 2.4. Si así lo indicara, Ud. acepta
+                                que compartamos sus datos con terceros que colaboran con nosotros con el fin de usar su información para darle a conocer mercancías y servicios que puedan ser de su interés (por correo, teléfono, mensajes de móvil (p. ej.
+                                SMS, MMS) y/o correo electrónico). 2.5. Si usted no desea que utilicemos sus datos para estos fines o cambiara de opinión sobre ser contactado en el futuro, por favor, póngase en contacto con nosotros utilizando los datos
+                                de contacto por correo electrónico a: info@pty.glass y/o modificando su perfil convenientemente. 2.6. Por favor, tenga en cuenta que al realizar comentarios y opiniones sobre la Página Web y sobre los servicios, usted consiente
+                                en que incluyamos dichos comentarios y opiniones en la Página Web y en cualesquiera materiales de marketing o publicidad. A estos efectos sólo le identificaremos por su nombre de pila y por su ciudad de residencia. Divulgación
+                                de sus datos 3.1. La información que usted nos proporcione será transferida y se conservará en nuestros servidores y podrán acceder a la misma tanto nuestro personal como terceros que pertenezcan al grupo de empresas Pty.glass.,
+                                que actúen para nosotros a los efectos establecidos en estas políticas o a otros efectos que le serán periódicamente notificados en estas políticas. 3.2. Dichos terceros serán encargados de tratar la información, tal como
+                                procesar pagos con tarjetas de crédito y proporcionar servicios de asistencia para nosotros. En cualquier caso, todos estos terceros, actuarán como encargados del tratamiento de Pty.glass y se verán vinculados por el correspondiente
+                                contrato de protección de datos. Al facilitar sus datos, Ud. acepta que los mismos sean transferidos, almacenados y tratados. Pty.glass adoptará todas las medidas que considere razonable para en aras de asegurarse que sus
+                                datos son tratados con seguridad de conformidad las presentes políticas de privacidad. 3.3. Si nuestro negocio participara en una jointventure, comprara, fuera vendida a, o fusionada con, otra entidad mercantil, la información
+                                sobre usted podrá ser revelada o transmitida a nuestros nuevos socios comerciales o propietarios o a sus asesores. 3.4. Podremos utilizar la información que usted nos proporcione si tuviéramos el deber de revelar o compartir
+                                su información para cumplir con (y/o creamos tener la obligación de tener que cumplir con) cualquier obligación legal; o con el fin de aplicar las Condiciones de nuestra Página Web y de cualquier otro contrato suscrito
+                                con usted, o para proteger los derechos de Pty.glass o demás colaboradores nuestros. Con ellos nos referimos a cruzar información con otras empresas y organizaciones con el objeto de evitar y proteger el fraude. Seguridad
+                                y retención de datos 4.1. Adoptaremos las medidas de protección de datos necesarias para evitar accesos no autorizados y tratamientos ilegales, pérdidas accidentales, destrucción y daños. Conservaremos su información por
+                                el plazo que resulte legalmente exigible. 4.2. En el supuesto de que hubiera escogido una contraseña que le permita acceder a determinadas partes de la Página Web, será responsable de mantener la confidencialidad de dicha
+                                contraseña. Le recomendamos no compartir su contraseña con nadie. 4.3. Desafortunadamente, la transmisión de información a través de internet no es completamente segura. A pesar de que adoptaremos las medidas para proteger
+                                sus datos, no podemos garantizar la seguridad de los datos que transmita a la Página Web; toda transmisión se realizará a su propio riesgo. Una vez recibida la información, utilizaremos procedimientos estrictos y medidas
+                                de seguridad para trata de evitar los accesos no autorizados. Derechos de acceso y actualización Le informamos que: 5.1. Sus datos personales, serán tratados y quedarán incorporados en los archivos de Pty.glass con el fin
+                                de dar una efectiva respuesta o prestación de los servicios solicitados, facilitar la tramitación de los Boletos, la realización de estudios estadísticos y el envío de publicidad de las promociones ofertadas por Pty.glass
+                                a través de su Sitio Web. En este sentido, el usuario consiente de forma expresa, el tratamiento de sus datos personales remitidos a Pty.glass para las finalidades indicadas en este documento. 5.2. Usted tendrá derecho
+                                de acceso a sus datos personales para verificar la fidelidad e integridad de los mismos, así como a los efectos de consultar el uso que de los mismos se está dando y los nombres de las personas a los que se hayan facilitado.
+                                5.3. También tiene derecho a solicitar la corrección o eliminación de datos personales o a objetar cualquier tratamiento de los mismos. 5.4. Para obtener información y ejercitar sus derechos de acceso, rectificación, cancelación
+                                y oposición al tratamiento de los mismos, por favor contacte con nosotros utilizando los datos de contacto o un correo a info@pty.glass . 5.5. En todo caso, Pty.glass conservará de forma confidencial y cumpliendo la obligación
+                                de secreto de todos los datos personales recabados y contenidos en sus archivos según lo dispuesto en la normativa vigente en materia de protección de datos y de carácter personal. Cambios a nuestras políticas de privacidad
+                                6.1. Cualesquiera cambios a nuestras Políticas de Privacidad serán incluidos en la Página Web y, cuando corresponda, a través de notificación por correo electrónico. Contacto 7.1. Todos los comentarios, consultas y solicitudes
+                                relativas a nuestra utilización de la información sobre usted serán bienvenidos y deberán remitirse a info@pty.glass POLITICAS DE DEVOLUCION O CANCELACION PTY Glass, acepta exclusivamente devoluciones en las siguientes
+                                situaciones: Usted podrá realizar una devolución de su pedido durante los primeros 15 días naturales desde la fecha de recepción del mismo. Para ello, Usted podrá devolver su boleto, para ello debe enviar un correo a info@pty.glass,
+                                máximo 2 días antes del inicio del evento (20 de Febrero de 2018) con copia de su identificación y recibo de pago. Cualquier costo de transferencia bancaria correra por parte del comprador.
                             </div>
 
                         </div>
@@ -786,9 +722,8 @@
                 <div class="row description">
                     <div class="col-md-8">
                         <p class="lead">
-                            Panama Glass es un discurso abierto sobre "modernización y transparencia del sistema financiero de Panamá". La cumbre reunirá
-                            a expertos internacionales con partes interesadas locales y un afortunado grupo de estudiantes.
-                            El objetivo de este grupo es producir un plan visionario. Temas a incluir:
+                            Panama Glass es un discurso abierto sobre "modernización y transparencia del sistema financiero de Panamá". La cumbre reunirá a expertos internacionales con partes interesadas locales y un afortunado grupo de estudiantes. El objetivo de este grupo es
+                            producir un plan visionario. Temas a incluir:
                             <ul>
                                 <li>Transparencia y responsabilidad</li>
                                 <li>Estándar de Dollar Digital</li>
@@ -806,8 +741,7 @@
                             <li>Recibió un préstamo de $ 250 millones de CAF por
                                 <a target="_blank" href="https://www.panamatoday.com/economy/caf-will-grant-panama-250-million-loan-improve-financial-management-5716">"modernizar y mejorar la transparencia del sistema financiero del país"</a>
                             </li>
-                            <li>Descubrieron que muchos funcionarios del gobierno recibieron millones en sobornos de Odebrecht
-                                y otros.</li>
+                            <li>Descubrieron que muchos funcionarios del gobierno recibieron millones en sobornos de Odebrecht y otros.</li>
                             <li>Está siendo presionado para revisar o eliminar las zonas económicas especiales.</li>
                             <li>Está siendo presionado para regular estrictamente la tecnología financiera.</li>
                         </ol>
@@ -1165,82 +1099,62 @@
                                 <strong>“Solving World’s Problems with Tech-Transparency”</strong>
                             </p>
                             <h5 id="objective">Objective</h5>
-                            <p>To choose the best students to assist top world class Though Leaders in making the white papers
-                                on their dissertations and thoughts developed in the event Panama Glass Summit 2018.</p>
+                            <p>To choose the best students to assist top world class Though Leaders in making the white papers on their dissertations and thoughts developed in the event Panama Glass Summit 2018.</p>
                             <h5 id="contest-rules">Reglas del Concurso:</h5>
                             <ol style="list-style-type: decimal">
                                 <li>
                                     <p>El concurso cierra el 12 de Febrero de 2018.</p>
                                 </li>
                                 <li>
-                                    <p>Está abierto para todas las universidades panameñas privadas y públicas. Todos los campos
-                                        profesionales son acogidos con beneplácito.</p>
+                                    <p>Está abierto para todas las universidades panameñas privadas y públicas. Todos los campos profesionales son acogidos con beneplácito.</p>
                                 </li>
                                 <li>
                                     <p>Debe tener 18 años o más.</p>
                                 </li>
                                 <li>
-                                    <p>Escriba un ensayo de 500 a 600 palabras con el título, “¿Cómo creo que la tecnología
-                                        puede aumentar la transparencia y disminuir la corrupción en Panamá?” El ensayo tendrá
-                                        dos partes: En la primera parte, describa tres problemas principales que usted cree
-                                        que son provocados por la falta de transparencia en Panamá. En la segunda parte,
-                                        describa como usted cree que la tecnología pueda usarse para mejorar la transparencia
-                                        y disminuir la corrupción en Panamá. Piense en los problemas y como la tecnología
-                                        podría ser la solución.</p>
+                                    <p>Escriba un ensayo de 500 a 600 palabras con el título, “¿Cómo creo que la tecnología puede aumentar la transparencia y disminuir la corrupción en Panamá?” El ensayo tendrá dos partes: En la primera parte, describa tres
+                                        problemas principales que usted cree que son provocados por la falta de transparencia en Panamá. En la segunda parte, describa como usted cree que la tecnología pueda usarse para mejorar la transparencia y disminuir
+                                        la corrupción en Panamá. Piense en los problemas y como la tecnología podría ser la solución.</p>
                                 </li>
                                 <li>
-                                    <p>Envíe dos copias: Una en español y una en inglés, en ambos formatos de bloc de notas
-                                        o formato Markdown
+                                    <p>Envíe dos copias: Una en español y una en inglés, en ambos formatos de bloc de notas o formato Markdown
                                         <a target="_blank" href="https://daringfireball.net/projects/markdown/syntax#html">https://daringfireball.net/projects/markdown/syntax#html</a> a
                                         <a href="mailto:someone@example.com">ptyglass@gmail.com</a> o por git
-                                        <a target="_blank" href="https://github.com/PanaFintech/panama-glass">https://github.com/PanaFintech/panama-glass</a> a más tardar a la medianoche del
-                                        12 de Febrero de 2018. No se aceptarán otros formatos, incluyendo PDF o Microsoft
-                                        Word.
+                                        <a target="_blank" href="https://github.com/PanaFintech/panama-glass">https://github.com/PanaFintech/panama-glass</a> a más tardar a la medianoche del 12 de Febrero de 2018. No se aceptarán otros formatos, incluyendo
+                                        PDF o Microsoft Word.
                                     </p>
                                 </li>
                                 <li>
-                                    <p>Incluya su nombre, número de cédula, y correo electrónico arriba del ensayo. Una foto
-                                        es opcional.</p>
+                                    <p>Incluya su nombre, número de cédula, y correo electrónico arriba del ensayo. Una foto es opcional.</p>
                                 </li>
                                 <li>
                                     <p>Debe usar notas finales para cualquier referencia.</p>
                                 </li>
                                 <li>
-                                    <p>El ensayo necesita incluir dos párrafos: a. En el primer párrafo, describa tres problemas
-                                        principales que usted piensa que se producen debido a la falta de transparencia y
-                                        corrupción en Panamá. b. En el segundo párrafo, describa como usted cree que la tecnología
-                                        puede mejorar la trasparencia y disminuir la corrupción en Panamá para resolver estos
-                                        problemas.
+                                    <p>El ensayo necesita incluir dos párrafos: a. En el primer párrafo, describa tres problemas principales que usted piensa que se producen debido a la falta de transparencia y corrupción en Panamá. b. En el segundo párrafo,
+                                        describa como usted cree que la tecnología puede mejorar la trasparencia y disminuir la corrupción en Panamá para resolver estos problemas.
                                     </p>
                                 </li>
                                 <li>
-                                    <p>Todos los estudiantes que envíen un ensayo al concurso recibirán una invitación personal
-                                        a un evento gratuito de networking con un invitado en la
+                                    <p>Todos los estudiantes que envíen un ensayo al concurso recibirán una invitación personal a un evento gratuito de networking con un invitado en la
                                         <a target="_blank" href="https://www.embassypty.com/es/">Blockchain Embassy</a> en la Avenida Balboa., que incluye una presentación de
-                                        <a target="_blank" href="https://iramiller.com/">Ira Miller</a>. Las invitaciones con los detalles sobre el evento se enviarán con
-                                        la recepción del correo.</p>
+                                        <a target="_blank" href="https://iramiller.com/">Ira Miller</a>. Las invitaciones con los detalles sobre el evento se enviarán con la recepción del correo.</p>
                                 </li>
                                 <li>
-                                    <p>Un comité leerá los ensayos y escogerá los ganadores. El comité considerará: a. El estilo
-                                        de redacción y el uso de la gramática en español e inglés. b. El conocimiento de
-                                        la transparencia y la tecnología c. La imaginación y la creatividad de las soluciones
-                                        tecnológicas propuestas.</p>
+                                    <p>Un comité leerá los ensayos y escogerá los ganadores. El comité considerará: a. El estilo de redacción y el uso de la gramática en español e inglés. b. El conocimiento de la transparencia y la tecnología c. La imaginación
+                                        y la creatividad de las soluciones tecnológicas propuestas.</p>
                                 </li>
                                 <li>
-                                    <p>Informaremos los resultados del concurso a los estudiantes por correo electrónico a más
-                                        tardar el 1 de febrero.</p>
+                                    <p>Informaremos los resultados del concurso a los estudiantes por correo electrónico a más tardar el 1 de febrero.</p>
                                 </li>
                                 <li>
-                                    <p>Los ganadores deben estar disponibles para asistir a la Cumbre Panama Glass y a todas
-                                        las actividades relacionadas en la Ciudad de Panamá del 22 al 25 de Febrero, de 2018.</p>
+                                    <p>Los ganadores deben estar disponibles para asistir a la Cumbre Panama Glass y a todas las actividades relacionadas en la Ciudad de Panamá del 22 al 25 de Febrero, de 2018.</p>
                                 </li>
                                 <li>
-                                    <p>La cumbre Panama Glass tendrá todos los derechos de los artículos y las ideas que incluye.
-                                        El informe técnico y las ideas se pueden usar libremente durante el evento.</p>
+                                    <p>La cumbre Panama Glass tendrá todos los derechos de los artículos y las ideas que incluye. El informe técnico y las ideas se pueden usar libremente durante el evento.</p>
                                 </li>
                                 <li>
-                                    <p>Los ganadores están de acuerdo con asistir a todas las sesiones de la cumbre y ayudar
-                                        a los organizadores, si es necesario.</p>
+                                    <p>Los ganadores están de acuerdo con asistir a todas las sesiones de la cumbre y ayudar a los organizadores, si es necesario.</p>
                                 </li>
                                 <li>
                                     <p>Al enviar el artículo, usted acepta y está de acuerdo con estas “reglas del concurso.”</p>
@@ -1275,23 +1189,17 @@
                                     <p>Asistencia gratis a todas las actividades de los eventos.</p>
                                 </li>
                                 <li>
-                                    <p>Certificados como un ganador del concurso, asistente para el comité organizador, y coautor
-                                        del informe técnico.</p>
+                                    <p>Certificados como un ganador del concurso, asistente para el comité organizador, y coautor del informe técnico.</p>
                                 </li>
                                 <li>
-                                    <p>Su nombre colocado en los informes técnicos finales, productos de la Cumbre Panama Glass,
-                                        ser publicado en revistas académicas, periódicos, redes sociales, y distribuido ampliamente
-                                        en el Internet.</p>
+                                    <p>Su nombre colocado en los informes técnicos finales, productos de la Cumbre Panama Glass, ser publicado en revistas académicas, periódicos, redes sociales, y distribuido ampliamente en el Internet.</p>
                                 </li>
                                 <li>
-                                    <p>Asistencia gratuita a la preparación del seminario “Cómo las tecnologías de cadenas de
-                                        bloques están solucionando problemas mundiales.” El seminario tendrá un total de
-                                        24-horas. Las sesiones tendrán lugar en la noche, de 6pm a 10 pm, del 29 de Enero
-                                        al 5 de Febrero incluyendo el certificado de asistencia.</p>
+                                    <p>Asistencia gratuita a la preparación del seminario “Cómo las tecnologías de cadenas de bloques están solucionando problemas mundiales.” El seminario tendrá un total de 24-horas. Las sesiones tendrán lugar en la noche,
+                                        de 6pm a 10 pm, del 29 de Enero al 5 de Febrero incluyendo el certificado de asistencia.</p>
                                 </li>
                                 <li>
-                                    <p>Contacto directo con expertos en Cadenas de bloques, Contrato inteligente y transparencia
-                                        tecnológica.
+                                    <p>Contacto directo con expertos en Cadenas de bloques, Contrato inteligente y transparencia tecnológica.
                                     </p>
                                 </li>
                             </ol>
@@ -1920,8 +1828,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <form id="contactForm" class="subscribe-form form-inline" action="mailto:ptyglass@gmail.com?subject=Panama Glass Info" method="POST"
-                            enctype="text/plain">
+                        <form id="contactForm" class="subscribe-form form-inline" action="mailto:ptyglass@gmail.com?subject=Panama Glass Info" method="POST" enctype="text/plain">
                             <button type="submit" class="btn btn-primary btn-lg">CONTÁCTENOS</button>
                         </form>
                     </div>
