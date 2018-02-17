@@ -1,4 +1,4 @@
-jQuery(function($) {
+jQuery(function ($) {
 
     'use strict';
 
@@ -6,7 +6,7 @@ jQuery(function($) {
     // PreLoader
     // --------------------------------------------------------------------
 
-    (function() {
+    (function () {
         $('#preloader').delay(200).fadeOut('slow');
     }());
 
@@ -14,8 +14,8 @@ jQuery(function($) {
     // One Page Navigation
     // --------------------------------------------------------------------
 
-    (function() {
-        $(window).scroll(function() {
+    (function () {
+        $(window).scroll(function () {
             if ($(this).scrollTop() >= 50) {
                 $('nav.navbar').addClass('sticky-nav');
             } else {
@@ -28,8 +28,8 @@ jQuery(function($) {
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     // --------------------------------------------------------------------
 
-    (function() {
-        $('a.page-scroll').on('click', function(e) {
+    (function () {
+        $('a.page-scroll').on('click', function (e) {
             e.preventDefault();
             var $anchor = $(this);
             $('html, body').stop().animate({
@@ -38,11 +38,11 @@ jQuery(function($) {
         });
     }());
 
-    (function() {
+    (function () {
 
 
         function getData(username) {
-            $.get("https://pty.glass/api/id/" + username, function(data) {
+            $.get("https://pty.glass/api/id/" + username, function (data) {
                 data = JSON.parse(data);
                 var addresses = data.depositAddresses;
                 var address = "";
@@ -99,19 +99,19 @@ jQuery(function($) {
                 d.setSeconds((d.getSeconds() + secondsUntilNextTimerTrigger) + 1);
                 $("#timedown span")
                     .countdown(d,
-                        function(event) {
+                        function (event) {
                             $(this).text(
                                 event.strftime('%M:%S')
                             );
                         });
 
-                setTimeout(function() {
+                setTimeout(function () {
                     getData(username)
                 }, secondsUntilNextTimerTrigger * 1000);
             });
         }
 
-        $('#cryptoForm').on('submit', function(e) {
+        $('#cryptoForm').on('submit', function (e) {
             e.preventDefault();
             e.stopPropagation();
             $("#pay_crypto .step1").hide();
@@ -127,7 +127,7 @@ jQuery(function($) {
                     email: $("#email").val(),
                     fullname: $("#fullname").val()
                 })
-                .done(function(data) {
+                .done(function (data) {
                     getData(username);
                 });
         });
@@ -138,8 +138,8 @@ jQuery(function($) {
     // Show step1
     // --------------------------------------------------------------------
 
-    (function() {
-        $('#back').on('click', function(e) {
+    (function () {
+        $('#back').on('click', function (e) {
             console.log("fired");
             $("#pay_crypto .step2").hide();
             $("#pay_crypto .step1").show();
@@ -151,7 +151,7 @@ jQuery(function($) {
     // pay with card stuff
     // --------------------------------------------------------------------
 
-    (function() {
+    (function () {
         function generate() {
             var number = $('#ticketNumber').val();
             var tier = $('#ticketTier').val();
@@ -170,7 +170,7 @@ jQuery(function($) {
 
             var tot = number * tierCost;
             $('#amount').text(tot + ".00");
-            $('#amountField').text(tot + ".00");
+            $('#amountField').val(tot + ".00");
 
             var modName = fname.replace(/\s/g, '');
             $('#cardHolder').val(modName);
@@ -180,22 +180,22 @@ jQuery(function($) {
         generate();
 
 
-        $('#ticketNumber').on('change', function() {
+        $('#ticketNumber').on('change', function () {
             generate();
         });
 
-        $('#ticketTier').on('change', function() {
+        $('#ticketTier').on('change', function () {
             generate();
         });
 
-        $('#cvv2').on('change', function() {
+        $('#cvv2').on('change', function () {
             generate();
         });
 
-        $('#cardNumber').on('change', function() {
+        $('#cardNumber').on('change', function () {
             generate();
         });
-
+        
         // Response to pay with card submit
         $('#iframe_a').load(function() {
             $('#pay_card').modal('hide');
@@ -212,8 +212,8 @@ jQuery(function($) {
     // Closes the Responsive Menu on Menu Item Click
     // --------------------------------------------------------------------
 
-    (function() {
-        $('.navbar-collapse ul li a').on('click', function() {
+    (function () {
+        $('.navbar-collapse ul li a').on('click', function () {
             if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
                 $('.navbar-toggle:visible').trigger('click');
             }
@@ -224,7 +224,7 @@ jQuery(function($) {
     // Google Map
     // --------------------------------------------------------------------
 
-    (function() {
+    (function () {
         //google map custom marker icon
         var $marker_url = 'img/google-map-marker.png';
 
@@ -251,17 +251,17 @@ jQuery(function($) {
 
             //set google map options
             var map_options = {
-                    center: new google.maps.LatLng($latitude, $longitude),
-                    zoom: $map_zoom,
-                    panControl: false,
-                    zoomControl: false,
-                    mapTypeControl: false,
-                    streetViewControl: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    scrollwheel: false,
-                    styles: style,
-                }
-                //initialize the map
+                center: new google.maps.LatLng($latitude, $longitude),
+                zoom: $map_zoom,
+                panControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                streetViewControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                styles: style,
+            }
+            //initialize the map
             var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
             //add a custom marker to the map
             var marker = new google.maps.Marker({
@@ -283,17 +283,17 @@ jQuery(function($) {
 
             //set google map options
             var map_options2 = {
-                    center: new google.maps.LatLng($latitude2, $longitude2),
-                    zoom: $map_zoom2,
-                    panControl: false,
-                    zoomControl: false,
-                    mapTypeControl: false,
-                    streetViewControl: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    scrollwheel: false,
-                    styles: style,
-                }
-                //initialize the map
+                center: new google.maps.LatLng($latitude2, $longitude2),
+                zoom: $map_zoom2,
+                panControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                streetViewControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                styles: style,
+            }
+            //initialize the map
             var map2 = new google.maps.Map(document.getElementById('googleMap2'), map_options2);
             //add a custom marker to the map
             var marker = new google.maps.Marker({
@@ -317,8 +317,8 @@ var typed3 = new Typed('#text', {
     loop: false
 });
 
-$(document).ready(function() {
-    $(window).resize(function() {
+$(document).ready(function () {
+    $(window).resize(function () {
         var height = $(window).height();
         var video = $('#background').outerHeight();
         var welcome = $('#welcome').outerHeight();
