@@ -86,7 +86,7 @@ jQuery(function ($) {
 
                 $("#qrcodeCanvas").html("");
                 $("#address").text(address);
-                new QRCode(document.getElementById("qrcodeCanvas"), currency + ":" + address + "[?amount=" + total + "][?label=Tickets][?message=Number: " + ticketNumber + " Tier: " + ticketTier + "]");
+                new QRCode(document.getElementById("qrcodeCanvas"), currency + ":" + address + "?amount=" + total);
 
                 $("#pay_crypto .step2").show();
 
@@ -146,21 +146,11 @@ jQuery(function ($) {
         });
     }());
 
-    // --------------------------------------------------------------------
-    // Closes the Responsive Menu on Menu Item Click
-    // --------------------------------------------------------------------
-
-    (function () {
-        $('.navbar-collapse ul li a').on('click', function () {
-            if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
-                $('.navbar-toggle:visible').trigger('click');
-            }
-        });
-    }());
 
     // --------------------------------------------------------------------
-    // Tickets calculator
+    // pay with card stuff
     // --------------------------------------------------------------------
+
     (function () {
         function generate() {
             var number = $('#ticketNumber').val();
@@ -179,34 +169,16 @@ jQuery(function ($) {
             }
 
             var tot = number * tierCost;
-            $('#Amount').val(tot + ".00");
+            $('#amount').text(tot + ".00");
+            $('#amountField').val(tot + ".00");
 
             var modName = fname.replace(/\s/g, '');
             $('#cardHolder').val(modName);
 
-            /*hide submit button if required fields are empty
-            $('#cardHolder, #eamil, #cardNumber, #expiration, #cvv2').keyup(function(){
-                if($('#cardHolder').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#email').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#cardNumber').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#expiration').val().length < 1){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else if($('#cvv2').val().length < 1 ){
-                    $('#paybutton').attr('disabled', true);
-                }
-                else{
-                    $('#paybutton').attr('disabled', false);
-                }
-            })*/
+
         }
         generate();
+
 
         $('#ticketNumber').on('change', function () {
             generate();
@@ -216,30 +188,38 @@ jQuery(function ($) {
             generate();
         });
 
+        $('#cvv2').on('change', function () {
+            generate();
+        });
+
+        $('#cardNumber').on('change', function () {
+            generate();
+        });
+        
         // Response to pay with card submit
-        $('#iframe_a').load(function () {
-            var iBody = $('#iframe_a');
-            var iBod = iBody.text()
-            $('#formresp').val(iBod)
-            //var pati = iBody.text();
-            $('#pay_card').modal('toggle');
+        $('#iframe_a').load(function() {
+            $('#pay_card').modal('hide');
             $('#card_confirm').modal('show');
         });
 
-        // POST crypto form
-
-        // Response to pay with crypto submit
-        $('#paycbutton').on('click', function () {
-            $('#pay_crypto').modal('toggle');
-            $('#qrcodeCanvas').qrcode({
-                text: "http://jetienne.com"
-            });
-            $('#paycbutton').attr('disabled', true);
-        });
-
-
-
     }());
+
+    // --------------------------------------------------------------------
+    // Closes the Responsive Menu on Menu Item Click
+    // --------------------------------------------------------------------
+
+    // --------------------------------------------------------------------
+    // Closes the Responsive Menu on Menu Item Click
+    // --------------------------------------------------------------------
+
+    (function () {
+        $('.navbar-collapse ul li a').on('click', function () {
+            if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+                $('.navbar-toggle:visible').trigger('click');
+            }
+        });
+    }());
+
     // --------------------------------------------------------------------
     // Google Map
     // --------------------------------------------------------------------

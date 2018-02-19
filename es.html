@@ -210,7 +210,7 @@
 
     <!-- MODAL FORM PAY CREDIT CARD-->
     <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="pay_card_label">Pago con Tarjeta</h5>
@@ -218,17 +218,17 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form id="cardForm" action="https://gatewaysandbox.merchantprocess.net/transaction.aspx?" method="POST" autocomplete="off" target="iframe_a">
-                        <input type="hidden" name="AccCode" value="32.00">
-                        <input type="hidden" name="procCode" value="000000">
-                        <input type="hidden" name="merchant" value="104886">
-                        <input type="hidden" name="terminal" value="104886001">
-                        <input type="hidden" name="currencyCode" value="840">
-                        <input type="hidden" name="SiteIPAddress" value="10.0.2.15">
+                <form id="cardForm" action="https://gateway.merchantprocess.net/v2/transaction.aspx" method="POST" autocomplete="off" target="iframe_a">
+                    <div class="modal-body">
+                        <input type="hidden" name="AccCode" value="123123">
+                        <input type="hidden" name="ProcCode" value="000000">
+                        <input type="hidden" name="Merchant" value="101360">
+                        <input type="hidden" name="Terminal" value="101360001">
+                        <input type="hidden" name="CurrencyCode" value="840">
+                        <input type="hidden" name="SiteIPAddress" value="190.32.33.206">
                         <div class="row">
-                            <div class="col-sm-4">
-                                <label for="ticketNumber" class="col-2 col-form-label">Cantidad</label>
+                            <div class="col-sm-5">
+                                <label for="ticketNumber" class="col-2 col-form-label labelForm">Cantidad</label>
                                 <div class="col-10">
                                     <select id="ticketNumber" class="form-control form-control-lg">
                                         <option value="1" selected>1</option>
@@ -246,7 +246,7 @@
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                                <label for="ticketNumber" class="col-2 col-form-label">Boleto</label>
+                                <label for="ticketNumber" class="col-2 col-form-label labelForm">Boleto</label>
                                 <div class="col-10">
                                     <select id="ticketTier" class="form-control form-control-lg">
                                         <option value="1" selected>Regular - 2 días ($300)</option>
@@ -259,36 +259,36 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-4">
-                                <label for="cardHolder">Nombre Completo</label>
+                            <div class="col-sm-5">
+                                <label for="cardHolder" class="labelForm">Nombre Completo</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
+                                    <input class="form-control form-control-lg" type="text" name="Cardholder" id="cardHolder" placeholder="JohnADoe" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                                <label for="cardHolder">Correo Electronico</label>
+                                <label for="cardHolder" class="labelForm">Correo Electronico</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="email" placeholder="john@mail.com" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-4">
-                                <label for="cardNumber">Numero de Tarjeta</label>
+                            <div class="col-sm-5">
+                                <label for="cardNumber" class="labelForm">Numero de Tarjeta</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
+                                    <input class="form-control form-control-lg" type="text" name="CardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-4">
-                                <label for="expiration">Fecha de Expiracion</label>
+                                <label for="expiration" class="labelForm">Fecha de Expiracion</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="expiration" placeholder="mmyy" required>
+                                    <input class="form-control form-control-lg" type="text" name="Expiration" placeholder="mmyy" required>
                                 </div>
                             </div>
                             <div class="col-sm-2">
-                                <label for="cvv2">CVV</label>
+                                <label for="cvv2" class="labelForm">CVV</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="cvv2" placeholder="xxx" id="cvv2" required>
                                 </div>
@@ -296,39 +296,35 @@
                         </div>
                         <div class="row"></div>
                         <label></label>
-                        <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
-                        <div class="row">
-                            Acepto los
-                            <a data-toggle="modal" data-target="#terms"> Terminos y Condiciones</a>
-                            <input type="checkbox" id="agree" required>
-                        </div>
-
-                        <label></label>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <h3>Total USD:</h3>
+                    </div>
+                    <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
+                    <div class="modal-footer">
+                        <div class="col-sm-6">
+                            <div class="col-sm-4 colTotal ">
+                                <span class="spanTotal itemCredit">Total USD:</span>
                             </div>
                             <div class="col-sm-2">
-                                <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-2">
-                                <a href="https://www.credit-card-logos.com/">
-                                    <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.credit-card-logos.com/images/visa_credit-card-logos/new_visa_medium.gif" border="0" align="center" />
-                                </a>
-                            </div>
-                            <div class="col-sm-1">
-                                <a href="https://www.credit-card-logos.com/">
-                                    <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.credit-card-logos.com/images/mastercard_credit-card-logos/mastercard_logo_1.gif" width="67" height="40" border="0" align="center" />
-                                </a>
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-2 text-center">
-                                <input class="btn btn-success" type="submit" value="Pagar" align="right">
+                                <div class="itemCredit" id="amount"></div>
+                                <input type="hidden" name="Amount" id="amountField">
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-sm-6 text-right">
+                            <img src="img/visa.png" class="img-responsive  credImg" alt="Visa">
+                            <img src="img/mastercard.png" class="img-responsive  credImg" alt="MasterCard">
+                        </div>
+                    </div>
+                    <div class=" modal-footer">
+                        <div class="col-sm-10 text-right rowTerms accept">
+                            <input type="checkbox" id="agree" class="checkbox" required>
+                            <span class="">I accept the</span>
+                            <a data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
+                        </div>
+                        <div class="col-sm-2 text-right itemCredit">
+                            <!--btn btn-success-->
+                            <input class="btn btn-primary" type="submit" value="Pay" align="right">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -348,8 +344,8 @@
                     <div class="step1">
                         <form id="cryptoForm">
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <label for="ticketNumber" class="col-2 col-form-label">Cant</label>
+                                <div class="col-sm-5">
+                                    <label for="ticketNumber" class="col-2 col-form-label labelForm">Cantidad</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketNumber" class="form-control form-control-lg">
                                             <option value="1" selected>1</option>
@@ -367,7 +363,7 @@
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="ticketNumber" class="col-2 col-form-label">Boleto</label>
+                                    <label for="ticketNumber" class="col-2 col-form-label labelForm">Boleto</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketTier" class="form-control form-control-lg">
                                             <option value="1" selected>Regular - 2 días ($300)</option>
@@ -380,8 +376,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <label for="moneda" class="col-2 col-form-label">Moneda</label>
+                                <div class="col-sm-5">
+                                    <label for="moneda" class="col-2 col-form-label labelForm">Moneda</label>
                                     <div class="col-10">
                                         <select id="cryptoMoneda" class="form-control form-control-lg">
                                             <option value="1" selected>BTC - Bitcoin</option>
@@ -392,22 +388,22 @@
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="username">Usuario</label>
+                                    <label for="username" class="labelForm">Usuario</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="username" id="username" placeholder="JohnADoe" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <label for="fullname">Nombre completo</label>
+                                <div class="col-sm-5">
+                                    <label for="fullname" class="labelForm">Nombre completo</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="fullname" id="fullname" placeholder="John A Doe" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="email">Correo</label>
+                                    <label for="email" class="labelForm">Correo</label>
                                     <div class="col-10">
                                         <input id="email" class="form-control form-control-lg" type="email" name="email" placeholder="john@mail.com" required>
                                     </div>
@@ -432,10 +428,10 @@
                     -->
 
                             </br>
-                            <div class="modal-footer">
+                            <div class="modal-footer btnPay">
                                 <button class='btn btn-primary ' type='submit'>
-                                        Pagar
-                                    </button>
+                                    Pagar
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -456,10 +452,14 @@
                             </div>
                             <div class="col-md-6 col-sm-6 divqr">
                                 <div class="total">Total: </div>
-                                <p id="totalamount"><span id="total"></span><span id="totalcurrency"></span></p>
+                                <p id="totalamount">
+                                    <span id="total"></span>
+                                    <span id="totalcurrency"></span>
+                                </p>
 
                                 <div class="generate">Regenerate in:</div>
-                                <div id="timedown" class="space"><i class="far fa-clock"></i>
+                                <div id="timedown" class="space">
+                                    <i class="far fa-clock"></i>
                                     <span>15:00</span>
                                 </div>
 
@@ -682,15 +682,16 @@
                         COMPRA BOLETOS
                         <div>con Crypto</div>
                     </a>
+
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
+                        COMPRA BOLETOS
+                        <div>con Tarjeta</div>
+                    </a>
+
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#at_stores">
                         COMPRA BOLETOS
                         <div>en tienda</div>
                     </a>
-                    <!--
-                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
-                        COMPRA BOLETOS
-                        <div>con Tarjeta</div>
-                    </a> -->
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_fiat">
                         COMPRA BOLETOS
                         <div>en USD</div>
@@ -988,6 +989,21 @@
                                             <small>Fundador
                                                 <a target="_blank" href="https://decent.bet">Decent.bet</a>
                                             </small>
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- /.col-sm-6 -->
+                            <div class="col-sm-6 col-md-3">
+                                <figure class="thumbnail">
+                                    <a target="_blank" href="https://intermaritime.org/">
+                                        <img src="img/speakers/flortorrijos.png" class="img-responsive" alt="Image">
+                                    </a>
+                                    <figcaption class="caption text-center">
+                                        <h3>Flor Torrijos
+                                            <small>  Vicepresidente
+                                                    <a target="_blank" href="https://intermaritime.org/">Intermaritime.org</a>
+                                                </small>
                                         </h3>
                                     </figcaption>
                                 </figure>
@@ -1370,14 +1386,16 @@
                         <div class="session">
                             <time>9:00AM</time>
                             <h2>Comentarios de iniciando</h2>
-                            <h3>Ira Miller <span><a target="_blank" href="https://guld.io">guld</a></span></h3>
+                            <h3>Ira Miller
+                                <span>
+                                    <a target="_blank" href="https://guld.io">guld</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>9:30 - 10:30AM</time>
-                            <h2>Dirección del Estado de Panamá</h2>
-                            <h3> <span></span></h3>
                         </div>
                         <!-- .session -->
 
@@ -1523,21 +1541,33 @@
                         <div class="session">
                             <time>9:00AM</time>
                             <h2>Panama Blockchain Embajada</h2>
-                            <h3>Jorge Farias <span><a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a></span></h3>
+                            <h3>Jorge Farias
+                                <span>
+                                    <a target="_blank" href="https://embassypty.com">Panamá Blockchain Embassy</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>9:30AM</time>
                             <h2>Privacidad en la Era Digital</h2>
-                            <h3>Cindy Zimmerman <span><a target="_blank" href="https://tigoctm.com">TigoCTM</a></span></h3>
+                            <h3>Cindy Zimmerman
+                                <span>
+                                    <a target="_blank" href="https://tigoctm.com">TigoCTM</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
                         <div class="session">
                             <time>10:00AM</time>
                             <h2>100 Dias de Transparencia</h2>
-                            <h3>Tomer Avital <span><a target="_blank" href="https://shkifut.info/english/">100 Days of Transparency</a></span></h3>
+                            <h3>Tomer Avital
+                                <span>
+                                    <a target="_blank" href="https://shkifut.info/english/">100 Days of Transparency</a>
+                                </span>
+                            </h3>
                         </div>
                         <!-- .session -->
 
@@ -1715,6 +1745,11 @@
                                 </a>
                             </div>
                             <div class="golditem">
+                                <a target="_blank" href="https://decent.bet" alt="decent.bet">
+                                    <img src="img/sponsors/dbet.png" alt="decent.bet">
+                                </a>
+                            </div>
+                            <div class="golditem">
                                 <a target="_blank" href="https://300eholdings.com" alt="300eholding">
                                     <img src="img/sponsors/300e.png" alt="300eholdings">
                                 </a>
@@ -1743,6 +1778,11 @@
                                 </a>
                             </div>
 
+                            <div class="silveritem ">
+                                <a target="_blank" href="https://tokenmagic.io">
+                                    <img src="img/sponsors/tokenmagic.png" alt="Token Magic">
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Bronze -->
@@ -1847,8 +1887,8 @@
                                 </li>
                                 <li>
                                     <a data-toggle="modal" data-target="#terms">
-                                    Términos y condiciones
-                                </a>
+                                        Términos y condiciones
+                                    </a>
                                 </li>
                             </ul>
                             <div class="copytext text-center">&copy; PanaFintech. Todos los derechos reservados</div>

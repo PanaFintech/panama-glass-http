@@ -210,7 +210,7 @@
 
     <!-- MODAL FORM PAY CREDIT CARD-->
     <div id="pay_card" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_card_label" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="pay_card_label">Payment with Credit Card</h5>
@@ -218,17 +218,17 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form id="cardForm" action="https://gatewaysandbox.merchantprocess.net/transaction.aspx?" method="POST" autocomplete="off" target="iframe_a">
-                        <input type="hidden" name="AccCode" value="32.00">
-                        <input type="hidden" name="procCode" value="000000">
-                        <input type="hidden" name="merchant" value="104886">
-                        <input type="hidden" name="terminal" value="104886001">
-                        <input type="hidden" name="currencyCode" value="840">
-                        <input type="hidden" name="SiteIPAddress" value="10.0.2.15">
+                <form id="cardForm" action="https://gateway.merchantprocess.net/v2/transaction.aspx" method="POST" autocomplete="off" target="iframe_a">
+                    <div class="modal-body">
+                        <input type="hidden" name="AccCode" value="123123">
+                        <input type="hidden" name="ProcCode" value="000000">
+                        <input type="hidden" name="Merchant" value="101360">
+                        <input type="hidden" name="Terminal" value="101360001">
+                        <input type="hidden" name="CurrencyCode" value="840">
+                        <input type="hidden" name="SiteIPAddress" value="190.32.33.206">
                         <div class="row">
-                            <div class="col-sm-4">
-                                <label for="ticketNumber" class="col-2 col-form-label">Cantidad</label>
+                            <div class="col-sm-5">
+                                <label for="ticketNumber" class="col-2 col-form-label labelForm">Quantity</label>
                                 <div class="col-10">
                                     <select id="ticketNumber" class="form-control form-control-lg">
                                         <option value="1" selected>1</option>
@@ -246,7 +246,7 @@
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                                <label for="ticketNumber" class="col-2 col-form-label">Boleto</label>
+                                <label for="ticketNumber" class="col-2 col-form-label labelForm">Ticket</label>
                                 <div class="col-10">
                                     <select id="ticketTier" class="form-control form-control-lg">
                                         <option value="1" selected>Regular - 2 days ($300)</option>
@@ -259,36 +259,36 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-4">
-                                <label for="cardHolder">Full Name</label>
+                            <div class="col-sm-5">
+                                <label for="cardHolder" class="labelForm">Full Name</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="cardHolder" id="cardHolder" placeholder="JohnADoe" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-6">
-                                <label for="cardHolder">Email</label>
+                                <label for="cardHolder" class="labelForm">Email</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="email" placeholder="john@mail.com" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-4">
-                                <label for="cardNumber">Credit Card Number</label>
+                            <div class="col-sm-5">
+                                <label for="cardNumber" class="labelForm">Credit Card Number</label>
                                 <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
+                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="CardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
                             <div class="col-sm-4">
-                                <label for="expiration">Expiration</label>
+                                <label for="expiration" class="labelForm">Expiration</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="expiration" placeholder="mmyy" required>
                                 </div>
                             </div>
                             <div class="col-sm-2">
-                                <label for="cvv2">CVV</label>
+                                <label for="cvv2" class="labelForm">CVV</label>
                                 <div class="col-10">
                                     <input class="form-control form-control-lg" type="text" name="cvv2" placeholder="xxx" id="cvv2" required>
                                 </div>
@@ -296,68 +296,35 @@
                         </div>
                         <div class="row"></div>
                         <label></label>
-                        <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
-                        <div class="row">
-                            I accetpt the
+                    </div>
+                    <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
+                    <div class="modal-footer">
+                        <div class="col-sm-6">
+                            <div class="col-sm-4 colTotal ">
+                                <span class="spanTotal itemCredit">Total USD:</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="itemCredit" id="amount"></div>
+                                <input type="hidden" name="Amount" id="amountField">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <img src="img/visa.png" class="img-responsive credImg" alt="Visa">
+                            <img src="img/mastercard.png" class="img-responsive credImg" alt="Mastercard">
+                        </div>
+                    </div>
+                    <div class=" modal-footer">
+                        <div class="col-sm-10 text-right rowTerms accept">
+                            <input type="checkbox" id="agree" class="checkbox" required>
+                            <span class="">I accept the</span>
                             <a data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
-                            <input type="checkbox" id="agree" required>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label for="cardNumber">Credit Card Number</label>
-                                <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cardNumber" id="cardNumber" placeholder="xxxxxxxxxxxxxxxx" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-4">
-                                <label for="expiration">Expiration</label>
-                                <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="expiration" placeholder="mmyy" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <label for="cvv2">CVV</label>
-                                <div class="col-10">
-                                    <input class="form-control form-control-lg" type="text" name="cvv2" placeholder="xxx" id="cvv2" required>
-                                </div>
-                            </div>
+                        <div class="col-sm-2 text-right itemCredit">
+                            <!--btn btn-success-->
+                            <input class="btn btn-primary" type="submit" value="Pay" align="right">
                         </div>
-                        <div class="row"></div>
-                        <label></label>
-                        <!-- CHECKBOX TO ACCEPT TERMS AND CONDITIONS -->
-                        <div class="row">
-                            I accetpt the
-                            <a data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
-                            <input type="checkbox" id="agree" required>
-                        </div>
-
-                        <label></label>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <h3>Total USD:</h3>
-                            </div>
-                            <div class="col-sm-2">
-                                <input class="form-control form-control-lg" type="text" name="amount" id="Amount" readonly>
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-2">
-                                <a href="https://www.credit-card-logos.com/">
-                                    <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.credit-card-logos.com/images/visa_credit-card-logos/new_visa_medium.gif" border="0" align="center" />
-                                </a>
-                            </div>
-                            <div class="col-sm-1">
-                                <a href="https://www.credit-card-logos.com/">
-                                    <img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.credit-card-logos.com/images/mastercard_credit-card-logos/mastercard_logo_1.gif" width="67" height="40" border="0" align="center" />
-                                </a>
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-2 text-center">
-                                <input class="btn btn-success" type="submit" value="Pagar" align="right">
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -377,8 +344,8 @@
                     <div class="step1">
                         <form id="cryptoForm">
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <label for="ticketNumber" class="col-2 col-form-label">Qty</label>
+                                <div class="col-sm-5">
+                                    <label for="ticketNumber" class="col-2 col-form-label labelForm">Qty</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketNumber" class="form-control form-control-lg">
                                             <option value="1" selected>1</option>
@@ -396,7 +363,7 @@
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="ticketNumber" class="col-2 col-form-label">Ticket</label>
+                                    <label for="ticketNumber" class="col-2 col-form-label labelForm">Ticket</label>
                                     <div class="col-10">
                                         <select id="cryptoTicketTier" class="form-control form-control-lg">
                                             <option value="1" selected>Regular - 2 days ($300)</option>
@@ -409,8 +376,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <label for="moneda" class="col-2 col-form-label">Currency</label>
+                                <div class="col-sm-5">
+                                    <label for="moneda" class="col-2 col-form-label labelForm">Currency</label>
                                     <div class="col-10">
                                         <select id="cryptoMoneda" class="form-control form-control-lg">
                                             <option value="1" selected>BTC - Bitcoin</option>
@@ -421,22 +388,22 @@
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="username">Username</label>
+                                    <label for="username" class="labelForm">Username</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="username" id="username" placeholder="JohnADoe" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
-                                    <label for="fullname">Full Name</label>
+                                <div class="col-sm-5">
+                                    <label for="fullname" class="labelForm">Full Name</label>
                                     <div class="col-10">
                                         <input class="form-control form-control-lg" type="text" name="fullname" id="fullname" placeholder="John A Doe" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-6">
-                                    <label for="email">Email</label>
+                                    <label for="email" class="labelForm">Email</label>
                                     <div class="col-10">
                                         <input id="email" class="form-control form-control-lg" type="email" name="email" placeholder="john@mail.com" required>
                                     </div>
@@ -461,10 +428,10 @@
                     -->
 
                             </br>
-                            <div class="modal-footer">
-                                <button class='btn btn-primary ' type='submit'>
-                                Pay
-                            </button>
+                            <div class="modal-footer btnPay">
+                                <button class='btn btn-primary' type='submit'>
+                                    Pay
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -476,37 +443,37 @@
                             <div id="address"></div>
                         </div>
                         <div class="row">
-
                             <div class="col-md-6 col-sm-6 divqr">
-
                                 <div id="qrcodeCanvas">
-
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 divqr">
                                 <div class="total">Total: </div>
-                                <p id="totalamount"><span id="total"></span><span id="totalcurrency"></span></p>
+                                <p id="totalamount">
+                                    <span id="total"></span>
+                                    <span id="totalcurrency"></span>
+                                </p>
 
                                 <div class="generate">Regenerate in:</div>
-                                <div id="timedown" class="space"><i class="far fa-clock"></i>
+                                <div id="timedown" class="space">
+                                    <i class="far fa-clock"></i>
                                     <span>15:00</span>
                                 </div>
 
                             </div>
                         </div>
-
                         <!--  <div class="modal-footer">
                             <a class="btn btn-primary btn-lg" id="back">
                                 Regresar
                             </a>
                         </div> -->
-
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- BUY TICKETS AT STORES-->
     <div id="at_stores" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pay_store_label" style="display: none;" aria-hidden="true">
@@ -713,11 +680,12 @@
                         BUY TICKETS
                         <div>with Crypto</div>
                     </a>
-                    <!--
-                        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
+
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pay_card">
                         BUY TICKETS
                         <div>with credit card</div>
-                    -->
+                    </a>
+
                     <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#at_stores">
                         BUY TICKETS
                         <div>at stores</div>
@@ -782,6 +750,7 @@
         </section>
         <!-- .about-event -->
 
+        <!-- PEOPLE -->
         <section id="section-people" class="section-wrapper team gray-bg">
             <div class="container">
                 <div class="row">
@@ -1017,6 +986,21 @@
                                             <small>Founder
                                                 <a target="_blank" href="https://decent.bet">Decent.bet</a>
                                             </small>
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- /.col-sm-6 -->
+                            <div class="col-sm-6 col-md-3">
+                                <figure class="thumbnail">
+                                    <a target="_blank" href="https://intermaritime.org/">
+                                        <img src="img/speakers/flortorrijos.png" class="img-responsive" alt="Image">
+                                    </a>
+                                    <figcaption class="caption text-center">
+                                        <h3>Flor Torrijos
+                                            <small>  vice-president
+                                                        <a target="_blank" href="https://intermaritime.org/">Intermaritime.org</a>
+                                                    </small>
                                         </h3>
                                     </figcaption>
                                 </figure>
@@ -1408,10 +1392,6 @@
 
                         <div class="session">
                             <time>9:30 - 10:30AM</time>
-                            <h2>State of Panama Address</h2>
-                            <h3>Adolfo Linares
-                                <span></span>
-                            </h3>
                         </div>
                         <!-- .session -->
 
@@ -1761,6 +1741,11 @@
                                 </a>
                             </div>
                             <div class="golditem">
+                                <a target="_blank" href="https://decent.bet" alt="decent.bet">
+                                    <img src="img/sponsors/dbet.png" alt="decent.bet">
+                                </a>
+                            </div>
+                            <div class="golditem">
                                 <a target="_blank" href="https://300eholdings.com" alt="300eholding">
                                     <img src="img/sponsors/300e.png" alt="300eholdings">
                                 </a>
@@ -1789,6 +1774,11 @@
                                 </a>
                             </div>
 
+                            <div class="silveritem ">
+                                <a target="_blank" href="https://tokenmagic.io">
+                                    <img src="img/sponsors/tokenmagic.png" alt="Token Magic">
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Bronze -->
