@@ -1249,13 +1249,9 @@ span.typed-cursor {
 
 .golditem {
     text-align: center;
-    width: 20%;
-    margin: 0% 5% 4% 9%;
+    width: 18%;
+    margin: 0% 7% 4% 7%;
     display: inline-block;
-}
-
-.guld {
-    width: 19.5%;
 }
 
 .silver {
@@ -1270,12 +1266,24 @@ span.typed-cursor {
     display: inline-block;
 }
 
+.tigo {
+    margin-right: 4%;
+    margin-left: 6%;
+}
+
 .social200logo {
-    width: 7%;
+    width: 6%;
+    margin-left: 4%;
 }
 
 .blockchain {
-    widows: 13.5%;
+    widows: 13%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.token {
+    width: 17%;
 }
 
 .bronze {
