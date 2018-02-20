@@ -1300,6 +1300,10 @@ span.typed-cursor {
     display: inline-block;
 }
 
+.ufm {
+    width: 8%;
+}
+
 .creditcards {
     margin-top: 1.5rem;
 }
