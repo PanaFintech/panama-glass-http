@@ -886,7 +886,7 @@ button:focus,
 
 #welcome #buy a {
     display: inline-block;
-    margin: 0 0.4rem;
+    margin: 0 0.4rem 1rem 0.4rem;
 }
 
 #welcome #buy .btn div {
@@ -984,6 +984,10 @@ button:focus,
     padding: 0.6rem 1.1rem;
     animation: social-show 0.8s;
     -webkit-animation: social-show 0.8s;
+}
+
+#social a#instagram {
+    padding: 0.6rem 0.74rem;
 }
 
 #section-partner .section-margin {
