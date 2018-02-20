@@ -208,10 +208,6 @@ jQuery(function ($) {
     // Closes the Responsive Menu on Menu Item Click
     // --------------------------------------------------------------------
 
-    // --------------------------------------------------------------------
-    // Closes the Responsive Menu on Menu Item Click
-    // --------------------------------------------------------------------
-
     (function () {
         $('.navbar-collapse ul li a').on('click', function () {
             if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
