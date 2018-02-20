@@ -325,14 +325,13 @@ $(document).ready(function () {
             $('#background').height(video);
         }
 
-        var free_space = video - (welcome + 62);
-        free_space = free_space - (free_space * 0.1) // 0.1 of adjust to top
+        var free_space = video - welcome;
         var off_top = (free_space / 2);
         if (off_top < 1) {
             off_top = 3;
         }
 
-        $('#welcome').css("padding-top", off_top + "px");
+        $('#welcome').css("margin-top", off_top + "px");
 
         $(".header").height(heightWOButton);
     });

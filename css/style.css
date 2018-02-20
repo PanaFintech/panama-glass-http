@@ -886,7 +886,7 @@ button:focus,
 
 #welcome #buy a {
     display: inline-block;
-    margin: 0 0.4rem;
+    margin: 0 0.4rem 1rem 0.4rem;
 }
 
 #welcome #buy .btn div {
